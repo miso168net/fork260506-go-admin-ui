@@ -24,8 +24,8 @@
             <a-form-item field="dictType" label="字典类型">
               <a-input v-model="queryForm.dictType" placeholder="请输入字典类型" @press-enter="handleQuery" />
             </a-form-item>
-            <a-form-item field="status" label="状态">
-              <a-select v-model="queryForm.status" placeholder="请选择字典状态">
+            <a-form-item field="status" label="状态" :style="{width: '150px'}">
+              <a-select v-model="queryForm.status" placeholder="状态">
                 <a-option :value="2">正常</a-option>
                 <a-option :value="1">停用</a-option>
               </a-select>
@@ -43,7 +43,6 @@
         <a-space class="action">
           <a-button v-has="'admin:sysDictType:add'" type="primary" @click="handleAdd"><icon-plus /> 新增</a-button>
           <a-button v-has="'system:sysdicttype:remove'" type="primary" status="danger" @click="() => { deleteVisible = true; }"><icon-delete /> 批量删除</a-button>
-          <a-button type="primary" status="warning" disabled><icon-download /> 导出</a-button>
         </a-space>
       </template>
     </a-card>
@@ -102,7 +101,7 @@
             :disabled="modalForm.id ? true : false"
           ></a-input>
         </a-form-item>
-        <a-form-item field="status" label="状态">
+        <a-form-item field="status" label="状态" >
           <a-radio-group v-model="modalForm.status">
             <a-radio :value="2">正常</a-radio>
             <a-radio :value="1">停用</a-radio>

@@ -14,31 +14,6 @@
           </div>
         </template>
       </a-list-item-meta>
-      <a-divider />
-      <a-card-meta>
-        <template #avatar>
-          <a-form :model="queryForm" layout="inline">
-            <a-form-item field="dictType" label="字典名称">
-              <a-select v-model="queryForm.dictType" :options="dictTypeOptions" :field-names="{ value: 'dictType', label: 'dictName' }" />
-            </a-form-item>
-            <a-form-item field="dictTag" label="字典标签">
-              <a-input v-model="queryForm.dictTag" placeholder="请输入字典标签" />
-            </a-form-item>
-            <a-form-item field="status" label="字典状态">
-              <a-select v-model="queryForm.status" placeholder="请选择字典状态">
-                <a-option :value="2">正常</a-option>
-                <a-option :value="1">关闭</a-option>
-              </a-select>
-            </a-form-item>
-            <a-form-item>
-              <a-space>
-                <a-button v-has="'admin:sysDictData:query'" type="primary">搜索</a-button>
-                <a-button>重置</a-button>
-              </a-space>
-            </a-form-item>
-          </a-form>
-        </template>
-      </a-card-meta>
       <template #actions>
         <a-space class="action">
           <a-button v-has="'admin:sysDictData:add'" type="primary" @click="handleAdd">新增</a-button>
@@ -245,7 +220,9 @@ const handlePageChange = (pagerIndex) => {
 
 // 获取字典数据
 const getDictDataInfo = async (params = {}) => {
-  const { data, code, msg } = await getDictData(params);
+  const { data, code, msg } = await getDictData({
+    dictType: params.dictId
+  });
   if ( code === 200 ) {
     tableData.value = data.list;
     Object.assign(pager, { count: data.count, pageIndex: data.pageIndex, pageSize: data.pageSize });
