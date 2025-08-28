@@ -33,7 +33,7 @@
         <el-table-column prop="createdAt" label="创建时间" />
         <el-table-column prop="updatedAt" label="更新时间" />
       </el-table>
-      <pagination
+      <app-pagination
         v-show="total>0"
         :total="total"
         :page.sync="queryParams.pageIndex"
