@@ -26,16 +26,24 @@
 - 解决依赖冲突并安装新版本 ✅
 - 验证项目基础功能（lint、test）✅
 
-### 阶段二：依赖升级
-- 使用 npm-check-updates 或手动修改 `package.json`，升级核心依赖。
-- 执行 `npm install`，解决依赖冲突。
-- 升级 Babel、Webpack、ESLint、Jest、axios、lodash 等工具包。
+### 阶段二：依赖升级 ✅ 已完成
+- ✅ Vue 2.7.16 → Vue 3.5.20
+- ✅ vue-router 3.6.5 → vue-router 4.5.1
+- ✅ vuex 3.6.2 → vuex 4.1.0
+- ✅ element-ui 2.15.14 → element-plus 2.11.1
+- ✅ vue-template-compiler → @vue/compiler-sfc 3.4.0
+- ✅ @vue/test-utils 1.3.6 → @vue/test-utils 2.4.0
+- ✅ Vue CLI 4.x → Vue CLI 5.0.9
+- ✅ ESLint 7.32.0 + eslint-plugin-vue 8.7.0
+- ⚠️ 移除不兼容依赖：@riophae/vue-treeselect、viser-vue、vue-particles
+- ⚠️ 开发服务器启动问题：Progress Plugin配置冲突（Vue CLI 5.x已知问题）
 
-### 阶段三：代码适配与重构
-- 全面适配 Vue 3 语法（如 Composition API、生命周期钩子变更）。
-- 替换 Element UI 为 Element Plus，调整组件用法。
-- 升级 vue-router、vuex，并适配新 API。
-- 检查第三方库兼容性，必要时替换或移除。
+### 阶段三：代码适配与重构 🔄 进行中
+- 需要更新Vue应用入口文件（main.js）
+- 需要更新路由配置（Vue Router 4 API变更）
+- 需要更新状态管理（Vuex 4 API变更）
+- 需要替换Element UI组件为Element Plus
+- 需要修复Vue 3语法兼容性问题
 
 ### 阶段四：配置文件调整
 - 更新 babel.config.js、webpack、eslint、jest 等配置文件。
