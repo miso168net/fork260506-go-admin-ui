@@ -1,7 +1,4 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-
-Vue.use(Router)
+import { createRouter, createWebHistory } from 'vue-router'
 
 /* Layout */
 import Layout from '@/layout'
@@ -107,18 +104,26 @@ export const asyncRoutes = [
 
 ]
 
-const createRouter = () => new Router({
-  mode: 'history', // require service support
-  scrollBehavior: () => ({ y: 0 }),
-  routes: constantRoutes
-})
+const createRouterInstance = () => {
+  return createRouter({
+    history: createWebHistory(process.env.BASE_URL),
+    scrollBehavior: () => ({ top: 0 }),
+    routes: constantRoutes
+  })
+}
 
-const router = createRouter()
+const router = createRouterInstance()
 
 // Detail see: https://github.com/vuejs/vue-router/issues/1234#issuecomment-357941465
 export function resetRouter() {
-  const newRouter = createRouter()
-  router.matcher = newRouter.matcher // reset router
+  // Vue Router 4中重置路由的方式
+  const newRouter = createRouter({
+    history: createWebHistory(process.env.BASE_URL),
+    scrollBehavior: () => ({ top: 0 }),
+    routes: constantRoutes
+  })
+  // 替换当前的路由实例
+  router.options.routes = newRouter.options.routes
 }
 
 export default router
