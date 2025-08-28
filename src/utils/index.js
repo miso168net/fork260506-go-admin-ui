@@ -12,7 +12,7 @@ export function parseTime(time, cFormat) {
   if (arguments.length === 0) {
     return null
   }
-  if (time_str.indexOf('01-01-01') > -1) {
+  if (typeof time === 'string' && time.indexOf('01-01-01') > -1) {
     return '-'
   }
   const format = cFormat || '{y}-{m}-{d} {h}:{i}:{s}'
