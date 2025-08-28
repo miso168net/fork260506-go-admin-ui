@@ -28,9 +28,12 @@ module.exports = {
       alias: {
         '@': resolve('src')
       }
-    }
+    },
+    plugins: []
   },
   chainWebpack(config) {
+    // 彻底禁用progress插件以解决Vue CLI 5.x兼容性问题
+    config.plugins.delete('progress')
     config.plugins.delete('prefetch')
 
     config.module
@@ -53,5 +56,9 @@ module.exports = {
       .when(process.env.NODE_ENV === 'development',
         config => config.devtool('cheap-source-map')
       )
+  },
+  // 禁用CSS提取以简化开发环境
+  css: {
+    extract: process.env.NODE_ENV === 'production'
   }
 }
