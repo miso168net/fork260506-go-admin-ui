@@ -10,7 +10,7 @@
               clearable
               size="small"
               style="width: 160px"
-              @keyup.enter.native="handleQuery"
+              @keyup.enter="handleQuery"
             />
           </el-form-item>
           <el-form-item label="权限字符" prop="roleKey">
@@ -20,7 +20,7 @@
               clearable
               size="small"
               style="width: 160px"
-              @keyup.enter.native="handleQuery"
+              @keyup.enter="handleQuery"
             />
           </el-form-item>
           <el-form-item label="状态" prop="status">
@@ -111,7 +111,7 @@
           <el-table-column label="权限字符" prop="roleKey" :show-overflow-tooltip="true" width="150" />
           <el-table-column label="排序" sortable="custom" prop="roleSort" width="80" />
           <el-table-column label="状态" sortable="custom" width="80">
-            <template slot-scope="scope">
+            <template v-slot="scope">
               <el-switch
                 v-model="scope.row.status"
                 active-value="2"
@@ -121,7 +121,7 @@
             </template>
           </el-table-column>
           <el-table-column label="创建时间" sortable="custom" prop="createdAt" width="160">
-            <template slot-scope="scope">
+            <template v-slot="scope">
               <span>{{ parseTime(scope.row.createdAt) }}</span>
             </template>
           </el-table-column>
@@ -131,7 +131,7 @@
             class-name="small-padding fixed-width"
             width="220"
           >
-            <template slot-scope="scope">
+            <template v-slot="scope">
               <el-button
                 v-permisaction="['admin:sysRole:update']"
                 size="mini"
@@ -161,13 +161,13 @@
         <app-pagination
           v-show="total>0"
           :total="total"
-          :page.sync="queryParams.pageIndex"
-          :limit.sync="queryParams.pageSize"
+          v-model:current-page="queryParams.pageIndex"
+          v-model:page-size="queryParams.pageSize"
           @pagination="getList"
         />
 
         <!-- 添加或修改角色配置对话框 -->
-        <el-dialog v-if="open" :title="title" :visible.sync="open" width="500px" :close-on-click-modal="false">
+        <el-dialog v-if="open" :title="title" v-model="0" width="500px" :close-on-click-modal="false">
           <el-form ref="form" :model="form" :rules="rules" label-width="80px">
             <el-form-item label="角色名称" prop="roleName">
               <el-input v-model="form.roleName" placeholder="请输入角色名称" :disabled="isEdit" />
@@ -201,14 +201,14 @@
               <el-input v-model="form.remark" type="textarea" placeholder="请输入内容" />
             </el-form-item>
           </el-form>
-          <div slot="footer" class="dialog-footer">
+          <div v-slot:footer class="dialog-footer">
             <el-button type="primary" @click="submitForm">确 定</el-button>
             <el-button @click="cancel">取 消</el-button>
           </div>
         </el-dialog>
 
         <!-- 分配角色数据权限对话框 -->
-        <el-dialog v-if="openDataScope" :title="title" :visible.sync="openDataScope" width="500px" :close-on-click-modal="false">
+        <el-dialog v-if="openDataScope" :title="title" v-model="0" width="500px" :close-on-click-modal="false">
           <el-form :model="form" label-width="80px">
             <el-form-item label="角色名称">
               <el-input v-model="form.roleName" :disabled="true" />
@@ -238,7 +238,7 @@
               />
             </el-form-item>
           </el-form>
-          <div slot="footer" class="dialog-footer">
+          <div v-slot:footer class="dialog-footer">
             <el-button type="primary" @click="submitDataScope">确 定</el-button>
             <el-button @click="cancelDataScope">取 消</el-button>
           </div>
@@ -255,7 +255,7 @@ import { treeselect as deptTreeselect, roleDeptTreeselect } from '@/api/admin/sy
 import { formatJson } from '@/utils'
 
 export default {
-  name: 'Role',
+  name: 'SysRole',
   components: {
 
   },

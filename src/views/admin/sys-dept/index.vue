@@ -9,7 +9,7 @@
               placeholder="请输入部门名称"
               clearable
               size="small"
-              @keyup.enter.native="handleQuery"
+              @keyup.enter="handleQuery"
             />
           </el-form-item>
           <el-form-item label="状态">
@@ -52,7 +52,7 @@
           <el-table-column prop="deptName" label="部门名称" />
           <el-table-column prop="sort" label="排序" width="200" />
           <el-table-column prop="status" label="状态" :formatter="statusFormat" width="100">
-            <template slot-scope="scope">
+            <template v-slot="scope">
               <el-tag
                 :type="scope.row.status === 1 ? 'danger' : 'success'"
                 disable-transitions
@@ -60,12 +60,12 @@
             </template>
           </el-table-column>
           <el-table-column label="创建时间" align="center" prop="createdAt" width="200">
-            <template slot-scope="scope">
+            <template v-slot="scope">
               <span>{{ parseTime(scope.row.createdAt) }}</span>
             </template>
           </el-table-column>
           <el-table-column label="操作" align="center" class-name="small-padding fixed-width">
-            <template slot-scope="scope">
+            <template v-slot="scope">
               <el-button
                 v-permisaction="['admin:sysDept:edit']"
                 size="mini"
@@ -93,7 +93,7 @@
         </el-table>
 
         <!-- 添加或修改部门对话框 -->
-        <el-dialog :title="title" :visible.sync="open" width="600px" :close-on-click-modal="false">
+        <el-dialog :title="title" v-model="0" width="600px" :close-on-click-modal="false">
           <el-form ref="form" :model="form" :rules="rules" label-width="80px">
             <el-row>
               <el-col :span="24">
@@ -146,7 +146,7 @@
               </el-col>
             </el-row>
           </el-form>
-          <div slot="footer" class="dialog-footer">
+          <div v-slot:footer class="dialog-footer">
             <el-button type="primary" @click="submitForm">确 定</el-button>
             <el-button @click="cancel">取 消</el-button>
           </div>

@@ -13,12 +13,12 @@
       >
         <router-link
           ref="tag"
-          slot="label"
+          v-slot:label
           tag="span"
           class="tags-view-item"
           :style="{ color: item.fullPath === $route.fullPath ? theme : '' }"
           :to="{ path: item.path, query: item.query, fullPath: item.fullPath }"
-          @contextmenu.prevent.native="openMenu(item,$event)"
+          @contextmenu.prevent="openMenu(item,$event)"
         >
           {{ item.title }}
         </router-link>

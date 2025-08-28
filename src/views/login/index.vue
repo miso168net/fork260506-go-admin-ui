@@ -72,9 +72,9 @@
                   name="password"
                   tabindex="2"
                   autocomplete="on"
-                  @keyup.native="checkCapslock"
+                  @keyup="checkCapslock"
                   @blur="capsTooltip = false"
-                  @keyup.enter.native="handleLogin"
+                  @keyup.enter="handleLogin"
                 />
                 <span class="show-pwd" @click="showPwd">
                   <svg-icon
@@ -99,7 +99,7 @@
                 maxlength="5"
                 autocomplete="off"
                 style="width: 75%"
-                @keyup.enter.native="handleLogin"
+                @keyup.enter="handleLogin"
               />
             </el-form-item>
             <div
@@ -128,7 +128,7 @@
               :loading="loading"
               type="primary"
               style="width: 100%; padding: 12px 20px; margin-bottom: 30px"
-              @click.native.prevent="handleLogin"
+              @click.prevent="handleLogin"
             >
               <span v-if="!loading">登 录</span>
               <span v-else>登 录 中...</span>
@@ -138,7 +138,7 @@
       </div>
     </div>
 
-    <el-dialog title="Or connect with" :visible.sync="showDialog" :close-on-click-modal="false">
+    <el-dialog title="Or connect with" v-model="0" :close-on-click-modal="false">
       Can not be simulated on local, so please combine you own business
       simulation! ! !
       <br>
@@ -250,7 +250,7 @@ export default {
       this.$nextTick(() => (this.refreshParticles = true))
     })
   },
-  destroyed() {
+  unmounted() {
     clearInterval(this.timer)
     window.removeEventListener('resize', () => {})
     // window.removeEventListener('storage', this.afterQRScan)

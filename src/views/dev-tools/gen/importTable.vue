@@ -1,6 +1,6 @@
 <template>
   <!-- 导入表 -->
-  <el-dialog title="导入表" :visible.sync="visible" width="800px" top="5vh">
+  <el-dialog title="导入表" v-model="0" width="800px" top="5vh">
     <el-form ref="queryForm" :model="queryParams" :inline="true">
       <el-form-item label="表名称" prop="tableName">
         <el-input
@@ -8,7 +8,7 @@
           placeholder="请输入表名称"
           clearable
           size="small"
-          @keyup.enter.native="handleQuery"
+          @keyup.enter="handleQuery"
         />
       </el-form-item>
       <el-form-item label="表描述" prop="tableComment">
@@ -17,7 +17,7 @@
           placeholder="请输入表描述"
           clearable
           size="small"
-          @keyup.enter.native="handleQuery"
+          @keyup.enter="handleQuery"
         />
       </el-form-item>
       <el-form-item>
@@ -36,12 +36,12 @@
       <app-pagination
         v-show="total>0"
         :total="total"
-        :page.sync="queryParams.pageIndex"
-        :limit.sync="queryParams.pageSize"
+        v-model:current-page="queryParams.pageIndex"
+        v-model:page-size="queryParams.pageSize"
         @pagination="getList"
       />
     </el-row>
-    <div slot="footer" class="dialog-footer">
+    <div v-slot:footer class="dialog-footer">
       <el-button type="primary" :loading="loading" @click="handleImportTable">确 定</el-button>
       <el-button @click="visible = false">取 消</el-button>
     </div>

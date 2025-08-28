@@ -3,7 +3,7 @@
     <el-row>
       <el-col :span="12">
         <el-form-item prop="tableName">
-          <span slot="label">
+          <span v-slot:label>
             数据表名称
             <el-tooltip content="数据库表名称，针对gorm对应的table()使用，⚠️这里必须是蛇形结构" placement="top">
               <i class="el-icon-question" />
@@ -14,7 +14,7 @@
       </el-col>
       <el-col :span="12">
         <el-form-item prop="tableComment">
-          <span slot="label">
+          <span v-slot:label>
             菜单名称
             <el-tooltip content="同步的数据库表名称，生成配置数据时，用作菜单名称" placement="top">
               <i class="el-icon-question" />
@@ -25,7 +25,7 @@
       </el-col>
       <el-col :span="12">
         <el-form-item prop="className">
-          <span slot="label">
+          <span v-slot:label>
             结构体模型名称
             <el-tooltip content="结构体模型名称，代码中的struct名称定义使用" placement="top">
               <i class="el-icon-question" />
@@ -41,7 +41,7 @@
       </el-col>
       <!-- <el-col :span="12">
         <el-form-item prop="isLogicalDelete">
-          <span slot="label">
+          <span v-slot:label>
             是否逻辑删除
             <el-tooltip content="目前只支持逻辑删除" placement="top">
               <i class="el-icon-question" />

@@ -10,7 +10,7 @@
               placeholder="请输入标题"
               clearable
               size="small"
-              @keyup.enter.native="handleQuery"
+              @keyup.enter="handleQuery"
             />
           </el-form-item>
           <el-form-item label="地址" prop="path">
@@ -19,7 +19,7 @@
               placeholder="请输入地址"
               clearable
               size="small"
-              @keyup.enter.native="handleQuery"
+              @keyup.enter="handleQuery"
             />
           </el-form-item>
           <el-form-item label="Method" prop="action">
@@ -28,7 +28,7 @@
               placeholder="请选择Method"
               clearable
               size="small"
-              @keyup.enter.native="handleQuery"
+              @keyup.enter="handleQuery"
             >
               <el-option value="GET">GET</el-option>
               <el-option value="POST">POST</el-option>
@@ -42,7 +42,7 @@
               placeholder="请选择类型"
               clearable
               size="small"
-              @keyup.enter.native="handleQuery"
+              @keyup.enter="handleQuery"
             >
               <el-option value="SYS">SYS</el-option>
               <el-option value="BUS">BUS</el-option>
@@ -72,7 +72,7 @@
             width="260px"
             :show-overflow-tooltip="true"
           >
-            <template slot-scope="scope">
+            <template v-slot="scope">
               <span v-if="scope.row.type=='SYS' && scope.row.title!=''"><el-tag type="success">{{ '['+scope.row.type +'] '+ scope.row.title }}</el-tag></span>
               <span v-if="scope.row.type!='SYS' && scope.row.title!=''"><el-tag type="">{{ '['+scope.row.type +'] '+scope.row.title }}</el-tag></span>
               <span v-if="scope.row.title==''"><el-tag type="danger">暂无</el-tag></span>
@@ -88,10 +88,10 @@
             sortable="custom"
             :show-overflow-tooltip="true"
           >
-            <!-- <template slot-scope="scope">
+            <!-- <template v-slot="scope">
               <span>{{ "["+scope.row.action +"] "+ scope.row.path }}</span>
             </template> -->
-            <template slot-scope="scope">
+            <template v-slot="scope">
               <el-popover trigger="hover" placement="top">
                 <p><span v-if="scope.row.type=='SYS' && scope.row.title!=''"><el-tag type="success">{{ '['+scope.row.type +'] '+ scope.row.title }}</el-tag></span>
                   <span v-if="scope.row.type!='SYS' && scope.row.title!=''"><el-tag type="">{{ '['+scope.row.type +'] '+scope.row.title }}</el-tag></span>
@@ -105,7 +105,7 @@
                   <el-tag v-if="scope.row.action=='DELETE'" type="danger">{{ scope.row.action }}</el-tag>
                 </p>
                 <p>接口类型: {{ scope.row.type }}</p>
-                <div slot="reference" class="name-wrapper">
+                <div v-slot:reference class="name-wrapper">
                   <el-tag v-if="scope.row.action=='GET'">{{ scope.row.action }}</el-tag>
                   <el-tag v-if="scope.row.action=='POST'" type="success">{{ scope.row.action }}</el-tag>
                   <el-tag v-if="scope.row.action=='PUT'" type="warning">{{ scope.row.action }}</el-tag>
@@ -122,7 +122,7 @@
             width="155px"
             sortable="custom"
           >
-            <template slot-scope="scope">
+            <template v-slot="scope">
               <span>{{ parseTime(scope.row.createdAt) }}</span>
             </template>
           </el-table-column>
@@ -132,7 +132,7 @@
             width="80px"
             class-name="small-padding fixed-width"
           >
-            <template slot-scope="scope">
+            <template v-slot="scope">
               <el-button
                 v-permisaction="['admin:sysApi:edit']"
                 size="mini"
@@ -148,8 +148,8 @@
         <app-pagination
           v-show="total>0"
           :total="total"
-          :page.sync="queryParams.pageIndex"
-          :limit.sync="queryParams.pageSize"
+          v-model:current-page="queryParams.pageIndex"
+          v-model:page-size="queryParams.pageSize"
           @pagination="getList"
         />
 
@@ -158,7 +158,7 @@
           ref="drawer"
           :title="title"
           :before-close="cancel"
-          :visible.sync="open"
+          v-model="0"
           direction="rtl"
           custom-class="demo-drawer"
         >
@@ -183,7 +183,7 @@
                   placeholder="请选择类型"
                   clearable
                   size="small"
-                  @keyup.enter.native="handleQuery"
+                  @keyup.enter="handleQuery"
                 >
                   <el-option value="SYS">SYS</el-option>
                   <el-option value="BUS">BUS</el-option>
@@ -195,7 +195,7 @@
                   placeholder="请选择方式"
                   clearable
                   size="small"
-                  @keyup.enter.native="handleQuery"
+                  @keyup.enter="handleQuery"
                 >
                   <el-option value="GET">GET</el-option>
                   <el-option value="POST">POST</el-option>

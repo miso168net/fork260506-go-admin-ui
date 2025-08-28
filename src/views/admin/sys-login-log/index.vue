@@ -9,7 +9,7 @@
             placeholder="请输入用户名"
             clearable
             size="small"
-            @keyup.enter.native="handleQuery"
+            @keyup.enter="handleQuery"
           />
           </el-form-item>
           <el-form-item label="状态" prop="status"><el-select
@@ -31,7 +31,7 @@
             placeholder="请输入ip地址"
             clearable
             size="small"
-            @keyup.enter.native="handleQuery"
+            @keyup.enter="handleQuery"
           />
           </el-form-item>
 
@@ -76,7 +76,7 @@
             :formatter="statusFormat"
             width="100"
           >
-            <template slot-scope="scope">
+            <template v-slot="scope">
               {{ statusFormat(scope.row) }}
             </template>
           </el-table-column>
@@ -85,14 +85,14 @@
             align="center"
             prop="ipaddr"
           >
-            <template slot-scope="scope">
+            <template v-slot="scope">
               <el-popover trigger="hover" placement="top">
                 <p>IP: {{ scope.row.ipaddr }}</p>
                 <p>归属地: {{ scope.row.loginLocation }}</p>
                 <p>浏览器: {{ scope.row.browser }}</p>
                 <p>系统: {{ scope.row.os }}</p>
                 <p>固件: {{ scope.row.platform }}</p>
-                <div slot="reference" class="name-wrapper">
+                <div v-slot:reference class="name-wrapper">
                   {{ scope.row.ipaddr }}
                 </div>
               </el-popover>
@@ -105,12 +105,12 @@
             prop="loginTime"
             width="180"
           >
-            <template slot-scope="scope">
+            <template v-slot="scope">
               <span>{{ parseTime(scope.row.loginTime) }}</span>
             </template>
           </el-table-column>
           <el-table-column label="操作" align="center" class-name="small-padding fixed-width">
-            <template slot-scope="scope">
+            <template v-slot="scope">
               <el-button
                 v-permisaction="['admin:sysLoginLog:remove']"
                 size="mini"
@@ -126,8 +126,8 @@
         <app-pagination
           v-show="total>0"
           :total="total"
-          :page.sync="queryParams.pageIndex"
-          :limit.sync="queryParams.pageSize"
+          v-model:current-page="queryParams.pageIndex"
+          v-model:page-size="queryParams.pageSize"
           @pagination="getList"
         />
       </el-card>

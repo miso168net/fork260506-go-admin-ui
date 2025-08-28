@@ -150,7 +150,7 @@ export default {
       this.getServerInfo()
     }, 1000)
   },
-  beforeDestroy() {
+  beforeUnmount() {
     clearInterval(this.timer)
     this.timer = null
   },

@@ -9,7 +9,7 @@
               placeholder="请输入表名称"
               clearable
               size="small"
-              @keyup.enter.native="handleQuery"
+              @keyup.enter="handleQuery"
             />
           </el-form-item>
           <el-form-item label="菜单名称" prop="tableComment">
@@ -18,7 +18,7 @@
               placeholder="请输入菜单名称"
               clearable
               size="small"
-              @keyup.enter.native="handleQuery"
+              @keyup.enter="handleQuery"
             />
           </el-form-item>
           <el-form-item>
@@ -91,12 +91,12 @@
             width="130"
           />
           <el-table-column label="创建时间" align="center" prop="createdAt" width="165">
-            <template slot-scope="scope">
+            <template v-slot="scope">
               <span>{{ parseTime(scope.row.createdAt) }}</span>
             </template>
           </el-table-column>
           <el-table-column label="操作" align="center" class-name="small-padding fixed-width">
-            <template slot-scope="scope">
+            <template v-slot="scope">
               <el-button
                 type="text"
                 size="small"
@@ -110,7 +110,7 @@
                 @click="handlePreview(scope.row)"
               >预览</el-button>
                 <el-button
-                  slot="reference"
+                  v-slot:reference
                   type="text"
                   size="small"
                   icon="el-icon-view"
@@ -118,7 +118,7 @@
                 >代码生成</el-button>
 
                 <el-button
-                  slot="reference"
+                  v-slot:reference
                   type="text"
                   size="small"
                   icon="el-icon-view"
@@ -127,7 +127,7 @@
 
      
                 <el-button
-                  slot="reference"
+                  v-slot:reference
                   type="text"
                   size="small"
                   icon="el-icon-view"
@@ -135,7 +135,7 @@
                 >生成迁移脚本</el-button>
                 
                 <el-button
-                  slot="reference"
+                  v-slot:reference
                   type="text"
                   size="small"
                   icon="el-icon-delete"
@@ -147,15 +147,15 @@
         <app-pagination
           v-show="total>0"
           :total="total"
-          :page.sync="queryParams.pageIndex"
-          :limit.sync="queryParams.pageSize"
+          v-model:current-page="queryParams.pageIndex"
+          v-model:page-size="queryParams.pageSize"
           @pagination="getList"
         />
       </el-card>
 
       <!-- 预览界面 -->
 
-      <el-dialog class="preview" :title="preview.title" :visible.sync="preview.open" :close-on-click-modal="false" fullscreen>
+      <el-dialog class="preview" :title="preview.title" v-model="0" :close-on-click-modal="false" fullscreen>
         <div class="el-dialog-container">
           <div class="tag-group">
             <!-- eslint-disable-next-line vue/valid-v-for -->
@@ -201,7 +201,7 @@ import 'codemirror/mode/go/go'
 import 'codemirror/mode/vue/vue'
 
 export default {
-  name: 'Gen',
+  name: 'GenCode',
   components: { importTable, codemirror },
   data() {
     return {

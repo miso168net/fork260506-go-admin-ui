@@ -9,7 +9,7 @@
               placeholder="请输入菜单名称"
               clearable
               size="small"
-              @keyup.enter.native="handleQuery"
+              @keyup.enter="handleQuery"
             />
           </el-form-item>
           <el-form-item label="状态">
@@ -43,13 +43,13 @@
         >
           <el-table-column prop="title" label="菜单名称" :show-overflow-tooltip="true" width="180px" />
           <el-table-column prop="icon" label="图标" align="center" width="100px">
-            <template slot-scope="scope">
+            <template v-slot="scope">
               <svg-icon :icon-class="scope.row.icon" />
             </template>
           </el-table-column>
           <el-table-column prop="sort" label="排序" width="60px" />
           <el-table-column prop="permission" label="权限标识" :show-overflow-tooltip="true">
-            <template slot-scope="scope">
+            <template v-slot="scope">
               <el-popover v-if="scope.row.sysApi.length>0" trigger="hover" placement="top">
                 <el-table
                   :data="scope.row.sysApi"
@@ -61,7 +61,7 @@
                     label="title"
                     width="260px"
                   >
-                    <template slot-scope="scope">
+                    <template v-slot="scope">
                       <span v-if="scope.row.type=='SYS' && scope.row.title!=''"><el-tag type="success">{{ '['+scope.row.type +'] '+ scope.row.title }}</el-tag></span>
                       <span v-if="scope.row.type!='SYS' && scope.row.title!=''"><el-tag type="">{{ '['+scope.row.type +'] '+scope.row.title }}</el-tag></span>
                       <span v-if="scope.row.title==''"><el-tag type="danger">暂无</el-tag></span>
@@ -73,7 +73,7 @@
                     label="path"
                     width="270px"
                   >
-                    <template slot-scope="scope">
+                    <template v-slot="scope">
                       <el-tag v-if="scope.row.action=='GET'">{{ scope.row.action }}</el-tag>
                       <el-tag v-if="scope.row.action=='POST'" type="success">{{ scope.row.action }}</el-tag>
                       <el-tag v-if="scope.row.action=='PUT'" type="warning">{{ scope.row.action }}</el-tag>
@@ -83,7 +83,7 @@
                   </el-table-column>
 
                 </el-table>
-                <div slot="reference" class="name-wrapper">
+                <div v-slot:reference class="name-wrapper">
                   <span v-if="scope.row.permission==''">-</span>
                   <span v-else>{{ scope.row.permission }}</span>
                 </div>
@@ -95,13 +95,13 @@
             </template>
           </el-table-column>
           <el-table-column prop="path" label="组件路径" :show-overflow-tooltip="true">
-            <template slot-scope="scope">
+            <template v-slot="scope">
               <span v-if="scope.row.menuType=='A'">{{ scope.row.path }}</span>
               <span v-else>{{ scope.row.component }}</span>
             </template>
           </el-table-column>
           <el-table-column prop="visible" label="可见" :formatter="visibleFormat" width="80">
-            <template slot-scope="scope">
+            <template v-slot="scope">
               <el-tag
                 :type="scope.row.visible === '1' ? 'danger' : 'success'"
                 disable-transitions
@@ -109,12 +109,12 @@
             </template>
           </el-table-column>
           <el-table-column label="创建时间" align="center" prop="createdAt" width="180">
-            <template slot-scope="scope">
+            <template v-slot="scope">
               <span>{{ parseTime(scope.row.createdAt) }}</span>
             </template>
           </el-table-column>
           <el-table-column label="操作" align="center" class-name="small-padding fixed-width" width="180">
-            <template slot-scope="scope">
+            <template v-slot="scope">
               <el-button
                 v-permisaction="['admin:sysMenu:edit']"
                 size="mini"
@@ -145,7 +145,7 @@
           ref="drawer"
           :title="title"
           :before-close="cancel"
-          :visible.sync="open"
+          v-model="0"
           direction="rtl"
           custom-class="demo-drawer"
           size="830px"
@@ -217,15 +217,15 @@
                       @show="$refs['iconSelect'].reset()"
                     >
                       <IconSelect ref="iconSelect" @selected="selected" />
-                      <el-input slot="reference" v-model="form.icon" placeholder="点击选择图标" readonly>
+                      <el-input v-slot:reference v-model="form.icon" placeholder="点击选择图标" readonly>
                         <svg-icon
                           v-if="form.icon"
-                          slot="prefix"
+                          v-slot:prefix
                           :icon-class="form.icon"
                           class="el-input__icon"
                           style="height: 32px;width: 16px;"
                         />
-                        <i v-else slot="prefix" class="el-icon-search el-input__icon" />
+                        <i v-else v-slot:prefix class="el-icon-search el-input__icon" />
                       </el-input>
                     </el-popover>
                   </el-form-item>

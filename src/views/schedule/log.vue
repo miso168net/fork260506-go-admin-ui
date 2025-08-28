@@ -45,7 +45,7 @@ export default {
     this.group = 'log'
     this.initWebSocket()
   },
-  destroyed() {
+  unmounted() {
     console.log('断开websocket连接')
     this.websock.close() // 离开路由之后断开websocket连接
     unWsLogout(this.id, this.group).then(response => {

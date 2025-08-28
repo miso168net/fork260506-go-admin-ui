@@ -11,7 +11,7 @@
                 placeholder="请输入名称"
                 clearable
                 size="small"
-                @keyup.enter.native="handleQuery"
+                @keyup.enter="handleQuery"
               />
             </el-form-item>
             <el-form-item label="任务分组" prop="jobGroup">
@@ -118,7 +118,7 @@
               :formatter="jobGroupFormat"
               width="100"
             >
-              <template slot-scope="scope">
+              <template v-slot="scope">
                 {{ jobGroupFormat(scope.row) }}
               </template>
             </el-table-column>
@@ -141,12 +141,12 @@
               :formatter="statusFormat"
               width="100"
             >
-              <template slot-scope="scope">
+              <template v-slot="scope">
                 {{ statusFormat(scope.row) }}
               </template>
             </el-table-column>
             <el-table-column label="操作" align="center" class-name="small-padding fixed-width">
-              <template slot-scope="scope">
+              <template v-slot="scope">
                 <el-button
                   v-permisaction="['job:sysJob:edit']"
                   size="mini"
@@ -188,13 +188,13 @@
           <app-pagination
             v-show="total>0"
             :total="total"
-            :page.sync="queryParams.pageIndex"
-            :limit.sync="queryParams.pageSize"
+            v-model:current-page="queryParams.pageIndex"
+            v-model:page-size="queryParams.pageSize"
             @pagination="getList"
           />
 
           <!-- 添加或修改对话框 -->
-          <el-dialog v-dialogDrag :title="title" :visible.sync="open" width="700px" append-to-body :close-on-click-modal="false">
+          <el-dialog v-dialogDrag :title="title" v-model="0" width="700px" append-to-body :close-on-click-modal="false">
             <el-form ref="form" :model="form" :rules="rules" label-width="120px">
               <el-row>
                 <el-col :span="12">
@@ -222,10 +222,10 @@
                 </el-col>
                 <el-col :span="24">
                   <el-form-item label="调用目标" prop="invokeTarget">
-                    <span slot="label">
+                    <span v-slot:label>
                       调用目标
                       <el-tooltip placement="top">
-                        <div slot="content">
+                        <div v-slot:content>
                           调用示例：func (t *EXEC) ExamplesNoParam(){..} 填写 ExamplesNoParam 即可；
                           <br>参数说明：目前不支持带参调用
                         </div>
@@ -240,10 +240,10 @@
                 </el-col>
                 <el-col :span="24">
                   <el-form-item label="目标参数" prop="args">
-                    <span slot="label">
+                    <span v-slot:label>
                       目标参数
                       <el-tooltip placement="top">
-                        <div slot="content">
+                        <div v-slot:content>
                           参数示例：有参：请以string格式填写；无参：为空；
                           <br>参数说明：目前仅支持函数调用
                         </div>
@@ -307,7 +307,7 @@
                 </el-col>
               </el-row>
             </el-form>
-            <div slot="footer" class="dialog-footer">
+            <div v-slot:footer class="dialog-footer">
               <el-button type="primary" @click="submitForm">确 定</el-button>
               <el-button @click="cancel">取 消</el-button>
             </div>

@@ -67,7 +67,7 @@
             label="Request info"
             prop="operUrl"
           >
-            <template slot-scope="scope">
+            <template v-slot="scope">
               <el-popover trigger="hover" placement="top">
 
                 <p>Request:
@@ -80,7 +80,7 @@
                 <p>Host: {{ scope.row.operIp }}</p>
                 <p>Location: {{ scope.row.operLocation }}</p>
                 <p>耗时: {{ scope.row.latencyTime }}</p>
-                <div slot="reference" class="name-wrapper">
+                <div v-slot:reference class="name-wrapper">
                   <el-tag v-if="scope.row.requestMethod=='GET'">{{ scope.row.requestMethod }}</el-tag>
                   <el-tag v-if="scope.row.requestMethod=='POST'" type="success">{{ scope.row.requestMethod }}</el-tag>
                   <el-tag v-if="scope.row.requestMethod=='PUT'" type="warning">{{ scope.row.requestMethod }}</el-tag>
@@ -102,13 +102,13 @@
             width="80"
             :show-overflow-tooltip="true"
           >
-            <template slot-scope="scope">
+            <template v-slot="scope">
               <el-tag v-if="scope.row.status=='2'" type="success">{{ statusFormat(scope.row,scope.row.status) }}</el-tag>
               <el-tag v-if="scope.row.status=='1'" type="danger">{{ statusFormat(scope.row,scope.row.status) }}</el-tag>
             </template>
           </el-table-column>
           <el-table-column label="操作日期" prop="operTime" width="160">
-            <template slot-scope="scope">
+            <template v-slot="scope">
               <span>{{ parseTime(scope.row.operTime) }}</span>
             </template>
           </el-table-column>
@@ -117,7 +117,7 @@
             width="80"
             class-name="small-padding fixed-width"
           >
-            <template slot-scope="scope">
+            <template v-slot="scope">
               <el-button
                 v-permisaction="['admin:sysOperLog:query']"
                 size="mini"
@@ -132,13 +132,13 @@
         <app-pagination
           v-show="total>0"
           :total="total"
-          :page.sync="queryParams.pageIndex"
-          :limit.sync="queryParams.pageSize"
+          v-model:current-page="queryParams.pageIndex"
+          v-model:page-size="queryParams.pageSize"
           @pagination="getList"
         />
 
         <!-- 操作日志详细 -->
-        <el-dialog title="操作日志详细" :visible.sync="open" width="700px" :close-on-click-modal="false">
+        <el-dialog title="操作日志详细" v-model="0" width="700px" :close-on-click-modal="false">
           <el-form ref="form" :model="form" label-width="100px" size="mini">
             <el-row>
               <el-col :span="24">
@@ -176,7 +176,7 @@
               </el-col>
             </el-row>
           </el-form>
-          <div slot="footer" class="dialog-footer">
+          <div v-slot:footer class="dialog-footer">
             <el-button @click="open = false">关 闭</el-button>
           </div>
         </el-dialog>

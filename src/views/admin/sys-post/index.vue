@@ -9,7 +9,7 @@
               placeholder="请输入岗位编码"
               clearable
               size="small"
-              @keyup.enter.native="handleQuery"
+              @keyup.enter="handleQuery"
             />
           </el-form-item>
           <el-form-item label="岗位名称" prop="postName">
@@ -18,7 +18,7 @@
               placeholder="请输入岗位名称"
               clearable
               size="small"
-              @keyup.enter.native="handleQuery"
+              @keyup.enter="handleQuery"
             />
           </el-form-item>
           <el-form-item label="状态" prop="status">
@@ -85,7 +85,7 @@
           <el-table-column label="岗位名称" align="center" prop="postName" />
           <el-table-column label="岗位排序" align="center" prop="sort" />
           <el-table-column label="状态" align="center" prop="status" :formatter="statusFormat">
-            <template slot-scope="scope">
+            <template v-slot="scope">
               <el-tag
                 :type="scope.row.status === 1 ? 'danger' : 'success'"
                 disable-transitions
@@ -93,12 +93,12 @@
             </template>
           </el-table-column>
           <el-table-column label="创建时间" align="center" prop="createdAt" width="180">
-            <template slot-scope="scope">
+            <template v-slot="scope">
               <span>{{ parseTime(scope.row.createdAt) }}</span>
             </template>
           </el-table-column>
           <el-table-column label="操作" align="center" class-name="small-padding fixed-width">
-            <template slot-scope="scope">
+            <template v-slot="scope">
               <el-button
                 v-permisaction="['admin:sysPost:edit']"
                 size="mini"
@@ -120,13 +120,13 @@
         <app-pagination
           v-show="total>0"
           :total="total"
-          :page.sync="queryParams.pageIndex"
-          :limit.sync="queryParams.pageSize"
+          v-model:current-page="queryParams.pageIndex"
+          v-model:page-size="queryParams.pageSize"
           @pagination="getList"
         />
 
         <!-- 添加或修改岗位对话框 -->
-        <el-dialog :title="title" :visible.sync="open" width="500px" :close-on-click-modal="false">
+        <el-dialog :title="title" v-model="0" width="500px" :close-on-click-modal="false">
           <el-form ref="form" :model="form" :rules="rules" label-width="80px">
             <el-form-item label="岗位名称" prop="postName">
               <el-input v-model="form.postName" placeholder="请输入岗位名称" />
@@ -150,7 +150,7 @@
               <el-input v-model="form.remark" type="textarea" placeholder="请输入内容" />
             </el-form-item>
           </el-form>
-          <div slot="footer" class="dialog-footer">
+          <div v-slot:footer class="dialog-footer">
             <el-button type="primary" @click="submitForm">确 定</el-button>
             <el-button @click="cancel">取 消</el-button>
           </div>
