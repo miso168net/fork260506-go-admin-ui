@@ -11,17 +11,17 @@
         :closable="item.fullPath === '/dashboard' ? false : true"
         :name="item.fullPath"
       >
-        <router-link
-          ref="tag"
-          v-slot:label
-          tag="span"
-          class="tags-view-item"
-          :style="{ color: item.fullPath === $route.fullPath ? theme : '' }"
-          :to="{ path: item.path, query: item.query, fullPath: item.fullPath }"
-          @contextmenu.prevent="openMenu(item,$event)"
-        >
-          {{ item.title }}
-        </router-link>
+        <template #label>
+          <router-link
+            ref="tag"
+            class="tags-view-item"
+            :style="{ color: item.fullPath === $route.fullPath ? theme : '' }"
+            :to="{ path: item.path, query: item.query, fullPath: item.fullPath }"
+            @contextmenu.prevent="openMenu(item,$event)"
+          >
+            {{ item.title }}
+          </router-link>
+        </template>
       </el-tab-pane>
     </el-tabs>
     <ul v-show="visible" :style="{left:left+'px',top:top+'px'}" class="contextmenu">
@@ -34,7 +34,6 @@
 </template>
 
 <script>
-import path from 'path'
 
 export default {
   data() {
@@ -77,6 +76,13 @@ export default {
     this.beforeUnload()
   },
   methods: {
+    joinPath(base, routePath) {
+      if (!base) return routePath || '/'
+      if (!routePath) return base
+      if (routePath.startsWith('/')) return routePath
+      if (base.endsWith('/')) return base + routePath
+      return base + '/' + routePath
+    },
     // 刷新前缓存tab
     beforeUnload() {
       // 监听页面刷新
@@ -125,7 +131,7 @@ export default {
       let tags = []
       routes.forEach(route => {
         if (route.meta && route.meta.affix) {
-          const tagPath = path.resolve(basePath, route.path)
+          const tagPath = this.joinPath(basePath, route.path)
           tags.push({
             fullPath: tagPath,
             path: tagPath,
@@ -272,7 +278,7 @@ String.prototype.colorRgb = function() {
 </script>
 
 <style lang="scss" scoped>
-.tags-view-container ::v-deep{
+.tags-view-container :deep(){
   height: 43px;
   width: 100%;
   background: #fff;
