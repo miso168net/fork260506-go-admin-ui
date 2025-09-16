@@ -8,7 +8,9 @@
 </template>
 
 <script>
-const version = require('element-ui/package.json').version // element-ui version from node_modules
+// Element UI 已迁移到 Element Plus，旧的远程样式动态编译逻辑不再适用。
+// 这里保留一个固定版本号占位，或可改造为 Element Plus 主题切换方案。
+const version = '2.15.14'
 const ORIGINAL_THEME = '#1890FF' // default color
 
 export default {
