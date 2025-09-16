@@ -13,7 +13,7 @@ import '@/styles/admin.scss'
 import VueCodemirror from 'vue-codemirror'
 import 'codemirror/lib/codemirror.css'
 
-import App from './App'
+import App from './App.vue'
 import store from './store'
 import router from './router'
 import permission from './directive/permission'
@@ -23,9 +23,9 @@ import { getItems, setItems } from '@/api/table'
 import { getConfigKey } from '@/api/admin/sys-config'
 import { parseTime, resetForm, addDateRange, selectDictLabel, /* download,*/ selectItemsLabel } from '@/utils/costum'
 
-import './icons' // icon
+import { registerSvgIcon } from './icons' // icon
 import './permission' // permission control
-import './utils/error-log' // error log
+import { setupErrorLog } from './utils/error-log' // error log
 
 // Vite SVG icons 支持
 import 'virtual:svg-icons-register'
@@ -33,13 +33,13 @@ import 'virtual:svg-icons-register'
 
 import * as filters from './filters' // global filters
 
-import Pagination from '@/components/Pagination'
-import BasicLayout from '@/layout/BasicLayout'
+import Pagination from '@/components/Pagination/index.vue'
+import BasicLayout from '@/layout/BasicLayout.vue'
 
 // VueParticles已经被移除，使用替代方案
 // import VueParticles from 'vue-particles'
 
-import '@/utils/dialog'
+import { registerDialogDirective } from '@/utils/dialog'
 
 // 创建Vue 3应用实例
 const app = createApp(App)
@@ -81,6 +81,9 @@ app.config.globalProperties.selectItemsLabel = selectItemsLabel
 // 全局组件注册
 app.component('AppPagination', Pagination)
 app.component('BasicLayout', BasicLayout)
+registerSvgIcon(app)
+setupErrorLog(app)
+registerDialogDirective(app)
 
 // Element Plus消息方法
 app.config.globalProperties.msgSuccess = function(msg) {
