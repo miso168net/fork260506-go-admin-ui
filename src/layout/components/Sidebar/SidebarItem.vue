@@ -25,10 +25,9 @@
 </template>
 
 <script>
-import path from 'path'
 import { isExternal } from '@/utils/validate'
-import Item from './Item'
-import AppLink from './Link'
+import Item from './Item.vue'
+import AppLink from './Link.vue'
 import FixiOSBug from './FixiOSBug'
 
 export default {
@@ -57,6 +56,14 @@ export default {
     return {}
   },
   methods: {
+    // 简单路径拼接，避免使用 Node 的 'path' 模块
+    joinPath(base, routePath) {
+      if (!base) return routePath || ''
+      if (!routePath) return base
+      if (routePath.startsWith('/')) return routePath
+      if (base.endsWith('/')) return base + routePath
+      return base + '/' + routePath
+    },
     hasOneShowingChild(children = [], parent) {
       const showingChildren = children.filter(item => {
         if (item.hidden) {
@@ -88,7 +95,7 @@ export default {
       if (isExternal(this.basePath)) {
         return this.basePath
       }
-      return path.resolve(this.basePath, routePath)
+      return this.joinPath(this.basePath, routePath)
     }
   }
 }
