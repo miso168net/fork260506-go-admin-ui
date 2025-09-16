@@ -1,6 +1,5 @@
-import Vue from 'vue'
-// v-dialogDrag: 弹窗拖拽属性
-Vue.directive('dialogDrag', {
+// v-dialogDrag: 弹窗拖拽属性（导出为Vue3插件函数）
+export const dialogDragDirective = {
   bind(el, binding, vnode, oldVnode) {
     const dialogHeaderEl = el.querySelector('.el-dialog__header')
     const dragDom = el.querySelector('.el-dialog')
@@ -73,4 +72,8 @@ Vue.directive('dialogDrag', {
       return false
     }
   }
-})
+}
+
+export function registerDialogDirective(app) {
+  app.directive('dialogDrag', dialogDragDirective)
+}
