@@ -110,32 +110,24 @@
                 @click="handlePreview(scope.row)"
               >预览</el-button>
                 <el-button
-                  v-slot:reference
                   type="text"
                   size="small"
                   icon="el-icon-view"
                   @click="handleToProject(scope.row)"
                 >代码生成</el-button>
-
                 <el-button
-                  v-slot:reference
                   type="text"
                   size="small"
                   icon="el-icon-view"
                   @click="handleToDB(scope.row)"
                 >生成配置</el-button>
-
-     
                 <el-button
-                  v-slot:reference
                   type="text"
                   size="small"
                   icon="el-icon-view"
                    @click="handleToApiFile(scope.row)"
                 >生成迁移脚本</el-button>
-                
                 <el-button
-                  v-slot:reference
                   type="text"
                   size="small"
                   icon="el-icon-delete"
@@ -155,7 +147,7 @@
 
       <!-- 预览界面 -->
 
-      <el-dialog class="preview" :title="preview.title" v-model="0" :close-on-click-modal="false" fullscreen>
+  <el-dialog class="preview" :title="preview.title" v-model="preview.open" :close-on-click-modal="false" fullscreen>
         <div class="el-dialog-container">
           <div class="tag-group">
             <!-- eslint-disable-next-line vue/valid-v-for -->
@@ -195,7 +187,6 @@ import { downLoadFile } from '@/utils/zipdownload'
 import { codemirror } from 'vue-codemirror'
 import 'codemirror/theme/material-palenight.css'
 
-require('codemirror/mode/javascript/javascript')
 import 'codemirror/mode/javascript/javascript'
 import 'codemirror/mode/go/go'
 import 'codemirror/mode/vue/vue'
@@ -376,23 +367,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
- .el-dialog-container ::v-deep{
+ .el-dialog-container{
    overflow: hidden;
-   .el-scrollbar__view{
+   :deep(.el-scrollbar__view){
      height: 100%;
    }
-   .pre{
+   :deep(.pre){
      height: 546px;
-      overflow: hidden;
-      .el-scrollbar{
-        height: 100%;
-      }
+     overflow: hidden;
    }
-   .el-scrollbar__wrap::-webkit-scrollbar{
+   :deep(.pre .el-scrollbar){
+     height: 100%;
+   }
+   :deep(.el-scrollbar__wrap::-webkit-scrollbar){
      display: none;
    }
  }
- ::v-deep .el-dialog__body{
+ :deep(.el-dialog__body){
     padding: 0 20px;
     margin:0;
   }
