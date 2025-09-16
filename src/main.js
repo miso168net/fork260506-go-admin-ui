@@ -27,7 +27,8 @@ import './icons' // icon
 import './permission' // permission control
 import './utils/error-log' // error log
 
-// Viser已经被移除，使用替代方案
+// Vite SVG icons 支持
+import 'virtual:svg-icons-register'
 // import Viser from 'viser-vue'
 
 import * as filters from './filters' // global filters
