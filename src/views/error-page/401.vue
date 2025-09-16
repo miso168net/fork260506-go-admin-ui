@@ -28,7 +28,7 @@
         <img :src="errGif" width="313" height="428" alt="Girl has dropped her ice cream.">
       </el-col>
     </el-row>
-    <el-dialog v-model="0" title="随便看" :close-on-click-modal="false">
+    <el-dialog v-model="dialogVisible" title="随便看" :close-on-click-modal="false">
       <img :src="ewizardClap" class="pan-img">
     </el-dialog>
   </div>
@@ -38,7 +38,7 @@
 import errGif from '@/assets/401_images/401.gif'
 
 export default {
-  name: 'Page401',
+  name: 'AppPage401',
   data() {
     return {
       errGif: errGif + '?' + +new Date(),
