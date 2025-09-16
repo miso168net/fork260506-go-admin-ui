@@ -54,8 +54,22 @@ export function generaMenu(routes, data) {
   })
 }
 
-export const loadView = (view) => { // 路由懒加载
-  return (resolve) => require([`@/views${view}`], resolve)
+// 基于 Vite 的按需加载
+const viewModules = import.meta.glob('/src/views/**/*.vue')
+export const loadView = (view) => {
+  // 兼容两种约定：/path/to/page 和 /path/to/page/index
+  const candidates = [
+    `/src/views${view}.vue`,
+    `/src/views${view}/index.vue`
+  ]
+  for (const key of candidates) {
+    if (viewModules[key]) {
+      return viewModules[key]
+    }
+  }
+  console.warn('[permission] 视图未找到：', view)
+  // 返回一个空组件，避免崩溃
+  return () => Promise.resolve({ default: { name: 'NotFoundView', render: () => null }})
 }
 
 /**
