@@ -1,9 +1,6 @@
-import Vue from 'vue'
-import SvgIcon from '@/components/SvgIcon'// svg component
+import SvgIcon from '@/components/SvgIcon/index.vue'
 
-// register globally
-Vue.component('svg-icon', SvgIcon)
-
-const req = require.context('./svg', false, /\.svg$/)
-const requireAll = requireContext => requireContext.keys().map(requireContext)
-requireAll(req)
+// Vue 3 注册函数，供 main.js 调用
+export function registerSvgIcon(app) {
+  app.component('svg-icon', SvgIcon)
+}
