@@ -5,7 +5,8 @@ import Cookies from 'js-cookie'
 import 'normalize.css/normalize.css' // a modern alternative to CSS resets
 
 import ElementPlus from 'element-plus'
-import './styles/element-variables.scss'
+import 'element-plus/dist/index.css'
+import '@/styles/element-theme.css' // Element Plus theme customization
 
 import '@/styles/index.scss' // global css
 import '@/styles/admin.scss'
