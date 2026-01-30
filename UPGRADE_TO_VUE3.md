@@ -26,33 +26,24 @@
 - 解决依赖冲突并安装新版本 ✅
 - 验证项目基础功能（lint、test）✅
 
-### 阶段二：依赖升级 ✅ 已完成
-- ✅ Vue 2.7.16 → Vue 3.5.20（核心功能验证通过）
-- ✅ vue-router 3.6.5 → vue-router 4.5.1
-- ✅ vuex 3.6.2 → vuex 4.1.0
-- ✅ element-ui 2.15.14 → element-plus 2.11.1
-- ✅ vue-template-compiler → @vue/compiler-sfc 3.4.0
-- ✅ @vue/test-utils 1.3.6 → @vue/test-utils 2.4.0
-- ✅ Vue CLI 4.x → Vue CLI 5.0.9
-- ✅ ESLint 7.32.0 + eslint-plugin-vue 8.7.0
-- ⚠️ 移除不兼容依赖：@riophae/vue-treeselect、viser-vue、vue-particles
-- ❌ 开发服务器启动问题：Progress Plugin配置冲突（Vue CLI 5.x已知问题）
-- ❌ 生产构建问题：构建过程无输出（可能与开发服务器问题相关）
+### 阶段二：依赖升级
+- 使用 npm-check-updates 或手动修改 `package.json`，升级核心依赖。
+- 执行 `npm install`，解决依赖冲突。
+- 升级 Babel、Webpack、ESLint、Jest、axios、lodash 等工具包。
 
-### 临时解决方案
-由于Vue CLI 5.x的Progress Plugin兼容性问题，建议采用以下临时方案：
-
-1. **跳过开发服务器**：直接进行代码适配和构建测试
-2. **使用备用开发服务器**：考虑使用Vite或其他开发服务器
-3. **手动webpack配置**：创建自定义webpack配置绕过Vue CLI问题
+### 阶段三：代码适配与重构
+- 全面适配 Vue 3 语法（如 Composition API、生命周期钩子变更）。
+- 替换 Element UI 为 Element Plus，调整组件用法。
+- 升级 vue-router、vuex，并适配新 API。
+- 检查第三方库兼容性，必要时替换或移除。
 
 ### 阶段四：配置文件调整
 - 更新 babel.config.js、webpack、eslint、jest 等配置文件。
 - 检查并调整 polyfill、postcss、plop 等相关配置。
 
-### 阶段五：测试与回归 ✅ 已完成
-- 运行单元测试，修复因升级导致的测试失败 ✅
-- 手动回归主要功能页面，确保无异常
+### 阶段五：测试与回归
+- 运行单元测试，修复因升级导致的测试失败。
+- 手动回归主要功能页面，确保无异常。
 - 检查打包、部署流程是否正常。
 
 ### 阶段六：文档与说明
@@ -68,24 +59,9 @@
 - ✅ 次要版本依赖升级完成（patch/minor 版本）
 - ✅ 依赖安装成功，项目可正常运行
 - ✅ ESLint 验证通过（发现 35 个问题，多数为代码风格问题）
-- ✅ 单元测试修复完成（23/23 通过）
-  - 修复了 `src/utils/index.js` 中的 `time_str` 变量初始化问题
-  - 更新了测试代码，将弃用的 `@vue/test-utils` `contains` 方法替换为 `find().exists()`
-  - 添加了 `nextTick` 确保 Vue 响应式更新完成
-
-## 5. 修复详情
-### 测试问题修复
-1. **parseTime 函数变量初始化问题**
-   - 问题：`time_str` 变量在定义前被使用
-   - 修复：将 `time_str.indexOf('01-01-01')` 改为 `time.indexOf('01-01-01')`
-
-2. **@vue/test-utils contains 方法弃用**
-   - 问题：`wrapper.contains()` 方法已弃用
-   - 修复：替换为 `wrapper.find().exists()`
-
-3. **异步更新问题**
-   - 问题：props 更新后 DOM 未及时更新
-   - 修复：添加 `await` 和 `nextTick` 确保响应式更新完成
+- ⚠️ 单元测试部分失败（9 个失败，14 个通过），主要问题：
+  - `time_str` 变量初始化问题（src/utils/index.js）
+  - @vue/test-utils `contains` 方法弃用（测试代码需更新）
 
 ## 5. 参考迁移资源
 - [Vue 2 → Vue 3 官方迁移指南](https://v3-migration.vuejs.org/)
