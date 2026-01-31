@@ -7,6 +7,8 @@
 
 <script>
 export default {
+  name: 'FilenameOptionComponent',
+  emits: ['input'],
   props: {
     value: {
       type: String,
