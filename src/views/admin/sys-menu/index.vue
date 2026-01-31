@@ -225,16 +225,19 @@
                       @show="$refs['iconSelect'].reset()"
                     >
                       <IconSelect ref="iconSelect" @selected="selected" />
-                      <el-input #reference v-model="form.icon" placeholder="点击选择图标" readonly>
-                        <svg-icon
-                          v-if="form.icon"
-                          #prefix
-                          :icon-class="form.icon"
-                          class="el-input__icon"
-                          style="height: 32px;width: 16px;"
-                        />
-                        <i v-else class="el-icon-search el-input__icon" />
-                      </el-input>
+                      <template #reference>
+                        <el-input v-model="form.icon" placeholder="点击选择图标" readonly>
+                          <template #prefix>
+                            <svg-icon
+                              v-if="form.icon"
+                              :icon-class="form.icon"
+                              class="el-input__icon"
+                              style="height: 32px;width: 16px;"
+                            />
+                            <i v-else class="el-icon-search el-input__icon" />
+                          </template>
+                        </el-input>
+                      </template>
                     </el-popover>
                   </el-form-item>
                 </el-col>
