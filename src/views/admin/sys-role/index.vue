@@ -255,7 +255,7 @@ import { treeselect as deptTreeselect, roleDeptTreeselect } from '@/api/admin/sy
 import { formatJson } from '@/utils'
 
 export default {
-  name: 'Role',
+  name: 'RoleManagement',
   components: {
 
   },

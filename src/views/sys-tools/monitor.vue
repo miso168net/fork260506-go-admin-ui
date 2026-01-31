@@ -131,7 +131,7 @@ import {
   getServer
 } from '@/api/monitor/server'
 export default {
-  name: 'Monitor',
+  name: 'MonitorPage',
   components: {
     Cell
   },

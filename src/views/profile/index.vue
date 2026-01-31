@@ -71,7 +71,7 @@ import resetPwd from './resetPwd'
 import { getUserProfile } from '@/api/admin/sys-user'
 
 export default {
-  name: 'Profile',
+  name: 'ProfilePage',
   components: { userAvatar, userInfo, resetPwd },
   data() {
     return {
