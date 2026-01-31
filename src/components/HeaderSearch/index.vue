@@ -21,6 +21,7 @@
 // fuse is a lightweight fuzzy-search module
 // make search results more in line with expectations
 import Fuse from 'fuse.js'
+import path from 'path'
 
 export default {
   name: 'HeaderSearch',
@@ -57,13 +58,6 @@ export default {
     this.searchPool = this.generateRoutes(this.routes)
   },
   methods: {
-    joinPath(base, routePath) {
-      if (!base) return routePath || ''
-      if (!routePath) return base
-      if (routePath.startsWith('/')) return routePath
-      if (base.endsWith('/')) return base + routePath
-      return base + '/' + routePath
-    },
     click() {
       this.show = !this.show
       if (this.show) {
@@ -110,7 +104,7 @@ export default {
         if (router.hidden) { continue }
 
         const data = {
-          path: this.joinPath(basePath, router.path),
+          path: path.resolve(basePath, router.path),
           title: [...prefixTitle]
         }
 
@@ -165,7 +159,7 @@ export default {
     display: inline-block;
     vertical-align: middle;
 
-  :deep(.el-input__inner) {
+    ::v-deep .el-input__inner {
       border-radius: 0;
       border: 0;
       padding-left: 0;

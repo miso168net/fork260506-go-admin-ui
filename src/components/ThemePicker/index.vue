@@ -8,9 +8,7 @@
 </template>
 
 <script>
-// Element UI 已迁移到 Element Plus，旧的远程样式动态编译逻辑不再适用。
-// 这里保留一个固定版本号占位，或可改造为 Element Plus 主题切换方案。
-const version = '2.15.14'
+const version = require('element-plus/package.json').version // element-plus version from node_modules
 const ORIGINAL_THEME = '#1890FF' // default color
 
 export default {
@@ -62,7 +60,7 @@ export default {
       }
 
       if (!this.chalk) {
-        const url = `https://unpkg.com/element-ui@${version}/lib/theme-chalk/index.css`
+        const url = `https://unpkg.com/element-plus@${version}/lib/theme-chalk/index.css`
         await this.getCSSString(url, 'chalk')
       }
 

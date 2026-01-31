@@ -232,8 +232,8 @@ export default {
       allowImgFormat.indexOf(imgFormat) === -1 ? 'jpg' : imgFormat
     const lang = language[langType] ? language[langType] : language['en']
     const mime = mimes[tempImgFormat]
-    // 规范图片格式 - 使用内部变量而不是修改props
-    const normalizedImgFormat = tempImgFormat
+    // 规范图片格式
+    this.imgFormat = tempImgFormat
     if (langExt) {
       Object.assign(lang, langExt)
     }
@@ -247,8 +247,6 @@ export default {
       lang,
       // 浏览器是否支持该控件
       isSupported,
-      // 内部使用的图片格式（规范化后的）
-      imgFormat: normalizedImgFormat,
       // 浏览器是否支持触屏事件
       isSupportTouch: document.hasOwnProperty('ontouchstart'),
       // 步骤
