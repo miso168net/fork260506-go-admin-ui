@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import { ElMessage } from 'element-plus'
 
 import Cookies from 'js-cookie'
 
@@ -6,15 +7,14 @@ import 'normalize.css/normalize.css' // a modern alternative to CSS resets
 
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
-import '@/styles/element-theme.css' // Element Plus theme customization
+import zhCn from 'element-plus/es/locale/lang/zh-cn'
 
 import '@/styles/index.scss' // global css
 import '@/styles/admin.scss'
 
-import VueCodemirror from 'vue-codemirror'
-import 'codemirror/lib/codemirror.css'
+import { Codemirror } from 'vue-codemirror'
 
-import App from './App.vue'
+import App from './App'
 import store from './store'
 import router from './router'
 import permission from './directive/permission'
@@ -23,94 +23,87 @@ import { getDicts } from '@/api/admin/dict/data'
 import { getItems, setItems } from '@/api/table'
 import { getConfigKey } from '@/api/admin/sys-config'
 import { parseTime, resetForm, addDateRange, selectDictLabel, /* download,*/ selectItemsLabel } from '@/utils/costum'
+import { dialogDrag } from '@/utils/dialog' // dialog directive
+import { setupErrorHandler } from '@/utils/error-log' // error log
 
-import { registerSvgIcon } from './icons' // icon
+import SvgIcon from './icons' // icon
 import './permission' // permission control
-import { setupErrorLog } from './utils/error-log' // error log
 
-// Vite SVG icons 支持
-import 'virtual:svg-icons-register'
 // import Viser from 'viser-vue'
+// Note: viser-vue 不支持 Vue 3，需要后续处理
 
 import * as filters from './filters' // global filters
 
-import Pagination from '@/components/Pagination/index.vue'
-import BasicLayout from '@/layout/BasicLayout.vue'
+import Pagination from '@/components/Pagination'
+import BasicLayout from '@/layout/BasicLayout'
 
-// VueParticles已经被移除，使用替代方案
 // import VueParticles from 'vue-particles'
+// Note: vue-particles 不支持 Vue 3，需要后续处理
 
-import { registerDialogDirective } from '@/utils/dialog'
+import '@/utils/dialog'
 
-// 创建Vue 3应用实例
-const app = createApp(App)
-
-// 使用Vue Router 4
-app.use(router)
-
-// 使用Vuex 4
-app.use(store)
-
-// 使用Element Plus
-app.use(ElementPlus, {
-  size: Cookies.get('size') || 'default' // Element Plus默认大小
-})
-
-// 使用Vue Codemirror
-app.use(VueCodemirror)
-
-// 使用权限指令
-app.use(permission)
-
-// 使用VueDND
-import VueDND from 'awe-dnd'
-app.use(VueDND)
+// import VueDND from 'awe-dnd'
+// Note: awe-dnd 不支持 Vue 3，已改用 vue3-dnd
 
 import 'remixicon/fonts/remixicon.css'
-
-// 全局方法挂载到app.config.globalProperties
-app.config.globalProperties.getDicts = getDicts
-app.config.globalProperties.getItems = getItems
-app.config.globalProperties.setItems = setItems
-app.config.globalProperties.getConfigKey = getConfigKey
-app.config.globalProperties.parseTime = parseTime
-app.config.globalProperties.resetForm = resetForm
-app.config.globalProperties.addDateRange = addDateRange
-app.config.globalProperties.selectDictLabel = selectDictLabel
-app.config.globalProperties.selectItemsLabel = selectItemsLabel
-
-// 全局组件注册
-app.component('AppPagination', Pagination)
-app.component('BasicLayout', BasicLayout)
-registerSvgIcon(app)
-setupErrorLog(app)
-registerDialogDirective(app)
-
-// Element Plus消息方法
-app.config.globalProperties.msgSuccess = function(msg) {
-  this.$message({ showClose: true, message: msg, type: 'success' })
-}
-
-app.config.globalProperties.msgError = function(msg) {
-  this.$message({ showClose: true, message: msg, type: 'error' })
-}
-
-app.config.globalProperties.msgInfo = function(msg) {
-  this.$message.info(msg)
-}
 
 console.info(`欢迎使用go-admin，谢谢您对我们的支持，在使用过程中如果有什么问题，
 请访问https://github.com/go-admin-team/go-admin 或者
  https://github.com/go-admin-team/go-admin-ui 向我们反馈，
  谢谢！`)
 
-// register global utility filters
-Object.keys(filters).forEach(key => {
-  app.config.globalProperties.$filters = app.config.globalProperties.$filters || {}
-  app.config.globalProperties.$filters[key] = filters[key]
+// 创建 Vue 应用实例
+const app = createApp(App)
+
+// 全局方法挂载
+app.config.globalProperties.$getDicts = getDicts
+app.config.globalProperties.$getItems = getItems
+app.config.globalProperties.$setItems = setItems
+app.config.globalProperties.$getConfigKey = getConfigKey
+app.config.globalProperties.$parseTime = parseTime
+app.config.globalProperties.$resetForm = resetForm
+app.config.globalProperties.$addDateRange = addDateRange
+app.config.globalProperties.$selectDictLabel = selectDictLabel
+app.config.globalProperties.$selectItemsLabel = selectItemsLabel
+// app.config.globalProperties.$download = download
+
+// 全局过滤器改为全局方法
+app.config.globalProperties.$filters = filters
+
+// 消息提示方法
+app.config.globalProperties.$msgSuccess = function(msg) {
+  ElMessage({ showClose: true, message: msg, type: 'success' })
+}
+
+app.config.globalProperties.$msgError = function(msg) {
+  ElMessage({ showClose: true, message: msg, type: 'error' })
+}
+
+app.config.globalProperties.$msgInfo = function(msg) {
+  ElMessage.info(msg)
+}
+
+// 全局组件注册
+app.component('Pagination', Pagination)
+app.component('BasicLayout', BasicLayout)
+app.component('Codemirror', Codemirror)
+app.component('svg-icon', SvgIcon)
+app.component('SvgIcon', SvgIcon)
+
+// 注册插件
+app.use(store)
+app.use(router)
+app.use(permission)
+app.use(ElementPlus, {
+  locale: zhCn,
+  size: Cookies.get('size') || 'default'
 })
 
-app.config.productionTip = false
+// 注册自定义指令
+app.directive('dialogDrag', dialogDrag)
+
+// 设置错误处理器
+setupErrorHandler(app)
 
 // 挂载应用
 app.mount('#app')

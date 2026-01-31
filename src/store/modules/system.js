@@ -15,9 +15,8 @@ const actions = {
   settingDetail({ commit }) {
     return new Promise((resolve, reject) => {
       getSetting().then(response => {
-        const { data } = response
-        commit('SET_INFO', data)
-        resolve(data)
+        commit('SET_INFO', response.data)
+        resolve(response.data)
       }).catch(error => {
         reject(error)
       })
