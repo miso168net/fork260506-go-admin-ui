@@ -84,10 +84,9 @@ app.config.globalProperties.$msgInfo = function(msg) {
 }
 
 // 全局组件注册
-app.component('Pagination', Pagination)
+app.component('AppPagination', Pagination)
 app.component('BasicLayout', BasicLayout)
-app.component('Codemirror', Codemirror)
-app.component('SvgIcon', SvgIcon)
+app.component('CodeEditor', Codemirror)
 app.component('SvgIcon', SvgIcon)
 
 // 注册插件
