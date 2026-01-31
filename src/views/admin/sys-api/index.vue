@@ -10,7 +10,7 @@
               placeholder="请输入标题"
               clearable
               size="small"
-              @keyup.enter.native="handleQuery"
+              @keyup.enter="handleQuery"
             />
           </el-form-item>
           <el-form-item label="地址" prop="path">
@@ -19,7 +19,7 @@
               placeholder="请输入地址"
               clearable
               size="small"
-              @keyup.enter.native="handleQuery"
+              @keyup.enter="handleQuery"
             />
           </el-form-item>
           <el-form-item label="Method" prop="action">
@@ -28,7 +28,7 @@
               placeholder="请选择Method"
               clearable
               size="small"
-              @keyup.enter.native="handleQuery"
+              @keyup.enter="handleQuery"
             >
               <el-option value="GET">GET</el-option>
               <el-option value="POST">POST</el-option>
@@ -42,7 +42,7 @@
               placeholder="请选择类型"
               clearable
               size="small"
-              @keyup.enter.native="handleQuery"
+              @keyup.enter="handleQuery"
             >
               <el-option value="SYS">SYS</el-option>
               <el-option value="BUS">BUS</el-option>
@@ -183,7 +183,7 @@
                   placeholder="请选择类型"
                   clearable
                   size="small"
-                  @keyup.enter.native="handleQuery"
+                  @keyup.enter="handleQuery"
                 >
                   <el-option value="SYS">SYS</el-option>
                   <el-option value="BUS">BUS</el-option>
@@ -195,7 +195,7 @@
                   placeholder="请选择方式"
                   clearable
                   size="small"
-                  @keyup.enter.native="handleQuery"
+                  @keyup.enter="handleQuery"
                 >
                   <el-option value="GET">GET</el-option>
                   <el-option value="POST">POST</el-option>

@@ -368,10 +368,10 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
- .el-dialog-container ::v-deep{
+<style lang="scss">
+ .el-dialog-container {
    overflow: hidden;
-   .el-scrollbar__view{
+   :deep(.el-scrollbar__view){
      height: 100%;
    }
    .pre{
@@ -381,11 +381,11 @@ export default {
         height: 100%;
       }
    }
-   .el-scrollbar__wrap::-webkit-scrollbar{
+   :deep(.el-scrollbar__wrap::-webkit-scrollbar){
      display: none;
    }
  }
- ::v-deep .el-dialog__body{
+ :deep(.el-dialog__body){
     padding: 0 20px;
     margin:0;
   }

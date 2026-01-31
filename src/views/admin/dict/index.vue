@@ -10,7 +10,7 @@
               clearable
               size="small"
               style="width: 240px"
-              @keyup.enter.native="handleQuery"
+              @keyup.enter="handleQuery"
             />
           </el-form-item>
           <el-form-item label="字典类型" prop="dictType">
@@ -20,7 +20,7 @@
               clearable
               size="small"
               style="width: 240px"
-              @keyup.enter.native="handleQuery"
+              @keyup.enter="handleQuery"
             />
           </el-form-item>
           <el-form-item label="状态" prop="status">

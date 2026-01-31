@@ -271,8 +271,8 @@ String.prototype.colorRgb = function() {
 }
 </script>
 
-<style lang="scss" scoped>
-.tags-view-container ::v-deep{
+<style lang="scss">
+.tags-view-container {
   height: 43px;
   width: 100%;
   background: #fff;

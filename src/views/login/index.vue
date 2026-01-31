@@ -641,7 +641,7 @@ $cursor: #fff;
 
 /* reset element-ui css */
 .login-container {
-  ::v-deep .el-input {
+  :deep(.el-input) {
     display: inline-block;
     height: 47px;
     width: 85%;

@@ -19,7 +19,7 @@
               placeholder="请输入字典标签"
               clearable
               size="small"
-              @keyup.enter.native="handleQuery"
+              @keyup.enter="handleQuery"
             />
           </el-form-item>
           <el-form-item label="状态" prop="status">
