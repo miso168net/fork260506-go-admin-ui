@@ -61,7 +61,8 @@
 </template>
 <script>
 export default {
-  name: 'BasicInfoForm',
+  name: 'BasicInfoFormComponent',
+  emits: ['update:info'],
   props: {
     info: {
       type: Object,
