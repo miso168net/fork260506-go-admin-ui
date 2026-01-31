@@ -1,24 +1,11 @@
 <template>
   <div class="login-container">
     <div id="particles-js">
-      <!-- <vue-particles
+      <vue-particles
         v-if="refreshParticles"
-        color="#dedede"
-        :particle-opacity="0.7"
-        :particles-number="80"
-        shape-type="circle"
-        :particle-size="4"
-        lines-color="#dedede"
-        :lines-width="1"
-        :line-linked="true"
-        :line-opacity="0.4"
-        :lines-distance="150"
-        :move-speed="3"
-        :hover-effect="true"
-        hover-mode="grab"
-        :click-effect="true"
-        click-mode="push"
-      /> -->
+        id="tsparticles"
+        :options="particlesOptions"
+      />
     </div>
 
     <div class="login-weaper animated bounceInDown">
@@ -184,15 +171,86 @@
 import { getCodeImg } from '@/api/login'
 import moment from 'moment'
 import SocialSign from './components/SocialSignin'
+import Particles from '@tsparticles/vue3'
+import { loadSlim } from '@tsparticles/slim'
 
 export default {
   name: 'Login',
-  components: { SocialSign },
+  components: { 
+    SocialSign,
+    VueParticles: Particles
+  },
   data() {
     return {
       codeUrl: '',
       cookiePassword: '',
       refreshParticles: true,
+      particlesOptions: {
+        background: {
+          color: {
+            value: 'transparent'
+          }
+        },
+        fpsLimit: 120,
+        particles: {
+          color: {
+            value: '#dedede'
+          },
+          links: {
+            color: '#dedede',
+            distance: 150,
+            enable: true,
+            opacity: 0.4,
+            width: 1
+          },
+          move: {
+            enable: true,
+            speed: 3,
+            direction: 'none',
+            random: false,
+            straight: false,
+            outModes: {
+              default: 'bounce'
+            }
+          },
+          number: {
+            value: 80
+          },
+          opacity: {
+            value: 0.7
+          },
+          shape: {
+            type: 'circle'
+          },
+          size: {
+            value: { min: 1, max: 4 }
+          }
+        },
+        interactivity: {
+          events: {
+            onHover: {
+              enable: true,
+              mode: 'grab'
+            },
+            onClick: {
+              enable: true,
+              mode: 'push'
+            }
+          },
+          modes: {
+            grab: {
+              distance: 140,
+              links: {
+                opacity: 1
+              }
+            },
+            push: {
+              quantity: 4
+            }
+          }
+        },
+        detectRetina: true
+      },
       loginForm: {
         username: 'admin',
         password: '123456',
