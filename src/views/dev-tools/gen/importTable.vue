@@ -51,6 +51,7 @@
 <script>
 import { listDbTable, importTable } from '@/api/tools/gen'
 export default {
+  emits: ['ok'],
   data() {
     return {
       loading: false,

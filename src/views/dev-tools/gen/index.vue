@@ -154,10 +154,8 @@
         <div class="el-dialog-container">
           <div class="tag-group">
             <!-- eslint-disable-next-line vue/valid-v-for -->
-            <el-tag v-for="(value, key) in preview.data" @click="codeChange(key)">
-              <template>
-                {{ key.substring(key.lastIndexOf('/')+1,key.indexOf('.go.template')) }}
-              </template>
+            <el-tag v-for="(value, key) in preview.data" :key="key" @click="codeChange(key)">
+              {{ key.substring(key.lastIndexOf('/')+1,key.indexOf('.go.template')) }}
             </el-tag>
           </div>
           <div id="codemirror">
@@ -196,7 +194,7 @@ import { codemirror } from 'vue-codemirror'
 // import 'codemirror/mode/vue/vue'
 
 export default {
-  name: 'Gen',
+  name: 'CodeGen',
   components: { importTable, codemirror },
   data() {
     return {
