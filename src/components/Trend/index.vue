@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'Trend',
+  name: 'TrendIndicator',
   props: {
     rate: {
       type: String,
