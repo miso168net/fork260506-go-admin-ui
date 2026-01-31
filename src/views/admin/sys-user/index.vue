@@ -118,7 +118,7 @@
               <el-table-column label="部门" prop="dept.deptName" :show-overflow-tooltip="true" />
               <el-table-column label="手机号" prop="phone" width="108" />
               <el-table-column label="状态" width="80" sortable="custom">
-                <template v-slot="scope">
+                <template #default="scope">
                   <el-switch
                     v-model="scope.row.status"
                     active-value="2"
@@ -133,7 +133,7 @@
                 sortable="custom"
                 width="155"
               >
-                <template v-slot="scope">
+                <template #default="scope">
                   <span>{{ parseTime(scope.row.createdAt) }}</span>
                 </template>
               </el-table-column>
@@ -144,7 +144,7 @@
                 fix="right"
                 class-name="small-padding fixed-width"
               >
-                <template v-slot="scope">
+                <template #default="scope">
                   <el-button
                     v-permisaction="['admin:sysUser:edit']"
                     size="mini"
@@ -173,16 +173,16 @@
 
             <pagination
               v-show="total>0"
-              :total="total"
               v-model:current-page="queryParams.pageIndex"
               v-model:page-size="queryParams.pageSize"
+              :total="total"
               @pagination="getList"
             />
           </el-col>
         </el-row>
       </el-card>
       <!-- 添加或修改参数配置对话框 -->
-      <el-dialog :title="title" v-model="open" width="600px" :close-on-click-modal="false">
+      <el-dialog v-model="open" :title="title" width="600px" :close-on-click-modal="false">
         <el-form ref="form" :model="form" :rules="rules" label-width="80px">
           <el-row>
             <el-col :span="12">
@@ -282,7 +282,7 @@
         </div></template>
       </el-dialog>
       <!-- 用户导入对话框 -->
-      <el-dialog :title="upload.title" v-model="open" width="400px" :close-on-click-modal="false">
+      <el-dialog v-model="open" :title="upload.title" width="400px" :close-on-click-modal="false">
         <el-upload
           ref="upload"
           :limit="1"

@@ -125,7 +125,7 @@
       </div>
     </div>
 
-    <el-dialog title="Or connect with" v-model="showDialog" :close-on-click-modal="false">
+    <el-dialog v-model="showDialog" title="Or connect with" :close-on-click-modal="false">
       Can not be simulated on local, so please combine you own business
       simulation! ! !
       <br>
@@ -172,11 +172,10 @@ import { getCodeImg } from '@/api/login'
 import moment from 'moment'
 import SocialSign from './components/SocialSignin'
 import Particles from '@tsparticles/vue3'
-import { loadSlim } from '@tsparticles/slim'
 
 export default {
-  name: 'Login',
-  components: { 
+  name: 'LoginPage',
+  components: {
     SocialSign,
     VueParticles: Particles
   },

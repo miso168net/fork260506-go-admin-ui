@@ -87,7 +87,7 @@ app.config.globalProperties.$msgInfo = function(msg) {
 app.component('Pagination', Pagination)
 app.component('BasicLayout', BasicLayout)
 app.component('Codemirror', Codemirror)
-app.component('svg-icon', SvgIcon)
+app.component('SvgIcon', SvgIcon)
 app.component('SvgIcon', SvgIcon)
 
 // 注册插件

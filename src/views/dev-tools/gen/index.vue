@@ -91,12 +91,12 @@
             width="130"
           />
           <el-table-column label="创建时间" align="center" prop="createdAt" width="165">
-            <template v-slot="scope">
+            <template #default="scope">
               <span>{{ parseTime(scope.row.createdAt) }}</span>
             </template>
           </el-table-column>
           <el-table-column label="操作" align="center" class-name="small-padding fixed-width">
-            <template v-slot="scope">
+            <template #default="scope">
               <el-button
                 type="text"
                 size="small"
@@ -109,53 +109,52 @@
                 icon="el-icon-view"
                 @click="handlePreview(scope.row)"
               >预览</el-button>
-                <el-button
-                  v-slot:reference
-                  type="text"
-                  size="small"
-                  icon="el-icon-view"
-                  @click="handleToProject(scope.row)"
-                >代码生成</el-button>
+              <el-button
+                #reference
+                type="text"
+                size="small"
+                icon="el-icon-view"
+                @click="handleToProject(scope.row)"
+              >代码生成</el-button>
 
-                <el-button
-                  v-slot:reference
-                  type="text"
-                  size="small"
-                  icon="el-icon-view"
-                  @click="handleToDB(scope.row)"
-                >生成配置</el-button>
+              <el-button
+                #reference
+                type="text"
+                size="small"
+                icon="el-icon-view"
+                @click="handleToDB(scope.row)"
+              >生成配置</el-button>
 
-     
-                <el-button
-                  v-slot:reference
-                  type="text"
-                  size="small"
-                  icon="el-icon-view"
-                   @click="handleToApiFile(scope.row)"
-                >生成迁移脚本</el-button>
-                
-                <el-button
-                  v-slot:reference
-                  type="text"
-                  size="small"
-                  icon="el-icon-delete"
-                  @click="handleSingleDelete(scope.row)"
-                >删除</el-button>
+              <el-button
+                #reference
+                type="text"
+                size="small"
+                icon="el-icon-view"
+                @click="handleToApiFile(scope.row)"
+              >生成迁移脚本</el-button>
+
+              <el-button
+                #reference
+                type="text"
+                size="small"
+                icon="el-icon-delete"
+                @click="handleSingleDelete(scope.row)"
+              >删除</el-button>
             </template>
           </el-table-column>
         </el-table>
         <pagination
           v-show="total>0"
-          :total="total"
           v-model:current-page="queryParams.pageIndex"
           v-model:page-size="queryParams.pageSize"
+          :total="total"
           @pagination="getList"
         />
       </el-card>
 
       <!-- 预览界面 -->
 
-      <el-dialog class="preview" :title="preview.title" v-model="open" :close-on-click-modal="false" fullscreen>
+      <el-dialog v-model="open" class="preview" :title="preview.title" :close-on-click-modal="false" fullscreen>
         <div class="el-dialog-container">
           <div class="tag-group">
             <!-- eslint-disable-next-line vue/valid-v-for -->

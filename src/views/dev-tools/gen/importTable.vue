@@ -1,6 +1,6 @@
 <template>
   <!-- 导入表 -->
-  <el-dialog title="导入表" v-model="visible" width="800px" top="5vh">
+  <el-dialog v-model="visible" title="导入表" width="800px" top="5vh">
     <el-form ref="queryForm" :model="queryParams" :inline="true">
       <el-form-item label="表名称" prop="tableName">
         <el-input
@@ -35,9 +35,9 @@
       </el-table>
       <pagination
         v-show="total>0"
-        :total="total"
         v-model:current-page="queryParams.pageIndex"
         v-model:page-size="queryParams.pageSize"
+        :total="total"
         @pagination="getList"
       />
     </el-row>

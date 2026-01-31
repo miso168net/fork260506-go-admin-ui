@@ -111,7 +111,7 @@
           <el-table-column label="权限字符" prop="roleKey" :show-overflow-tooltip="true" width="150" />
           <el-table-column label="排序" sortable="custom" prop="roleSort" width="80" />
           <el-table-column label="状态" sortable="custom" width="80">
-            <template v-slot="scope">
+            <template #default="scope">
               <el-switch
                 v-model="scope.row.status"
                 active-value="2"
@@ -121,7 +121,7 @@
             </template>
           </el-table-column>
           <el-table-column label="创建时间" sortable="custom" prop="createdAt" width="160">
-            <template v-slot="scope">
+            <template #default="scope">
               <span>{{ parseTime(scope.row.createdAt) }}</span>
             </template>
           </el-table-column>
@@ -131,7 +131,7 @@
             class-name="small-padding fixed-width"
             width="220"
           >
-            <template v-slot="scope">
+            <template #default="scope">
               <el-button
                 v-permisaction="['admin:sysRole:update']"
                 size="mini"
@@ -160,14 +160,14 @@
 
         <pagination
           v-show="total>0"
-          :total="total"
           v-model:current-page="queryParams.pageIndex"
           v-model:page-size="queryParams.pageSize"
+          :total="total"
           @pagination="getList"
         />
 
         <!-- 添加或修改角色配置对话框 -->
-        <el-dialog v-if="open" :title="title" v-model="open" width="500px" :close-on-click-modal="false">
+        <el-dialog v-if="open" v-model="open" :title="title" width="500px" :close-on-click-modal="false">
           <el-form ref="form" :model="form" :rules="rules" label-width="80px">
             <el-form-item label="角色名称" prop="roleName">
               <el-input v-model="form.roleName" placeholder="请输入角色名称" :disabled="isEdit" />
@@ -208,7 +208,7 @@
         </el-dialog>
 
         <!-- 分配角色数据权限对话框 -->
-        <el-dialog v-if="openDataScope" :title="title" v-model="open" width="500px" :close-on-click-modal="false">
+        <el-dialog v-if="openDataScope" v-model="open" :title="title" width="500px" :close-on-click-modal="false">
           <el-form :model="form" label-width="80px">
             <el-form-item label="角色名称">
               <el-input v-model="form.roleName" :disabled="true" />

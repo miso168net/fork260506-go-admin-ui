@@ -76,7 +76,7 @@
             :formatter="statusFormat"
             width="100"
           >
-            <template v-slot="scope">
+            <template #default="scope">
               {{ statusFormat(scope.row) }}
             </template>
           </el-table-column>
@@ -85,7 +85,7 @@
             align="center"
             prop="ipaddr"
           >
-            <template v-slot="scope">
+            <template #default="scope">
               <el-popover trigger="hover" placement="top">
                 <p>IP: {{ scope.row.ipaddr }}</p>
                 <p>归属地: {{ scope.row.loginLocation }}</p>
@@ -105,12 +105,12 @@
             prop="loginTime"
             width="180"
           >
-            <template v-slot="scope">
+            <template #default="scope">
               <span>{{ parseTime(scope.row.loginTime) }}</span>
             </template>
           </el-table-column>
           <el-table-column label="操作" align="center" class-name="small-padding fixed-width">
-            <template v-slot="scope">
+            <template #default="scope">
               <el-button
                 v-permisaction="['admin:sysLoginLog:remove']"
                 size="mini"
@@ -125,9 +125,9 @@
 
         <pagination
           v-show="total>0"
-          :total="total"
           v-model:current-page="queryParams.pageIndex"
           v-model:page-size="queryParams.pageSize"
+          :total="total"
           @pagination="getList"
         />
       </el-card>

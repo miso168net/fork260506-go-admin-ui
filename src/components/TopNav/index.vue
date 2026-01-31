@@ -15,7 +15,7 @@
 
     <!-- 顶部菜单超出数量折叠 -->
     <el-submenu v-if="topMenus.length > visibleNumber" index="more">
-      <template v-slot:title>更多菜单</template>
+      <template #title>更多菜单</template>
       <template v-for="(item, index) in topMenus">
         <el-menu-item
           v-if="index >= visibleNumber"

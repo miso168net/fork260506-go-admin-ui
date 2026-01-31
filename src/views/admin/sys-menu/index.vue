@@ -43,13 +43,13 @@
         >
           <el-table-column prop="title" label="菜单名称" :show-overflow-tooltip="true" width="180px" />
           <el-table-column prop="icon" label="图标" align="center" width="100px">
-            <template v-slot="scope">
+            <template #default="scope">
               <svg-icon :icon-class="scope.row.icon" />
             </template>
           </el-table-column>
           <el-table-column prop="sort" label="排序" width="60px" />
           <el-table-column prop="permission" label="权限标识" :show-overflow-tooltip="true">
-            <template v-slot="scope">
+            <template #default="scope">
               <el-popover v-if="scope.row.sysApi.length>0" trigger="hover" placement="top">
                 <el-table
                   :data="scope.row.sysApi"
@@ -61,7 +61,7 @@
                     label="title"
                     width="260px"
                   >
-                    <template v-slot="scope">
+                    <template #default="scope">
                       <span v-if="scope.row.type=='SYS' && scope.row.title!=''"><el-tag type="success">{{ '['+scope.row.type +'] '+ scope.row.title }}</el-tag></span>
                       <span v-if="scope.row.type!='SYS' && scope.row.title!=''"><el-tag type="">{{ '['+scope.row.type +'] '+scope.row.title }}</el-tag></span>
                       <span v-if="scope.row.title==''"><el-tag type="danger">暂无</el-tag></span>
@@ -73,7 +73,7 @@
                     label="path"
                     width="270px"
                   >
-                    <template v-slot="scope">
+                    <template #default="scope">
                       <el-tag v-if="scope.row.action=='GET'">{{ scope.row.action }}</el-tag>
                       <el-tag v-if="scope.row.action=='POST'" type="success">{{ scope.row.action }}</el-tag>
                       <el-tag v-if="scope.row.action=='PUT'" type="warning">{{ scope.row.action }}</el-tag>
@@ -95,13 +95,13 @@
             </template>
           </el-table-column>
           <el-table-column prop="path" label="组件路径" :show-overflow-tooltip="true">
-            <template v-slot="scope">
+            <template #default="scope">
               <span v-if="scope.row.menuType=='A'">{{ scope.row.path }}</span>
               <span v-else>{{ scope.row.component }}</span>
             </template>
           </el-table-column>
           <el-table-column prop="visible" label="可见" :formatter="visibleFormat" width="80">
-            <template v-slot="scope">
+            <template #default="scope">
               <el-tag
                 :type="scope.row.visible === '1' ? 'danger' : 'success'"
                 disable-transitions
@@ -109,12 +109,12 @@
             </template>
           </el-table-column>
           <el-table-column label="创建时间" align="center" prop="createdAt" width="180">
-            <template v-slot="scope">
+            <template #default="scope">
               <span>{{ parseTime(scope.row.createdAt) }}</span>
             </template>
           </el-table-column>
           <el-table-column label="操作" align="center" class-name="small-padding fixed-width" width="180">
-            <template v-slot="scope">
+            <template #default="scope">
               <el-button
                 v-permisaction="['admin:sysMenu:edit']"
                 size="mini"
@@ -143,9 +143,9 @@
         <!-- 添加或修改菜单对话框 -->
         <el-drawer
           ref="drawer"
+          v-model="open"
           :title="title"
           :before-close="cancel"
-          v-model="open"
           direction="rtl"
           custom-class="demo-drawer"
           size="830px"
@@ -155,12 +155,14 @@
               <el-row>
                 <el-col :span="24">
                   <el-form-item prop="parentId">
-                    <span slot="label">
-                      上级菜单
-                      <el-tooltip content="指当前菜单停靠的菜单归属" placement="top">
-                        <i class="el-icon-question" />
-                      </el-tooltip>
-                    </span>
+                    <template #label>
+                      <span>
+                        上级菜单
+                        <el-tooltip content="指当前菜单停靠的菜单归属" placement="top">
+                          <i class="el-icon-question" />
+                        </el-tooltip>
+                      </span>
+                    </template>
                     <treeselect
                       v-model="form.parentId"
                       :options="menuOptions"
@@ -172,35 +174,41 @@
                 </el-col>
                 <el-col :span="12">
                   <el-form-item prop="title">
-                    <span slot="label">
-                      菜单标题
-                      <el-tooltip content="菜单位置显示的说明信息" placement="top">
-                        <i class="el-icon-question" />
-                      </el-tooltip>
-                    </span>
+                    <template #label>
+                      <span>
+                        菜单标题
+                        <el-tooltip content="菜单位置显示的说明信息" placement="top">
+                          <i class="el-icon-question" />
+                        </el-tooltip>
+                      </span>
+                    </template>
                     <el-input v-model="form.title" placeholder="请输入菜单标题" />
                   </el-form-item>
                 </el-col>
                 <el-col :span="12">
                   <el-form-item prop="sort">
-                    <span slot="label">
-                      显示排序
-                      <el-tooltip content="根据序号升序排列" placement="top">
-                        <i class="el-icon-question" />
-                      </el-tooltip>
-                    </span>
+                    <template #label>
+                      <span>
+                        显示排序
+                        <el-tooltip content="根据序号升序排列" placement="top">
+                          <i class="el-icon-question" />
+                        </el-tooltip>
+                      </span>
+                    </template>
                     <el-input-number v-model="form.sort" controls-position="right" :min="0" />
                   </el-form-item>
                 </el-col>
 
                 <el-col :span="24">
                   <el-form-item prop="menuType">
-                    <span slot="label">
-                      菜单类型
-                      <el-tooltip content="包含目录：以及菜单或者菜单组，菜单：具体对应某一个页面，按钮：功能才做按钮；" placement="top">
-                        <i class="el-icon-question" />
-                      </el-tooltip>
-                    </span>
+                    <template #label>
+                      <span>
+                        菜单类型
+                        <el-tooltip content="包含目录：以及菜单或者菜单组，菜单：具体对应某一个页面，按钮：功能才做按钮；" placement="top">
+                          <i class="el-icon-question" />
+                        </el-tooltip>
+                      </span>
+                    </template>
                     <el-radio-group v-model="form.menuType">
                       <el-radio label="M">目录</el-radio>
                       <el-radio label="C">菜单</el-radio>
@@ -217,10 +225,10 @@
                       @show="$refs['iconSelect'].reset()"
                     >
                       <IconSelect ref="iconSelect" @selected="selected" />
-                      <el-input v-slot:reference v-model="form.icon" placeholder="点击选择图标" readonly>
+                      <el-input #reference v-model="form.icon" placeholder="点击选择图标" readonly>
                         <svg-icon
                           v-if="form.icon"
-                          v-slot:prefix
+                          #prefix
                           :icon-class="form.icon"
                           class="el-input__icon"
                           style="height: 32px;width: 16px;"
@@ -232,36 +240,42 @@
                 </el-col>
                 <el-col :span="12">
                   <el-form-item v-if="form.menuType == 'M' || form.menuType == 'C'" prop="menuName">
-                    <span slot="label">
-                      路由名称
-                      <el-tooltip content="需要和页面name保持一致，对应页面即可选择缓存" placement="top">
-                        <i class="el-icon-question" />
-                      </el-tooltip>
-                    </span>
+                    <template #label>
+                      <span>
+                        路由名称
+                        <el-tooltip content="需要和页面name保持一致，对应页面即可选择缓存" placement="top">
+                          <i class="el-icon-question" />
+                        </el-tooltip>
+                      </span>
+                    </template>
                     <el-input v-model="form.menuName" placeholder="请输入路由名称" />
                   </el-form-item>
                 </el-col>
 
                 <el-col v-if="form.menuType == 'M' || form.menuType == 'C'" :span="12">
                   <el-form-item prop="component">
-                    <span slot="label">
-                      组件路径
-                      <el-tooltip content="菜单对应的具体vue页面文件路径views的下级路径/admin/sys-api/index；目录类型：填写Layout，如何有二级目录请参照日志目录填写；" placement="top">
-                        <i class="el-icon-question" />
-                      </el-tooltip>
-                    </span>
+                    <template #label>
+                      <span>
+                        组件路径
+                        <el-tooltip content="菜单对应的具体vue页面文件路径views的下级路径/admin/sys-api/index；目录类型：填写Layout，如何有二级目录请参照日志目录填写；" placement="top">
+                          <i class="el-icon-question" />
+                        </el-tooltip>
+                      </span>
+                    </template>
                     <el-input v-model="form.component" placeholder="请输入组件路径" />
                   </el-form-item>
                 </el-col>
 
                 <el-col :span="12">
                   <el-form-item v-if="form.menuType == 'M' || form.menuType == 'C'">
-                    <span slot="label">
-                      是否外链
-                      <el-tooltip content="可以通过iframe打开指定地址" placement="top">
-                        <i class="el-icon-question" />
-                      </el-tooltip>
-                    </span>
+                    <template #label>
+                      <span>
+                        是否外链
+                        <el-tooltip content="可以通过iframe打开指定地址" placement="top">
+                          <i class="el-icon-question" />
+                        </el-tooltip>
+                      </span>
+                    </template>
                     <el-radio-group v-model="form.isFrame">
                       <el-radio label="0">是</el-radio>
                       <el-radio label="1">否</el-radio>
@@ -271,35 +285,41 @@
 
                 <el-col :span="12">
                   <el-form-item v-if="form.menuType != 'F'" prop="path">
-                    <span slot="label">
-                      路由地址
-                      <el-tooltip content="访问此页面自定义的url地址，建议/开头书写，例如 /app-name/menu-name" placement="top">
-                        <i class="el-icon-question" />
-                      </el-tooltip>
-                    </span>
+                    <template #label>
+                      <span>
+                        路由地址
+                        <el-tooltip content="访问此页面自定义的url地址，建议/开头书写，例如 /app-name/menu-name" placement="top">
+                          <i class="el-icon-question" />
+                        </el-tooltip>
+                      </span>
+                    </template>
                     <el-input v-model="form.path" placeholder="请输入路由地址" />
                   </el-form-item>
                 </el-col>
 
                 <el-col :span="12">
                   <el-form-item v-if="form.menuType == 'F' || form.menuType == 'C'">
-                    <span slot="label">
-                      权限标识
-                      <el-tooltip content="前端权限控制按钮是否显示" placement="top">
-                        <i class="el-icon-question" />
-                      </el-tooltip>
-                    </span>
+                    <template #label>
+                      <span>
+                        权限标识
+                        <el-tooltip content="前端权限控制按钮是否显示" placement="top">
+                          <i class="el-icon-question" />
+                        </el-tooltip>
+                      </span>
+                    </template>
                     <el-input v-model="form.permission" placeholder="请权限标识" maxlength="50" />
                   </el-form-item>
                 </el-col>
                 <el-col :span="12">
                   <el-form-item v-if="form.menuType != 'F'">
-                    <span slot="label">
-                      菜单状态
-                      <el-tooltip content="需要显示在菜单列表的菜单设置为显示，否则设置为隐藏" placement="top">
-                        <i class="el-icon-question" />
-                      </el-tooltip>
-                    </span>
+                    <template #label>
+                      <span>
+                        菜单状态
+                        <el-tooltip content="需要显示在菜单列表的菜单设置为显示，否则设置为隐藏" placement="top">
+                          <i class="el-icon-question" />
+                        </el-tooltip>
+                      </span>
+                    </template>
                     <el-radio-group v-model="form.visible">
                       <el-radio
                         v-for="dict in visibleOptions"
@@ -311,12 +331,14 @@
                 </el-col>
                 <el-col :span="24">
                   <el-form-item v-if="form.menuType == 'F' || form.menuType == 'C'">
-                    <span slot="label">
-                      api权限
-                      <el-tooltip content="配置在这个才做上需要使用到的接口，否则在设置用户角色时，接口将无权访问。" placement="top">
-                        <i class="el-icon-question" />
-                      </el-tooltip>
-                    </span>
+                    <template #label>
+                      <span>
+                        api权限
+                        <el-tooltip content="配置在这个才做上需要使用到的接口，否则在设置用户角色时，接口将无权访问。" placement="top">
+                          <i class="el-icon-question" />
+                        </el-tooltip>
+                      </span>
+                    </template>
                     <el-transfer
                       v-model="form.apis"
                       style="text-align: left; display: inline-block"
@@ -335,7 +357,9 @@
                       :data="sysapiList"
                       @change="handleChange"
                     >
-                      <span slot-scope="{ option }">{{ option.title }}</span>
+                      <template #default="{ option }">
+                        <span>{{ option.title }}</span>
+                      </template>
                     </el-transfer>
                   </el-form-item>
                 </el-col>

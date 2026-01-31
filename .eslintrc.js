@@ -26,8 +26,10 @@ module.exports = {
     'vue/no-template-shadow': 'off',
     'vue/singleline-html-element-content-newline': 'off',
     'vue/multiline-html-element-content-newline': 'off',
-    'vue/name-property-casing': ['error', 'PascalCase'],
     'vue/no-v-html': 'off',
+    // Vue 3 规则调整
+    'vue/no-deprecated-slot-attribute': 'warn',
+    'vue/multi-word-component-names': 'warn',
     'accessor-pairs': 2,
     'arrow-spacing': [2, {
       'before': true,

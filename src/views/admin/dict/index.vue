@@ -92,7 +92,7 @@
           <el-table-column label="字典编号" width="80" align="center" prop="id" />
           <el-table-column label="字典名称" align="center" prop="dictName" :show-overflow-tooltip="true" />
           <el-table-column label="字典类型" align="center" :show-overflow-tooltip="true">
-            <template v-slot="scope">
+            <template #default="scope">
               <router-link :to="{name:'SysDictDataManage', params: {dictId:scope.row.id}}" class="link-type">
                 <span>{{ scope.row.dictType }}</span>
               </router-link>
@@ -101,12 +101,12 @@
           <el-table-column label="状态" align="center" prop="status" :formatter="statusFormat" />
           <el-table-column label="备注" align="center" prop="remark" :show-overflow-tooltip="true" />
           <el-table-column label="创建时间" align="center" prop="createdAt" width="180">
-            <template v-slot="scope">
+            <template #default="scope">
               <span>{{ parseTime(scope.row.createdAt) }}</span>
             </template>
           </el-table-column>
           <el-table-column label="操作" align="center" class-name="small-padding fixed-width">
-            <template v-slot="scope">
+            <template #default="scope">
               <el-button
                 v-permisaction="['admin:sysDictType:edit']"
                 size="mini"
@@ -127,14 +127,14 @@
 
         <pagination
           v-show="total>0"
-          :total="total"
           v-model:current-page="queryParams.pageIndex"
           v-model:page-size="queryParams.pageSize"
+          :total="total"
           @pagination="getList"
         />
 
         <!-- 添加或修改参数配置对话框 -->
-        <el-dialog :title="title" v-model="open" width="500px" :close-on-click-modal="false">
+        <el-dialog v-model="open" :title="title" width="500px" :close-on-click-modal="false">
           <el-form ref="form" :model="form" :rules="rules" label-width="80px">
             <el-form-item label="字典名称" prop="dictName">
               <el-input v-model="form.dictName" placeholder="请输入字典名称" :disabled="isEdit" />

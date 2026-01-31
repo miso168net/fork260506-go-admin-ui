@@ -1,7 +1,7 @@
 <template>
   <div>
     <img :src="options.img" title="点击上传头像" class="img-circle img-lg" @click="editCropper()">
-    <el-dialog :title="title" v-model="open" width="800px" :close-on-click-modal="false">
+    <el-dialog v-model="open" :title="title" width="800px" :close-on-click-modal="false">
       <el-row>
         <el-col :xs="24" :md="12" :style="{height: '350px'}">
           <vue-cropper
@@ -12,7 +12,7 @@
             :auto-crop-width="options.autoCropWidth"
             :auto-crop-height="options.autoCropHeight"
             :fixed-box="options.fixedBox"
-            @realTime="realTime"
+            @real-time="realTime"
           />
         </el-col>
         <el-col :xs="24" :md="12" :style="{height: '350px'}">

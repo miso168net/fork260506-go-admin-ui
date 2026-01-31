@@ -5,21 +5,23 @@
         <el-row :gutter="10" class="mb10">
           <el-col :sm="24" :md="8">
             <el-card v-if="info.cpu" class="box-card" shadow="always" :body-style="{paddingTop:'0 !important'}">
-              <div slot="header" class="clearfix">
-                <el-row :gutter="10">
-                  <el-col :sm="24" :md="8">
-                    <el-tag
-                      type="success"
-                      effect="dark"
-                    >
-                      Runing
-                    </el-tag>
-                  </el-col>
-                  <el-col :sm="24" :md="8" class="" style="line-height:28px;text-align:center;">
-                    {{ info.location }}
-                  </el-col>
-                </el-row>
-              </div>
+              <template #header>
+                <div class="clearfix">
+                  <el-row :gutter="10">
+                    <el-col :sm="24" :md="8">
+                      <el-tag
+                        type="success"
+                        effect="dark"
+                      >
+                        Runing
+                      </el-tag>
+                    </el-col>
+                    <el-col :sm="24" :md="8" class="" style="line-height:28px;text-align:center;">
+                      {{ info.location }}
+                    </el-col>
+                  </el-row>
+                </div>
+              </template>
               <div class="monitor" style="padding-top:0px;">
                 <div class="monitor-content">
                   <el-row :gutter="10">
@@ -103,9 +105,11 @@
           </el-card> -->
 
           <el-card v-if="info.os" class="box-card">
-            <div slot="header" class="clearfix">
-              <span>服务器信息</span>
-            </div>
+            <template #header>
+              <div class="clearfix">
+                <span>服务器信息</span>
+              </div>
+            </template>
             <div class="monitor">
               <Cell label="主机名称" :value="info.os.hostName" border />
               <Cell label="操作系统" :value="info.os.goOs" border />

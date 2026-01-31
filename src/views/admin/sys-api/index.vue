@@ -72,7 +72,7 @@
             width="260px"
             :show-overflow-tooltip="true"
           >
-            <template v-slot="scope">
+            <template #default="scope">
               <span v-if="scope.row.type=='SYS' && scope.row.title!=''"><el-tag type="success">{{ '['+scope.row.type +'] '+ scope.row.title }}</el-tag></span>
               <span v-if="scope.row.type!='SYS' && scope.row.title!=''"><el-tag type="">{{ '['+scope.row.type +'] '+scope.row.title }}</el-tag></span>
               <span v-if="scope.row.title==''"><el-tag type="danger">暂无</el-tag></span>
@@ -91,7 +91,7 @@
             <!-- <template v-slot="scope">
               <span>{{ "["+scope.row.action +"] "+ scope.row.path }}</span>
             </template> -->
-            <template v-slot="scope">
+            <template #default="scope">
               <el-popover trigger="hover" placement="top">
                 <p><span v-if="scope.row.type=='SYS' && scope.row.title!=''"><el-tag type="success">{{ '['+scope.row.type +'] '+ scope.row.title }}</el-tag></span>
                   <span v-if="scope.row.type!='SYS' && scope.row.title!=''"><el-tag type="">{{ '['+scope.row.type +'] '+scope.row.title }}</el-tag></span>
@@ -122,7 +122,7 @@
             width="155px"
             sortable="custom"
           >
-            <template v-slot="scope">
+            <template #default="scope">
               <span>{{ parseTime(scope.row.createdAt) }}</span>
             </template>
           </el-table-column>
@@ -132,7 +132,7 @@
             width="80px"
             class-name="small-padding fixed-width"
           >
-            <template v-slot="scope">
+            <template #default="scope">
               <el-button
                 v-permisaction="['admin:sysApi:edit']"
                 size="mini"
@@ -147,18 +147,18 @@
 
         <pagination
           v-show="total>0"
-          :total="total"
           v-model:current-page="queryParams.pageIndex"
           v-model:page-size="queryParams.pageSize"
+          :total="total"
           @pagination="getList"
         />
 
         <!-- 添加或修改对话框 -->
         <el-drawer
           ref="drawer"
+          v-model="open"
           :title="title"
           :before-close="cancel"
-          v-model="open"
           direction="rtl"
           custom-class="demo-drawer"
         >

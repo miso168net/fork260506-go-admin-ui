@@ -1,6 +1,6 @@
 <template>
   <div class="navbar">
-    <hamburger id="hamburger-container" :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" />
+    <hamburger id="hamburger-container" :is-active="sidebar.opened" class="hamburger-container" @toggle-click="toggleSideBar" />
 
     <breadcrumb v-if="!topNav" id="breadcrumb-container" class="breadcrumb-container" />
     <top-nav v-if="topNav" id="topmenu-container" class="breadcrumb-container" />
@@ -18,7 +18,7 @@
           <img :src="avatar+'?imageView2/1/w/80/h/80'" class="user-avatar">
           <i class="el-icon-caret-bottom" />
         </div>
-        <el-dropdown-menu v-slot:dropdown>
+        <el-dropdown-menu #dropdown>
           <router-link to="/profile/index">
             <el-dropdown-item>个人中心</el-dropdown-item>
           </router-link>

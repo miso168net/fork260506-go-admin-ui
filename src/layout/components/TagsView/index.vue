@@ -13,7 +13,7 @@
       >
         <router-link
           ref="tag"
-          v-slot:label
+          #label
           tag="span"
           class="tags-view-item"
           :style="{ color: item.fullPath === $route.fullPath ? theme : '' }"

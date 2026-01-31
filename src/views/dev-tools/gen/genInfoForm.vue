@@ -58,8 +58,8 @@
               <i class="el-icon-question" />
             </el-tooltip></template>
           <el-input v-model="info.moduleName">
-            <template v-slot:prepend>api/{version}/</template>
-            <template v-slot:append>...</template>
+            <template #prepend>api/{version}/</template>
+            <template #append>...</template>
           </el-input>
         </el-form-item>
         <!-- <el-alert

@@ -105,7 +105,7 @@
             sortable="custom"
             prop="configKey"
           >
-            <template v-slot="scope">
+            <template #default="scope">
               <el-popover trigger="hover" placement="top">
                 <p>键值: {{ scope.row.configValue }}</p>
                 <p>UI参数:  <el-tag v-if="scope.row.isFrontend=='2'">否</el-tag>
@@ -135,7 +135,7 @@
             prop="createdAt"
             width="160"
           >
-            <template v-slot="scope">
+            <template #default="scope">
               <span>{{ parseTime(scope.row.createdAt) }}</span>
             </template>
           </el-table-column>
@@ -144,7 +144,7 @@
             class-name="small-padding fixed-width"
             width="120"
           >
-            <template v-slot="scope">
+            <template #default="scope">
               <el-button
                 v-permisaction="['admin:sysConfig:edit']"
                 size="mini"
@@ -165,14 +165,14 @@
 
         <pagination
           v-show="total>0"
-          :total="total"
           v-model:current-page="queryParams.pageIndex"
           v-model:page-size="queryParams.pageSize"
+          :total="total"
           @pagination="getList"
         />
 
         <!-- 添加或修改参数配置对话框 -->
-        <el-dialog :title="title" v-model="open" width="500px" :close-on-click-modal="false">
+        <el-dialog v-model="open" :title="title" width="500px" :close-on-click-modal="false">
           <el-form ref="form" :model="form" :rules="rules" label-width="80px">
             <el-form-item label="参数名称" prop="configName">
               <el-input v-model="form.configName" placeholder="请输入参数名称" :disabled="isEdit" />

@@ -118,7 +118,7 @@
               :formatter="jobGroupFormat"
               width="100"
             >
-              <template v-slot="scope">
+              <template #default="scope">
                 {{ jobGroupFormat(scope.row) }}
               </template>
             </el-table-column>
@@ -141,12 +141,12 @@
               :formatter="statusFormat"
               width="100"
             >
-              <template v-slot="scope">
+              <template #default="scope">
                 {{ statusFormat(scope.row) }}
               </template>
             </el-table-column>
             <el-table-column label="操作" align="center" class-name="small-padding fixed-width">
-              <template v-slot="scope">
+              <template #default="scope">
                 <el-button
                   v-permisaction="['job:sysJob:edit']"
                   size="mini"
@@ -187,14 +187,14 @@
 
           <pagination
             v-show="total>0"
-            :total="total"
             v-model:current-page="queryParams.pageIndex"
             v-model:page-size="queryParams.pageSize"
+            :total="total"
             @pagination="getList"
           />
 
           <!-- 添加或修改对话框 -->
-          <el-dialog v-dialogDrag :title="title" v-model="open" width="700px" append-to-body :close-on-click-modal="false">
+          <el-dialog v-model="open" v-dialogDrag :title="title" width="700px" append-to-body :close-on-click-modal="false">
             <el-form ref="form" :model="form" :rules="rules" label-width="120px">
               <el-row>
                 <el-col :span="12">

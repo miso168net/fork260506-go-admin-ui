@@ -67,7 +67,7 @@
             label="Request info"
             prop="operUrl"
           >
-            <template v-slot="scope">
+            <template #default="scope">
               <el-popover trigger="hover" placement="top">
 
                 <p>Request:
@@ -102,13 +102,13 @@
             width="80"
             :show-overflow-tooltip="true"
           >
-            <template v-slot="scope">
+            <template #default="scope">
               <el-tag v-if="scope.row.status=='2'" type="success">{{ statusFormat(scope.row,scope.row.status) }}</el-tag>
               <el-tag v-if="scope.row.status=='1'" type="danger">{{ statusFormat(scope.row,scope.row.status) }}</el-tag>
             </template>
           </el-table-column>
           <el-table-column label="操作日期" prop="operTime" width="160">
-            <template v-slot="scope">
+            <template #default="scope">
               <span>{{ parseTime(scope.row.operTime) }}</span>
             </template>
           </el-table-column>
@@ -117,7 +117,7 @@
             width="80"
             class-name="small-padding fixed-width"
           >
-            <template v-slot="scope">
+            <template #default="scope">
               <el-button
                 v-permisaction="['admin:sysOperLog:query']"
                 size="mini"
@@ -131,14 +131,14 @@
 
         <pagination
           v-show="total>0"
-          :total="total"
           v-model:current-page="queryParams.pageIndex"
           v-model:page-size="queryParams.pageSize"
+          :total="total"
           @pagination="getList"
         />
 
         <!-- 操作日志详细 -->
-        <el-dialog title="操作日志详细" v-model="open" width="700px" :close-on-click-modal="false">
+        <el-dialog v-model="open" title="操作日志详细" width="700px" :close-on-click-modal="false">
           <el-form ref="form" :model="form" label-width="100px" size="mini">
             <el-row>
               <el-col :span="24">
