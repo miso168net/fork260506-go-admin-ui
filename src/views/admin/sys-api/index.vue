@@ -10,7 +10,7 @@
               placeholder="请输入标题"
               clearable
               size="small"
-              @keyup.enter="handleQuery"
+              @keyup.enter.native="handleQuery"
             />
           </el-form-item>
           <el-form-item label="地址" prop="path">
@@ -19,7 +19,7 @@
               placeholder="请输入地址"
               clearable
               size="small"
-              @keyup.enter="handleQuery"
+              @keyup.enter.native="handleQuery"
             />
           </el-form-item>
           <el-form-item label="Method" prop="action">
@@ -28,7 +28,7 @@
               placeholder="请选择Method"
               clearable
               size="small"
-              @keyup.enter="handleQuery"
+              @keyup.enter.native="handleQuery"
             >
               <el-option value="GET">GET</el-option>
               <el-option value="POST">POST</el-option>
@@ -42,7 +42,7 @@
               placeholder="请选择类型"
               clearable
               size="small"
-              @keyup.enter="handleQuery"
+              @keyup.enter.native="handleQuery"
             >
               <el-option value="SYS">SYS</el-option>
               <el-option value="BUS">BUS</el-option>
@@ -105,13 +105,13 @@
                   <el-tag v-if="scope.row.action=='DELETE'" type="danger">{{ scope.row.action }}</el-tag>
                 </p>
                 <p>接口类型: {{ scope.row.type }}</p>
-                <div v-slot:reference class="name-wrapper">
+                <template #reference><div class="name-wrapper">
                   <el-tag v-if="scope.row.action=='GET'">{{ scope.row.action }}</el-tag>
                   <el-tag v-if="scope.row.action=='POST'" type="success">{{ scope.row.action }}</el-tag>
                   <el-tag v-if="scope.row.action=='PUT'" type="warning">{{ scope.row.action }}</el-tag>
                   <el-tag v-if="scope.row.action=='DELETE'" type="danger">{{ scope.row.action }}</el-tag>
                   {{ scope.row.path }}
-                </div>
+                </div></template>
               </el-popover>
             </template>
           </el-table-column>
@@ -145,7 +145,7 @@
           </el-table-column>
         </el-table>
 
-        <app-pagination
+        <pagination
           v-show="total>0"
           :total="total"
           v-model:current-page="queryParams.pageIndex"
@@ -158,7 +158,7 @@
           ref="drawer"
           :title="title"
           :before-close="cancel"
-          v-model="0"
+          v-model="open"
           direction="rtl"
           custom-class="demo-drawer"
         >
@@ -183,7 +183,7 @@
                   placeholder="请选择类型"
                   clearable
                   size="small"
-                  @keyup.enter="handleQuery"
+                  @keyup.enter.native="handleQuery"
                 >
                   <el-option value="SYS">SYS</el-option>
                   <el-option value="BUS">BUS</el-option>
@@ -195,7 +195,7 @@
                   placeholder="请选择方式"
                   clearable
                   size="small"
-                  @keyup.enter="handleQuery"
+                  @keyup.enter.native="handleQuery"
                 >
                   <el-option value="GET">GET</el-option>
                   <el-option value="POST">POST</el-option>

@@ -171,7 +171,7 @@
               </el-table-column>
             </el-table>
 
-            <app-pagination
+            <pagination
               v-show="total>0"
               :total="total"
               v-model:current-page="queryParams.pageIndex"
@@ -182,7 +182,7 @@
         </el-row>
       </el-card>
       <!-- 添加或修改参数配置对话框 -->
-      <el-dialog :title="title" v-model="0" width="600px" :close-on-click-modal="false">
+      <el-dialog :title="title" v-model="open" width="600px" :close-on-click-modal="false">
         <el-form ref="form" :model="form" :rules="rules" label-width="80px">
           <el-row>
             <el-col :span="12">
@@ -276,13 +276,13 @@
             </el-col>
           </el-row>
         </el-form>
-        <div v-slot:footer class="dialog-footer">
+        <template #footer><div class="dialog-footer">
           <el-button type="primary" @click="submitForm">确 定</el-button>
           <el-button @click="cancel">取 消</el-button>
-        </div>
+        </div></template>
       </el-dialog>
       <!-- 用户导入对话框 -->
-      <el-dialog :title="upload.title" v-model="0" width="400px" :close-on-click-modal="false">
+      <el-dialog :title="upload.title" v-model="open" width="400px" :close-on-click-modal="false">
         <el-upload
           ref="upload"
           :limit="1"
@@ -300,16 +300,18 @@
             将文件拖到此处，或
             <em>点击上传</em>
           </div>
-          <div v-slot:tip class="el-upload__tip">
-            <el-checkbox v-model="upload.updateSupport" />是否更新已经存在的用户数据
-            <el-link type="info" style="font-size:12px" @click="importTemplate">下载模板</el-link>
-          </div>
-          <div v-slot:tip class="el-upload__tip" style="color:red">提示：仅允许导入“xls”或“xlsx”格式文件！</div>
+          <template #tip>
+            <div class="el-upload__tip">
+              <el-checkbox v-model="upload.updateSupport" />是否更新已经存在的用户数据
+              <el-link type="info" style="font-size:12px" @click="importTemplate">下载模板</el-link>
+            </div>
+            <div class="el-upload__tip" style="color:red">提示：仅允许导入"xls"或"xlsx"格式文件！</div>
+          </template>
         </el-upload>
-        <div v-slot:footer class="dialog-footer">
+        <template #footer><div class="dialog-footer">
           <el-button type="primary" @click="submitFileForm">确 定</el-button>
           <el-button @click="upload.open = false">取 消</el-button>
-        </div>
+        </div></template>
       </el-dialog>
     </template>
   </BasicLayout>
@@ -323,8 +325,8 @@ import { listPost } from '@/api/admin/sys-post'
 import { listRole } from '@/api/admin/sys-role'
 import { treeselect } from '@/api/admin/sys-dept'
 
-import Treeselect from '@riophae/vue-treeselect'
-import '@riophae/vue-treeselect/dist/vue-treeselect.css'
+import Treeselect from 'vue3-treeselect'
+import 'vue3-treeselect/dist/vue3-treeselect.css'
 
 export default {
   name: 'SysUserManage',

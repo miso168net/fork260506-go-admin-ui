@@ -1,10 +1,5 @@
 <template>
-  <Ba            <el-input
-              v-model="queryParams.label"
-              placeholder="字典标签"
-              clearable
-              size="small"
-              @keyup.enter="handleQuery"out>
+  <BasicLayout>
     <template #wrapper>
       <el-card class="box-card">
         <el-form ref="queryForm" :model="queryParams" :inline="true">
@@ -24,7 +19,7 @@
               placeholder="请输入字典标签"
               clearable
               size="small"
-              @keyup.enter="handleQuery"
+              @keyup.enter.native="handleQuery"
             />
           </el-form-item>
           <el-form-item label="状态" prop="status">
@@ -108,7 +103,7 @@
           </el-table-column>
         </el-table>
 
-        <app-pagination
+        <pagination
           v-show="total>0"
           :total="total"
           v-model:current-page="queryParams.pageIndex"
@@ -117,7 +112,7 @@
         />
 
         <!-- 添加或修改参数配置对话框 -->
-        <el-dialog :title="title" v-model="0" width="500px" :close-on-click-modal="false">
+        <el-dialog :title="title" v-model="open" width="500px" :close-on-click-modal="false">
           <el-form ref="form" :model="form" :rules="rules" label-width="80px">
             <el-form-item label="字典类型">
               <el-input v-model="form.dictType" :disabled="true" />
@@ -144,10 +139,10 @@
               <el-input v-model="form.remark" type="textarea" placeholder="请输入内容" />
             </el-form-item>
           </el-form>
-          <div v-slot:footer class="dialog-footer">
+          <template #footer><div class="dialog-footer">
             <el-button type="primary" @click="submitForm">确 定</el-button>
             <el-button @click="cancel">取 消</el-button>
-          </div>
+          </div></template>
         </el-dialog>
       </el-card>
     </template>

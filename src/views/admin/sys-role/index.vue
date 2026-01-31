@@ -158,7 +158,7 @@
           </el-table-column>
         </el-table>
 
-        <app-pagination
+        <pagination
           v-show="total>0"
           :total="total"
           v-model:current-page="queryParams.pageIndex"
@@ -167,7 +167,7 @@
         />
 
         <!-- 添加或修改角色配置对话框 -->
-        <el-dialog v-if="open" :title="title" v-model="0" width="500px" :close-on-click-modal="false">
+        <el-dialog v-if="open" :title="title" v-model="open" width="500px" :close-on-click-modal="false">
           <el-form ref="form" :model="form" :rules="rules" label-width="80px">
             <el-form-item label="角色名称" prop="roleName">
               <el-input v-model="form.roleName" placeholder="请输入角色名称" :disabled="isEdit" />
@@ -201,14 +201,14 @@
               <el-input v-model="form.remark" type="textarea" placeholder="请输入内容" />
             </el-form-item>
           </el-form>
-          <div v-slot:footer class="dialog-footer">
+          <template #footer><div class="dialog-footer">
             <el-button type="primary" @click="submitForm">确 定</el-button>
             <el-button @click="cancel">取 消</el-button>
-          </div>
+          </div></template>
         </el-dialog>
 
         <!-- 分配角色数据权限对话框 -->
-        <el-dialog v-if="openDataScope" :title="title" v-model="0" width="500px" :close-on-click-modal="false">
+        <el-dialog v-if="openDataScope" :title="title" v-model="open" width="500px" :close-on-click-modal="false">
           <el-form :model="form" label-width="80px">
             <el-form-item label="角色名称">
               <el-input v-model="form.roleName" :disabled="true" />
@@ -238,10 +238,10 @@
               />
             </el-form-item>
           </el-form>
-          <div v-slot:footer class="dialog-footer">
+          <template #footer><div class="dialog-footer">
             <el-button type="primary" @click="submitDataScope">确 定</el-button>
             <el-button @click="cancelDataScope">取 消</el-button>
-          </div>
+          </div></template>
         </el-dialog>
       </el-card>
     </template>
@@ -255,7 +255,7 @@ import { treeselect as deptTreeselect, roleDeptTreeselect } from '@/api/admin/sy
 import { formatJson } from '@/utils'
 
 export default {
-  name: 'SysRole',
+  name: 'Role',
   components: {
 
   },

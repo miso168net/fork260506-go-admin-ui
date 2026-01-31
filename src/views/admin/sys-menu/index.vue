@@ -83,10 +83,10 @@
                   </el-table-column>
 
                 </el-table>
-                <div v-slot:reference class="name-wrapper">
+                <template #reference><div class="name-wrapper">
                   <span v-if="scope.row.permission==''">-</span>
                   <span v-else>{{ scope.row.permission }}</span>
-                </div>
+                </div></template>
               </el-popover>
               <span v-else>
                 <span v-if="scope.row.permission==''">-</span>
@@ -145,7 +145,7 @@
           ref="drawer"
           :title="title"
           :before-close="cancel"
-          v-model="0"
+          v-model="open"
           direction="rtl"
           custom-class="demo-drawer"
           size="830px"
@@ -225,7 +225,7 @@
                           class="el-input__icon"
                           style="height: 32px;width: 16px;"
                         />
-                        <i v-else v-slot:prefix class="el-icon-search el-input__icon" />
+                        <i v-else class="el-icon-search el-input__icon" />
                       </el-input>
                     </el-popover>
                   </el-form-item>
@@ -357,8 +357,8 @@
 import { listMenu, getMenu, delMenu, addMenu, updateMenu } from '@/api/admin/sys-menu'
 import { listSysApi } from '@/api/admin/sys-api'
 
-import Treeselect from '@riophae/vue-treeselect'
-import '@riophae/vue-treeselect/dist/vue-treeselect.css'
+import Treeselect from 'vue3-treeselect'
+import 'vue3-treeselect/dist/vue3-treeselect.css'
 import IconSelect from '@/components/IconSelect'
 
 export default {

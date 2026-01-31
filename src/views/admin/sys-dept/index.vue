@@ -93,7 +93,7 @@
         </el-table>
 
         <!-- 添加或修改部门对话框 -->
-        <el-dialog :title="title" v-model="0" width="600px" :close-on-click-modal="false">
+        <el-dialog :title="title" v-model="open" width="600px" :close-on-click-modal="false">
           <el-form ref="form" :model="form" :rules="rules" label-width="80px">
             <el-row>
               <el-col :span="24">
@@ -146,10 +146,10 @@
               </el-col>
             </el-row>
           </el-form>
-          <div v-slot:footer class="dialog-footer">
+          <template #footer><div class="dialog-footer">
             <el-button type="primary" @click="submitForm">确 定</el-button>
             <el-button @click="cancel">取 消</el-button>
-          </div>
+          </div></template>
         </el-dialog>
       </el-card>
     </template>
@@ -158,8 +158,8 @@
 
 <script>
 import { getDeptList, getDept, delDept, addDept, updateDept } from '@/api/admin/sys-dept'
-import Treeselect from '@riophae/vue-treeselect'
-import '@riophae/vue-treeselect/dist/vue-treeselect.css'
+import Treeselect from 'vue3-treeselect'
+import 'vue3-treeselect/dist/vue3-treeselect.css'
 
 export default {
   name: 'SysDeptManage',

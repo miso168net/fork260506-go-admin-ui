@@ -80,13 +80,13 @@
                 <p>Host: {{ scope.row.operIp }}</p>
                 <p>Location: {{ scope.row.operLocation }}</p>
                 <p>耗时: {{ scope.row.latencyTime }}</p>
-                <div v-slot:reference class="name-wrapper">
+                <template #reference><div class="name-wrapper">
                   <el-tag v-if="scope.row.requestMethod=='GET'">{{ scope.row.requestMethod }}</el-tag>
                   <el-tag v-if="scope.row.requestMethod=='POST'" type="success">{{ scope.row.requestMethod }}</el-tag>
                   <el-tag v-if="scope.row.requestMethod=='PUT'" type="warning">{{ scope.row.requestMethod }}</el-tag>
                   <el-tag v-if="scope.row.requestMethod=='DELETE'" type="danger">{{ scope.row.requestMethod }}</el-tag>
                   {{ scope.row.operUrl }}
-                </div>
+                </div></template>
               </el-popover>
             </template>
           </el-table-column>
@@ -129,7 +129,7 @@
           </el-table-column>
         </el-table>
 
-        <app-pagination
+        <pagination
           v-show="total>0"
           :total="total"
           v-model:current-page="queryParams.pageIndex"
@@ -138,7 +138,7 @@
         />
 
         <!-- 操作日志详细 -->
-        <el-dialog title="操作日志详细" v-model="0" width="700px" :close-on-click-modal="false">
+        <el-dialog title="操作日志详细" v-model="open" width="700px" :close-on-click-modal="false">
           <el-form ref="form" :model="form" label-width="100px" size="mini">
             <el-row>
               <el-col :span="24">
@@ -176,9 +176,9 @@
               </el-col>
             </el-row>
           </el-form>
-          <div v-slot:footer class="dialog-footer">
+          <template #footer><div class="dialog-footer">
             <el-button @click="open = false">关 闭</el-button>
-          </div>
+          </div></template>
         </el-dialog>
       </el-card>
     </template>

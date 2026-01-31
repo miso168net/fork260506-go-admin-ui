@@ -92,9 +92,9 @@
                 <p>浏览器: {{ scope.row.browser }}</p>
                 <p>系统: {{ scope.row.os }}</p>
                 <p>固件: {{ scope.row.platform }}</p>
-                <div v-slot:reference class="name-wrapper">
+                <template #reference><div class="name-wrapper">
                   {{ scope.row.ipaddr }}
-                </div>
+                </div></template>
               </el-popover>
             </template>
           </el-table-column>
@@ -123,7 +123,7 @@
           </el-table-column>
         </el-table>
 
-        <app-pagination
+        <pagination
           v-show="total>0"
           :total="total"
           v-model:current-page="queryParams.pageIndex"
