@@ -1,6 +1,6 @@
-// v-dialogDrag: 弹窗拖拽属性（导出为Vue3插件函数）
-export const dialogDragDirective = {
-  bind(el, binding, vnode, oldVnode) {
+// v-dialogDrag: 弹窗拖拽属性
+export const dialogDrag = {
+  mounted(el, binding, vnode) {
     const dialogHeaderEl = el.querySelector('.el-dialog__header')
     const dragDom = el.querySelector('.el-dialog')
     dialogHeaderEl.style.cssText += ';cursor:move;'
@@ -72,8 +72,4 @@ export const dialogDragDirective = {
       return false
     }
   }
-}
-
-export function registerDialogDirective(app) {
-  app.directive('dialogDrag', dialogDragDirective)
 }

@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   title: 'go-admin后台管理系统',
 
   /**
