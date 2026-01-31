@@ -1,6 +1,6 @@
 <template>
-  <div v-if="isExternal" :style="styleExternalIcon" class="svg-external-icon svg-icon"  />
-  <svg v-else :class="svgClass" aria-hidden="true" >
+  <div v-if="isExternal" :style="styleExternalIcon" class="svg-external-icon svg-icon" />
+  <svg v-else :class="svgClass" aria-hidden="true">
     <use :href="iconName" />
   </svg>
 </template>

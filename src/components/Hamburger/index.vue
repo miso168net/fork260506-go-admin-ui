@@ -16,6 +16,7 @@
 <script>
 export default {
   name: 'AppHamburger',
+  emits: ['toggleClick'],
   props: {
     isActive: {
       type: Boolean,

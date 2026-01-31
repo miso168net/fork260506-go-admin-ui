@@ -12,6 +12,8 @@ const version = require('element-plus/package.json').version // element-plus ver
 const ORIGINAL_THEME = '#1890FF' // default color
 
 export default {
+  name: 'ThemePickerComponent',
+  emits: ['change'],
   data() {
     return {
       chalk: '', // content of theme-chalk css

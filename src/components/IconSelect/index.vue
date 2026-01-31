@@ -18,6 +18,7 @@
 import icons from './requireIcons'
 export default {
   name: 'IconSelect',
+  emits: ['selected'],
   data() {
     return {
       name: '',
