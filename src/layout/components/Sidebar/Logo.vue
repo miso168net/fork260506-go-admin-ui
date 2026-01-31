@@ -15,7 +15,7 @@
 
 <script>
 
-import variables from '@/styles/variables.module.scss'
+import variables from '@/styles/variables.scss'
 import { mapGetters } from 'vuex'
 
 export default {

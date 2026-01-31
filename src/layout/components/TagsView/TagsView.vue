@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import path from 'path'
 export default {
   name: 'TagsView',
   data() {
@@ -52,13 +53,6 @@ export default {
     this.addTags()
   },
   methods: {
-    joinPath(base, routePath) {
-      if (!base) return routePath || '/'
-      if (!routePath) return base
-      if (routePath.startsWith('/')) return routePath
-      if (base.endsWith('/')) return base + routePath
-      return base + '/' + routePath
-    },
     isActive(route) {
       return route.path === this.$route.path
     },
@@ -69,7 +63,7 @@ export default {
       let tags = []
       routes.forEach(route => {
         if (route.meta && route.meta.affix) {
-          const tagPath = this.joinPath(basePath, route.path)
+          const tagPath = path.resolve(basePath, route.path)
           tags.push({
             fullPath: tagPath,
             path: tagPath,

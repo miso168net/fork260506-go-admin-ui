@@ -67,7 +67,7 @@
 </template>
 
 <script>
-import ThemePicker from '@/components/ThemePicker/index.vue'
+import ThemePicker from '@/components/ThemePicker'
 
 export default {
   components: { ThemePicker },
