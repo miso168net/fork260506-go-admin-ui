@@ -1,28 +1,27 @@
 module.exports = {
   root: true,
   parserOptions: {
-    parser: 'babel-eslint',
-    ecmaVersion: 2020,
-    sourceType: 'module'
+    parser: '@babel/eslint-parser',
+    sourceType: 'module',
+    requireConfigFile: false
   },
   env: {
     browser: true,
     node: true,
     es6: true
   },
-  extends: [
-    'plugin:vue/vue3-essential',
-    'eslint:recommended'
-  ],
+  extends: ['plugin:vue/vue3-recommended', 'eslint:recommended'],
 
   // add your custom rules here
   // it is base on https://github.com/vuejs/eslint-config-vue
   rules: {
-    // Allow single-word component names like Layout, Login, index
-    'vue/multi-word-component-names': 'off',
     'vue/max-attributes-per-line': [2, {
-      'singleline': 10,
-      'multiline': 1
+      'singleline': {
+        'max': 10
+      },
+      'multiline': {
+        'max': 1
+      }
     }],
     'vue/no-template-shadow': 'off',
     'vue/singleline-html-element-content-newline': 'off',
