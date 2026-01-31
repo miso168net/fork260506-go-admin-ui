@@ -3,9 +3,11 @@
     <el-row :gutter="12">
       <el-col :sm="24" :xs="24" :md="6" :xl="6" :lg="6" :style="{ marginBottom: '12px' }">
         <chart-card title="总销售额" total="￥126,560">
-          <el-tooltip #action class="item" effect="dark" content="指标说明" placement="top-start">
-            <i class="el-icon-warning-outline" />
-          </el-tooltip>
+          <template #action>
+            <el-tooltip class="item" effect="dark" content="指标说明" placement="top-start">
+              <i class="el-icon-warning-outline" />
+            </el-tooltip>
+          </template>
           <div>
             <trend flag="top" style="margin-right: 16px;" rate="12">
               <template #term>
@@ -23,9 +25,11 @@
       </el-col>
       <el-col :sm="24" :xs="24" :md="6" :xl="6" :lg="6" :style="{ marginBottom: '12px' }">
         <chart-card title="访问量" :total="8846">
-          <el-tooltip #action class="item" effect="dark" content="指标说明" placement="top-start">
-            <i class="el-icon-warning-outline" />
-          </el-tooltip>
+          <template #action>
+            <el-tooltip class="item" effect="dark" content="指标说明" placement="top-start">
+              <i class="el-icon-warning-outline" />
+            </el-tooltip>
+          </template>
           <div>
             <mini-area />
           </div>
@@ -34,9 +38,11 @@
       </el-col>
       <el-col :sm="24" :xs="24" :md="6" :xl="6" :lg="6" :style="{ marginBottom: '12px' }">
         <chart-card title="支付笔数" :total="6560">
-          <el-tooltip #action class="item" effect="dark" content="指标说明" placement="top-start">
-            <i class="el-icon-warning-outline" />
-          </el-tooltip>
+          <template #action>
+            <el-tooltip class="item" effect="dark" content="指标说明" placement="top-start">
+              <i class="el-icon-warning-outline" />
+            </el-tooltip>
+          </template>
           <div>
             <mini-bar />
           </div>
@@ -45,9 +51,11 @@
       </el-col>
       <el-col :sm="24" :xs="24" :md="6" :xl="6" :lg="6" :style="{ marginBottom: '12px' }">
         <chart-card title="运营活动效果" total="78%">
-          <el-tooltip #action class="item" effect="dark" content="指标说明" placement="top-start">
-            <i class="el-icon-warning-outline" />
-          </el-tooltip>
+          <template #action>
+            <el-tooltip class="item" effect="dark" content="指标说明" placement="top-start">
+              <i class="el-icon-warning-outline" />
+            </el-tooltip>
+          </template>
           <div>
             <mini-progress color="rgb(19, 194, 194)" :target="80" :percentage="78" height="8px" />
           </div>
