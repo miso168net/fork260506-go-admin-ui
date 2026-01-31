@@ -138,7 +138,7 @@
       </div>
     </div>
 
-    <el-dialog title="Or connect with" v-model="dialogVisible" :close-on-click-modal="false">
+    <el-dialog title="Or connect with" v-model="showDialog" :close-on-click-modal="false">
       Can not be simulated on local, so please combine you own business
       simulation! ! !
       <br>
@@ -183,7 +183,7 @@
 <script>
 import { getCodeImg } from '@/api/login'
 import moment from 'moment'
-import SocialSign from './components/SocialSignin.vue'
+import SocialSign from './components/SocialSignin'
 
 export default {
   name: 'Login',
@@ -193,7 +193,6 @@ export default {
       codeUrl: '',
       cookiePassword: '',
       refreshParticles: true,
-      dialogVisible: false,
       loginForm: {
         username: 'admin',
         password: '123456',
@@ -585,7 +584,7 @@ $cursor: #fff;
 
 /* reset element-ui css */
 .login-container {
-  :deep(.el-input) {
+  ::v-deep .el-input {
     display: inline-block;
     height: 47px;
     width: 85%;
@@ -593,8 +592,7 @@ $cursor: #fff;
     input {
       background: transparent;
       border: 0px;
-  appearance: none;
-  -webkit-appearance: none;
+      -webkit-appearance: none;
       border-radius: 0px;
       padding: 12px 5px 12px 15px;
       color: #333;

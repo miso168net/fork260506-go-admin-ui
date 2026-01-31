@@ -4,11 +4,9 @@
       <el-row :gutter="10">
         <el-col :span="6" :xs="24">
           <el-card class="box-card">
-            <template #header>
-              <div class="clearfix">
-                <span>个人信息</span>
-              </div>
-            </template>
+            <div slot="header" class="clearfix">
+              <span>个人信息</span>
+            </div>
             <div>
               <div class="text-center">
                 <userAvatar :user="user" />
@@ -44,11 +42,9 @@
         </el-col>
         <el-col :span="18" :xs="24">
           <el-card>
-            <template #header>
-              <div class="clearfix">
-                <span>基本资料</span>
-              </div>
-            </template>
+            <div slot="header" class="clearfix">
+              <span>基本资料</span>
+            </div>
             <el-tabs v-model="activeTab">
               <el-tab-pane label="基本资料" name="userinfo">
                 <userInfo :user="user" />
@@ -65,13 +61,13 @@
 </template>
 
 <script>
-import userAvatar from './userAvatar.vue'
-import userInfo from './userInfo.vue'
-import resetPwd from './resetPwd.vue'
+import userAvatar from './userAvatar'
+import userInfo from './userInfo'
+import resetPwd from './resetPwd'
 import { getUserProfile } from '@/api/admin/sys-user'
 
 export default {
-  name: 'UserProfile',
+  name: 'Profile',
   components: { userAvatar, userInfo, resetPwd },
   data() {
     return {

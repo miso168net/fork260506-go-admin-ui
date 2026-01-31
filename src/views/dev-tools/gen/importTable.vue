@@ -1,6 +1,6 @@
 <template>
   <!-- 导入表 -->
-  <el-dialog title="导入表" v-model="0" width="800px" top="5vh">
+  <el-dialog title="导入表" v-model="visible" width="800px" top="5vh">
     <el-form ref="queryForm" :model="queryParams" :inline="true">
       <el-form-item label="表名称" prop="tableName">
         <el-input
@@ -33,7 +33,7 @@
         <el-table-column prop="createdAt" label="创建时间" />
         <el-table-column prop="updatedAt" label="更新时间" />
       </el-table>
-      <app-pagination
+      <pagination
         v-show="total>0"
         :total="total"
         v-model:current-page="queryParams.pageIndex"
@@ -41,10 +41,10 @@
         @pagination="getList"
       />
     </el-row>
-    <div v-slot:footer class="dialog-footer">
+    <template #footer><div class="dialog-footer">
       <el-button type="primary" :loading="loading" @click="handleImportTable">确 定</el-button>
       <el-button @click="visible = false">取 消</el-button>
-    </div>
+    </div></template>
   </el-dialog>
 </template>
 

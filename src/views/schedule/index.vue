@@ -185,7 +185,7 @@
             </el-table-column>
           </el-table>
 
-          <app-pagination
+          <pagination
             v-show="total>0"
             :total="total"
             v-model:current-page="queryParams.pageIndex"
@@ -194,7 +194,7 @@
           />
 
           <!-- 添加或修改对话框 -->
-          <el-dialog v-dialogDrag :title="title" v-model="0" width="700px" append-to-body :close-on-click-modal="false">
+          <el-dialog v-dialogDrag :title="title" v-model="open" width="700px" append-to-body :close-on-click-modal="false">
             <el-form ref="form" :model="form" :rules="rules" label-width="120px">
               <el-row>
                 <el-col :span="12">
@@ -221,17 +221,17 @@
                   </el-form-item>
                 </el-col>
                 <el-col :span="24">
-                  <el-form-item label="调用目标" prop="invokeTarget">
-                    <span v-slot:label>
+                  <el-form-item prop="invokeTarget">
+                    <template #label>
                       调用目标
                       <el-tooltip placement="top">
-                        <div v-slot:content>
+                        <template #content>
                           调用示例：func (t *EXEC) ExamplesNoParam(){..} 填写 ExamplesNoParam 即可；
                           <br>参数说明：目前不支持带参调用
-                        </div>
+                        </template>
                         <i class="el-icon-question" />
                       </el-tooltip>
-                    </span>
+                    </template>
                     <el-input
                       v-model="form.invokeTarget"
                       placeholder="调用目标"
@@ -239,17 +239,17 @@
                   </el-form-item>
                 </el-col>
                 <el-col :span="24">
-                  <el-form-item label="目标参数" prop="args">
-                    <span v-slot:label>
+                  <el-form-item prop="args">
+                    <template #label>
                       目标参数
                       <el-tooltip placement="top">
-                        <div v-slot:content>
+                        <template #content>
                           参数示例：有参：请以string格式填写；无参：为空；
                           <br>参数说明：目前仅支持函数调用
-                        </div>
+                        </template>
                         <i class="el-icon-question" />
                       </el-tooltip>
-                    </span>
+                    </template>
                     <el-input
                       v-model="form.args"
                       placeholder="目标参数"
@@ -307,10 +307,12 @@
                 </el-col>
               </el-row>
             </el-form>
-            <div v-slot:footer class="dialog-footer">
-              <el-button type="primary" @click="submitForm">确 定</el-button>
-              <el-button @click="cancel">取 消</el-button>
-            </div>
+            <template #footer>
+              <div class="dialog-footer">
+                <el-button type="primary" @click="submitForm">确 定</el-button>
+                <el-button @click="cancel">取 消</el-button>
+              </div>
+            </template>
           </el-dialog>
 
         </el-card>

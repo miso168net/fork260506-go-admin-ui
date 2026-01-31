@@ -3,34 +3,28 @@
     <el-row>
       <el-col :span="12">
         <el-form-item prop="tableName">
-          <span v-slot:label>
-            数据表名称
+          <template #label>数据表名称
             <el-tooltip content="数据库表名称，针对gorm对应的table()使用，⚠️这里必须是蛇形结构" placement="top">
               <i class="el-icon-question" />
-            </el-tooltip>
-          </span>
+            </el-tooltip></template>
           <el-input v-model="info.tableName" placeholder="请输入表名称" />
         </el-form-item>
       </el-col>
       <el-col :span="12">
         <el-form-item prop="tableComment">
-          <span v-slot:label>
-            菜单名称
+          <template #label>菜单名称
             <el-tooltip content="同步的数据库表名称，生成配置数据时，用作菜单名称" placement="top">
               <i class="el-icon-question" />
-            </el-tooltip>
-          </span>
+            </el-tooltip></template>
           <el-input v-model="info.tableComment" placeholder="请输入菜单名称" />
         </el-form-item>
       </el-col>
       <el-col :span="12">
         <el-form-item prop="className">
-          <span v-slot:label>
-            结构体模型名称
+          <template #label>结构体模型名称
             <el-tooltip content="结构体模型名称，代码中的struct名称定义使用" placement="top">
               <i class="el-icon-question" />
-            </el-tooltip>
-          </span>
+            </el-tooltip></template>
           <el-input v-model="info.className" placeholder="请输入" />
         </el-form-item>
       </el-col>
@@ -41,12 +35,10 @@
       </el-col>
       <!-- <el-col :span="12">
         <el-form-item prop="isLogicalDelete">
-          <span v-slot:label>
-            是否逻辑删除
+          <template #label>是否逻辑删除
             <el-tooltip content="目前只支持逻辑删除" placement="top">
               <i class="el-icon-question" />
-            </el-tooltip>
-          </span>
+            </el-tooltip></template>
           <el-radio-group v-model="info.isLogicalDelete">
             <el-radio label="1">是</el-radio>
             <el-radio label="0">否</el-radio>

@@ -110,24 +110,32 @@
                 @click="handlePreview(scope.row)"
               >预览</el-button>
                 <el-button
+                  v-slot:reference
                   type="text"
                   size="small"
                   icon="el-icon-view"
                   @click="handleToProject(scope.row)"
                 >代码生成</el-button>
+
                 <el-button
+                  v-slot:reference
                   type="text"
                   size="small"
                   icon="el-icon-view"
                   @click="handleToDB(scope.row)"
                 >生成配置</el-button>
+
+     
                 <el-button
+                  v-slot:reference
                   type="text"
                   size="small"
                   icon="el-icon-view"
                    @click="handleToApiFile(scope.row)"
                 >生成迁移脚本</el-button>
+                
                 <el-button
+                  v-slot:reference
                   type="text"
                   size="small"
                   icon="el-icon-delete"
@@ -136,7 +144,7 @@
             </template>
           </el-table-column>
         </el-table>
-        <app-pagination
+        <pagination
           v-show="total>0"
           :total="total"
           v-model:current-page="queryParams.pageIndex"
@@ -147,7 +155,7 @@
 
       <!-- 预览界面 -->
 
-  <el-dialog class="preview" :title="preview.title" v-model="preview.open" :close-on-click-modal="false" fullscreen>
+      <el-dialog class="preview" :title="preview.title" v-model="open" :close-on-click-modal="false" fullscreen>
         <div class="el-dialog-container">
           <div class="tag-group">
             <!-- eslint-disable-next-line vue/valid-v-for -->
@@ -185,14 +193,15 @@ import { listTable, previewTable, delTable, toDBTable, toProjectTableCheckRole, 
 import importTable from './importTable'
 import { downLoadFile } from '@/utils/zipdownload'
 import { codemirror } from 'vue-codemirror'
-import 'codemirror/theme/material-palenight.css'
+// import 'codemirror/theme/material-palenight.css'
 
-import 'codemirror/mode/javascript/javascript'
-import 'codemirror/mode/go/go'
-import 'codemirror/mode/vue/vue'
+// require('codemirror/mode/javascript/javascript')
+// import 'codemirror/mode/javascript/javascript'
+// import 'codemirror/mode/go/go'
+// import 'codemirror/mode/vue/vue'
 
 export default {
-  name: 'GenCode',
+  name: 'Gen',
   components: { importTable, codemirror },
   data() {
     return {
@@ -367,23 +376,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
- .el-dialog-container{
+ .el-dialog-container ::v-deep{
    overflow: hidden;
-   :deep(.el-scrollbar__view){
+   .el-scrollbar__view{
      height: 100%;
    }
-   :deep(.pre){
+   .pre{
      height: 546px;
-     overflow: hidden;
+      overflow: hidden;
+      .el-scrollbar{
+        height: 100%;
+      }
    }
-   :deep(.pre .el-scrollbar){
-     height: 100%;
-   }
-   :deep(.el-scrollbar__wrap::-webkit-scrollbar){
+   .el-scrollbar__wrap::-webkit-scrollbar{
      display: none;
    }
  }
- :deep(.el-dialog__body){
+ ::v-deep .el-dialog__body{
     padding: 0 20px;
     margin:0;
   }
