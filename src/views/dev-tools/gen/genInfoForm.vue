@@ -1,10 +1,10 @@
 <template>
-  <el-form ref="genInfoForm" :model="info" :rules="rules" label-width="150px">
+  <el-form ref="genInfoForm" :model="formData" :rules="rules" label-width="150px">
     <el-row>
       <el-col :span="12">
         <el-form-item prop="tplCategory">
           <template #label>生成模板</template>
-          <el-select v-model="info.tplCategory">
+          <el-select v-model="formData.tplCategory">
             <el-option label="关系表（增删改查）" value="crud" />
             <!-- <el-option label="关系表（增删改查）" value="mcrud" />
             <el-option label="树表（增删改查）" value="tree" /> -->
@@ -18,7 +18,7 @@
             <el-tooltip content="应用名，例如：在app文件夹下将该功能发到那个应用中，默认：admin" placement="top">
               <i class="el-icon-question" />
             </el-tooltip></template>
-          <el-input v-model="info.packageName" />
+          <el-input v-model="formData.packageName" />
         </el-form-item>
       </el-col>
 
@@ -28,7 +28,7 @@
             <el-tooltip content="前端项目文件名，例如 sys-user.js " placement="top">
               <i class="el-icon-question" />
             </el-tooltip></template>
-          <el-input v-model="info.moduleFrontName" />
+          <el-input v-model="formData.moduleFrontName" />
         </el-form-item>
       </el-col> -->
 
@@ -38,7 +38,7 @@
             <el-tooltip content="可理解为功能英文名，例如 user" placement="top">
               <i class="el-icon-question" />
             </el-tooltip></template>
-          <el-input v-model="info.businessName" />
+          <el-input v-model="formData.businessName" />
         </el-form-item>
       </el-col>
 
@@ -48,7 +48,7 @@
             <el-tooltip content="同步的数据库表备注，用作类描述，例如：用户" placement="top">
               <i class="el-icon-question" />
             </el-tooltip></template>
-          <el-input v-model="info.functionName" />
+          <el-input v-model="formData.functionName" />
         </el-form-item>
       </el-col>
       <el-col :span="12">
@@ -57,7 +57,7 @@
             <el-tooltip content="接口路径，例如：api/v1/{sys-user}" placement="top">
               <i class="el-icon-question" />
             </el-tooltip></template>
-          <el-input v-model="info.moduleName">
+          <el-input v-model="formData.moduleName">
             <template #prepend>api/{version}/</template>
             <template #append>...</template>
           </el-input>
@@ -75,7 +75,7 @@
             <el-tooltip content="是指是否使用用户和角色验证中间件" placement="top">
               <i class="el-icon-question" />
             </el-tooltip></template>
-          <el-select v-model="info.isAuth">
+          <el-select v-model="formData.isAuth">
             <el-option label="true" value="1" />
             <el-option label="false" value="2" />
           </el-select>
@@ -87,7 +87,7 @@
             <el-tooltip content="暂不支持" placement="top">
               <i class="el-icon-question" />
             </el-tooltip></template>
-          <el-select v-model="info.isDataScope" disabled>
+          <el-select v-model="formData.isDataScope" disabled>
             <el-option label="true" value="1" />
             <el-option label="false" value="2" />
           </el-select>
@@ -99,7 +99,7 @@
             <el-tooltip content="系统通用增删改查中间件方法" placement="top">
               <i class="el-icon-question" />
             </el-tooltip></template>
-          <el-select v-model="info.isActions" disabled>
+          <el-select v-model="formData.isActions" disabled>
             <el-option label="false" value="2" />
           </el-select>
         </el-form-item>
@@ -114,7 +114,7 @@
             <el-tooltip content="树显示的编码字段名， 如：dept_id" placement="top">
               <i class="el-icon-question" />
             </el-tooltip></template>
-          <el-select v-model="info.treeCode" placeholder="请选择">
+          <el-select v-model="formData.treeCode" placeholder="请选择">
             <el-option
               v-for="column in info.columns"
               :key="column.columnName"
@@ -130,7 +130,7 @@
             <el-tooltip content="树显示的父编码字段名， 如：parent_Id" placement="top">
               <i class="el-icon-question" />
             </el-tooltip></template>
-          <el-select v-model="info.treeParentCode" placeholder="请选择">
+          <el-select v-model="formData.treeParentCode" placeholder="请选择">
             <el-option
               v-for="column in info.columns"
               :key="column.columnName"
@@ -146,7 +146,7 @@
             <el-tooltip content="树节点的显示名称字段名， 如：dept_name" placement="top">
               <i class="el-icon-question" />
             </el-tooltip></template>
-          <el-select v-model="info.treeName" placeholder="请选择">
+          <el-select v-model="formData.treeName" placeholder="请选择">
             <el-option
               v-for="column in info.columns"
               :key="column.columnName"
@@ -170,6 +170,7 @@ export default {
   },
   data() {
     return {
+      formData: { ...this.info },
       rules: {
         tplCategory: [
           { required: true, message: '请选择生成模板', trigger: 'blur' }
@@ -190,6 +191,20 @@ export default {
           { required: true, message: '请输入生成功能名', trigger: 'blur' }
         ]
       }
+    }
+  },
+  watch: {
+    info: {
+      handler(val) {
+        this.formData = { ...val }
+      },
+      deep: true
+    },
+    formData: {
+      handler(val) {
+        this.$emit('update:info', val)
+      },
+      deep: true
     }
   },
   created() {}

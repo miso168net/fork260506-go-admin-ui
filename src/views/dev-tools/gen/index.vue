@@ -110,7 +110,6 @@
                 @click="handlePreview(scope.row)"
               >预览</el-button>
               <el-button
-                #reference
                 type="text"
                 size="small"
                 icon="el-icon-view"
@@ -118,7 +117,6 @@
               >代码生成</el-button>
 
               <el-button
-                #reference
                 type="text"
                 size="small"
                 icon="el-icon-view"
@@ -126,7 +124,6 @@
               >生成配置</el-button>
 
               <el-button
-                #reference
                 type="text"
                 size="small"
                 icon="el-icon-view"
@@ -134,7 +131,6 @@
               >生成迁移脚本</el-button>
 
               <el-button
-                #reference
                 type="text"
                 size="small"
                 icon="el-icon-delete"
