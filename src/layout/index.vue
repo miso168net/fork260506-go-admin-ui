@@ -23,7 +23,7 @@ import { mapState } from 'vuex'
 import variables from '@/styles/variables.scss'
 
 export default {
-  name: 'Layout',
+  name: 'MainLayout',
   components: {
     AppMain,
     Navbar,

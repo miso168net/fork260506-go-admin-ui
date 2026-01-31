@@ -11,17 +11,24 @@
         :closable="item.fullPath === '/dashboard' ? false : true"
         :name="item.fullPath"
       >
-        <router-link
-          ref="tag"
-          #label
-          tag="span"
-          class="tags-view-item"
-          :style="{ color: item.fullPath === $route.fullPath ? theme : '' }"
-          :to="{ path: item.path, query: item.query, fullPath: item.fullPath }"
-          @contextmenu.prevent="openMenu(item,$event)"
-        >
-          {{ item.title }}
-        </router-link>
+        <template #label>
+          <router-link
+            ref="tag"
+            class="tags-view-item"
+            :style="{ color: item.fullPath === $route.fullPath ? theme : '' }"
+            :to="{ path: item.path, query: item.query, fullPath: item.fullPath }"
+            custom
+            v-slot="{ navigate, href }"
+          >
+            <span
+              :href="href"
+              @click="navigate"
+              @contextmenu.prevent="openMenu(item,$event)"
+            >
+              {{ item.title }}
+            </span>
+          </router-link>
+        </template>
       </el-tab-pane>
     </el-tabs>
     <ul v-show="visible" :style="{left:left+'px',top:top+'px'}" class="contextmenu">
