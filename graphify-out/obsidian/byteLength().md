@@ -1,12 +1,12 @@
 ---
 source_file: "src/utils/index.js"
 type: "code"
-community: "App Bootstrap & DOM Utils"
+community: "Error Log & DOM Utils"
 location: "L116"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/App_Bootstrap_&_DOM_Utils
+  - community/Error_Log__DOM_Utils
 ---
 
 # byteLength()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[index.js_9]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/App_Bootstrap_&_DOM_Utils
+#graphify/code #graphify/EXTRACTED #community/Error_Log__DOM_Utils

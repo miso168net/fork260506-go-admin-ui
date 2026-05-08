@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/zip.svg"
 type: "image"
-community: "Upload Icon"
+community: "Community 115"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Upload_Icon
+  - community/Community_115
 ---
 
 # Zip Icon
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Upload Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Upload_Icon
+#graphify/image #graphify/INFERRED #community/Community_115

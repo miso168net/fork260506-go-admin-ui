@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/shopping.svg"
 type: "image"
-community: "Shopping Icon"
+community: "Community 74"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Shopping_Icon
+  - community/Community_74
 ---
 
 # Shopping Icon
@@ -14,4 +14,4 @@ tags:
 - [[Star Icon]] - `conceptually_related_to` [INFERRED]
 - [[WeChat Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Shopping_Icon
+#graphify/image #graphify/INFERRED #community/Community_74

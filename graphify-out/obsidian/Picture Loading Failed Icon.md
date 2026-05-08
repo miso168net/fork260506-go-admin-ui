@@ -1,11 +1,11 @@
 ---
 source_file: "src/assets/icons/Pictureloadingfailed.png"
 type: "image"
-community: "Picture Loading Failed Icon"
+community: "Community 77"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Picture_Loading_Failed_Icon
+  - community/Community_77
 ---
 
 # Picture Loading Failed Icon
@@ -14,4 +14,4 @@ tags:
 - [[PictureUnknow Icon]] - `conceptually_related_to` [INFERRED]
 - [[Unknow Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Picture_Loading_Failed_Icon
+#graphify/image #graphify/INFERRED #community/Community_77

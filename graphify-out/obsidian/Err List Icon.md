@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/err-list.svg"
 type: "image"
-community: "Err List Icon"
+community: "Community 105"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Err_List_Icon
+  - community/Community_105
 ---
 
 # Err List Icon
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[HTTP Err Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Err_List_Icon
+#graphify/image #graphify/INFERRED #community/Community_105

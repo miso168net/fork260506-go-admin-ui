@@ -1,12 +1,12 @@
 ---
 source_file: "src/components/FormGenRender/slots/el-button.js"
 type: "code"
-community: "el-button.js"
+community: "Community 85"
 location: "L2"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/el-button.js
+  - community/Community_85
 ---
 
 # default()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[el-button.js]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/el-button.js
+#graphify/code #graphify/EXTRACTED #community/Community_85

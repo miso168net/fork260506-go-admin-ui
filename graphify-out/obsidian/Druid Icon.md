@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/druid.svg"
 type: "image"
-community: "Druid Icon"
+community: "Community 108"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Druid_Icon
+  - community/Community_108
 ---
 
 # Druid Icon
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Intel Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Druid_Icon
+#graphify/image #graphify/INFERRED #community/Community_108

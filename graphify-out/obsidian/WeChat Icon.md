@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/wechat.svg"
 type: "image"
-community: "Shopping Icon"
+community: "Community 74"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Shopping_Icon
+  - community/Community_74
 ---
 
 # WeChat Icon
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Shopping Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Shopping_Icon
+#graphify/image #graphify/INFERRED #community/Community_74

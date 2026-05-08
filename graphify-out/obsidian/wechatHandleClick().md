@@ -1,12 +1,12 @@
 ---
 source_file: "src/views/login/components/SocialSignin.vue"
 type: "code"
-community: "tencentHandleClick()"
+community: "Community 68"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tencentHandleClick()
+  - community/Community_68
 ---
 
 # wechatHandleClick()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[SocialSignin.vue]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tencentHandleClick()
+#graphify/code #graphify/EXTRACTED #community/Community_68

@@ -1,11 +1,11 @@
 ---
 source_file: "README.md"
 type: "document"
-community: "Admin Modules & Docs"
+community: "Project Docs & Backend Concepts"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/Admin_Modules_&_Docs
+  - community/Project_Docs__Backend_Concepts
 ---
 
 # Node.js v18+
@@ -13,6 +13,6 @@ tags:
 ## Connections
 - [[Node.js =8.9 to =18.0 Upgrade]] - `rationale_for` [INFERRED]
 - [[Node.js v14.16.0 (legacy requirement)]] - `semantically_similar_to` [INFERRED]
-- [[go-admin Project]] - `references` [EXTRACTED]
+- [[go-admin Project (English README)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/INFERRED #community/Admin_Modules_&_Docs
+#graphify/document #graphify/INFERRED #community/Project_Docs__Backend_Concepts

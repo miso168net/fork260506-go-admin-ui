@@ -5,7 +5,7 @@ community: "Utility Functions"
 location: "L289"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/Utility_Functions
 ---
 
@@ -15,4 +15,4 @@ tags:
 - [[cleanOperlog()]] - `calls` [INFERRED]
 - [[index.vue_36]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Utility_Functions
+#graphify/code #graphify/INFERRED #community/Utility_Functions

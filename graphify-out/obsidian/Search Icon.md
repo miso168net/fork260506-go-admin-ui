@@ -1,13 +1,13 @@
 ---
 source_file: "src/icons/svg/search.svg"
 type: "image"
-community: "Search Icon"
+community: "Community 214"
 tags:
   - graphify/image
   - graphify/EXTRACTED
-  - community/Search_Icon
+  - community/Community_214
 ---
 
 # Search Icon
 
-#graphify/image #graphify/EXTRACTED #community/Search_Icon
+#graphify/image #graphify/EXTRACTED #community/Community_214

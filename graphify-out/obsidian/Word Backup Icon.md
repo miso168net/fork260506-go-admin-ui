@@ -1,11 +1,11 @@
 ---
 source_file: "src/assets/icons/Wordbeifen.png"
 type: "image"
-community: "PowerPoint Backup Icon"
+community: "Community 79"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/PowerPoint_Backup_Icon
+  - community/Community_79
 ---
 
 # Word Backup Icon
@@ -14,4 +14,4 @@ tags:
 - [[Excel Backup Icon]] - `conceptually_related_to` [INFERRED]
 - [[PowerPoint Backup Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/PowerPoint_Backup_Icon
+#graphify/image #graphify/INFERRED #community/Community_79

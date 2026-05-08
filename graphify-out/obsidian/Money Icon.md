@@ -1,13 +1,13 @@
 ---
 source_file: "src/icons/svg/money.svg"
 type: "image"
-community: "Money Icon"
+community: "Community 206"
 tags:
   - graphify/image
   - graphify/EXTRACTED
-  - community/Money_Icon
+  - community/Community_206
 ---
 
 # Money Icon
 
-#graphify/image #graphify/EXTRACTED #community/Money_Icon
+#graphify/image #graphify/EXTRACTED #community/Community_206

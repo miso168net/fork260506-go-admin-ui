@@ -1,12 +1,12 @@
 ---
 source_file: "src/views/dashboard/admin/components/LineChart.vue"
 type: "code"
-community: "Chart Component Lifecycle"
+community: "Community 26"
 location: "L42"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Chart_Component_Lifecycle
+  - community/Community_26
 ---
 
 # handler()
@@ -15,4 +15,4 @@ tags:
 - [[LineChart.vue]] - `contains` [EXTRACTED]
 - [[setOptions()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Chart_Component_Lifecycle
+#graphify/code #graphify/EXTRACTED #community/Community_26

@@ -1,12 +1,12 @@
 ---
 source_file: "src/views/profile/components/Activity.vue"
 type: "code"
-community: "Activity.vue"
+community: "Community 101"
 location: "L88"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Activity.vue
+  - community/Community_101
 ---
 
 # data()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Activity.vue]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Activity.vue
+#graphify/code #graphify/EXTRACTED #community/Community_101

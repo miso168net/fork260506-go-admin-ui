@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/validCode.svg"
 type: "image"
-community: "Valid Code Icon"
+community: "Community 114"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Valid_Code_Icon
+  - community/Community_114
 ---
 
 # Valid Code Icon
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Signature Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Valid_Code_Icon
+#graphify/image #graphify/INFERRED #community/Community_114

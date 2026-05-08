@@ -1,12 +1,12 @@
 ---
 source_file: "src/components/FormGenRender/slots/el-radio-group.js"
 type: "code"
-community: "el-radio-group.js"
+community: "Community 87"
 location: "L2"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/el-radio-group.js
+  - community/Community_87
 ---
 
 # options()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[el-radio-group.js]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/el-radio-group.js
+#graphify/code #graphify/EXTRACTED #community/Community_87

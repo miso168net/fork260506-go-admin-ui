@@ -1,12 +1,12 @@
 ---
 source_file: "src/api/admin/dict/data.js"
 type: "code"
-community: "CRUD Page Lifecycle"
+community: "Dictionary Data Component"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CRUD_Page_Lifecycle
+  - community/Dictionary_Data_Component
 ---
 
 # data.js
@@ -20,4 +20,4 @@ tags:
 - [[listData()]] - `contains` [EXTRACTED]
 - [[updateData()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CRUD_Page_Lifecycle
+#graphify/code #graphify/EXTRACTED #community/Dictionary_Data_Component

@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/exit-fullscreen.svg"
 type: "image"
-community: "Exit Fullscreen Icon"
+community: "Community 106"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Exit_Fullscreen_Icon
+  - community/Community_106
 ---
 
 # Exit Fullscreen Icon
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Fullscreen Icon]] - `semantically_similar_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Exit_Fullscreen_Icon
+#graphify/image #graphify/INFERRED #community/Community_106

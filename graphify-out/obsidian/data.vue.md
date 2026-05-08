@@ -1,12 +1,12 @@
 ---
 source_file: "src/views/admin/dict/data.vue"
 type: "code"
-community: "CRUD Page Lifecycle"
+community: "Dictionary Data Component"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CRUD_Page_Lifecycle
+  - community/Dictionary_Data_Component
 ---
 
 # data.vue
@@ -28,4 +28,4 @@ tags:
 - [[resetQuery()]] - `contains` [EXTRACTED]
 - [[statusFormat()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CRUD_Page_Lifecycle
+#graphify/code #graphify/EXTRACTED #community/Dictionary_Data_Component

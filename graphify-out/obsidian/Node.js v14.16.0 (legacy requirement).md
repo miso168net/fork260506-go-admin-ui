@@ -1,11 +1,11 @@
 ---
 source_file: "README.Zh-cn.md"
 type: "document"
-community: "Admin Modules & Docs"
+community: "Project Docs & Backend Concepts"
 tags:
   - graphify/document
-  - graphify/EXTRACTED
-  - community/Admin_Modules_&_Docs
+  - graphify/INFERRED
+  - community/Project_Docs__Backend_Concepts
 ---
 
 # Node.js v14.16.0 (legacy requirement)
@@ -14,4 +14,4 @@ tags:
 - [[Node.js v18+]] - `semantically_similar_to` [INFERRED]
 - [[README.Zh-cn.md (Chinese)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Admin_Modules_&_Docs
+#graphify/document #graphify/INFERRED #community/Project_Docs__Backend_Concepts

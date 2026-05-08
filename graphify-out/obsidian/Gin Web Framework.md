@@ -1,16 +1,18 @@
 ---
 source_file: "README.md"
-type: "document"
-community: "Admin Modules & Docs"
+type: "rationale"
+community: "Project Docs & Backend Concepts"
 tags:
-  - graphify/document
+  - graphify/rationale
   - graphify/EXTRACTED
-  - community/Admin_Modules_&_Docs
+  - community/Project_Docs__Backend_Concepts
 ---
 
 # Gin Web Framework
 
 ## Connections
-- [[go-admin Project]] - `implements` [EXTRACTED]
+- [[Memory Q GinCasbinJWTGORM are degree-1 doc nodes]] - `references` [EXTRACTED]
+- [[go-admin Project (English README)]] - `references` [EXTRACTED]
+- [[go-admin 專案 (Chinese README)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Admin_Modules_&_Docs
+#graphify/rationale #graphify/EXTRACTED #community/Project_Docs__Backend_Concepts

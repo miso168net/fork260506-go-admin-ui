@@ -1,12 +1,12 @@
 ---
 source_file: "src/utils/generator/index.js"
 type: "code"
-community: "App Bootstrap & DOM Utils"
+community: "Error Log & DOM Utils"
 location: "L109"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/App_Bootstrap_&_DOM_Utils
+  - community/Error_Log__DOM_Utils
 ---
 
 # deepClone()
@@ -18,4 +18,4 @@ tags:
 - [[isArray()]] - `calls` [INFERRED]
 - [[render()]] - `calls` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/App_Bootstrap_&_DOM_Utils
+#graphify/code #graphify/INFERRED #community/Error_Log__DOM_Utils

@@ -1,12 +1,12 @@
 ---
 source_file: "src/components/FormGenRender/slots/el-input.js"
 type: "code"
-community: "el-input.js"
+community: "Community 63"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/el-input.js
+  - community/Community_63
 ---
 
 # el-input.js
@@ -15,4 +15,4 @@ tags:
 - [[append()]] - `contains` [EXTRACTED]
 - [[prepend()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/el-input.js
+#graphify/code #graphify/EXTRACTED #community/Community_63

@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/download.svg"
 type: "image"
-community: "Microsoft OneDrive Icon"
+community: "Community 28"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Microsoft_OneDrive_Icon
+  - community/Community_28
 ---
 
 # Download Icon
@@ -14,4 +14,4 @@ tags:
 - [[Excel Icon]] - `conceptually_related_to` [INFERRED]
 - [[JSON Push Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Microsoft_OneDrive_Icon
+#graphify/image #graphify/INFERRED #community/Community_28

@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/rate.svg"
 type: "image"
-community: "Radio Icon"
+community: "Community 111"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Radio_Icon
+  - community/Community_111
 ---
 
 # Rate Icon
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Radio Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Radio_Icon
+#graphify/image #graphify/INFERRED #community/Community_111

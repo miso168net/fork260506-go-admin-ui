@@ -1,12 +1,12 @@
 ---
 source_file: "src/components/SvgIcon/index.vue"
 type: "code"
-community: "styleExternalIcon()"
+community: "Community 37"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/styleExternalIcon()
+  - community/Community_37
 ---
 
 # index.vue
@@ -17,4 +17,4 @@ tags:
 - [[styleExternalIcon()]] - `contains` [EXTRACTED]
 - [[svgClass()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/styleExternalIcon()
+#graphify/code #graphify/EXTRACTED #community/Community_37

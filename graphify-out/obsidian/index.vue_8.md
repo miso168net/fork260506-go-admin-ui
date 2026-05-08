@@ -1,12 +1,12 @@
 ---
 source_file: "src/components/Hamburger/index.vue"
 type: "code"
-community: "toggleClick()"
+community: "Community 88"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toggleClick()
+  - community/Community_88
 ---
 
 # index.vue
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[toggleClick()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toggleClick()
+#graphify/code #graphify/EXTRACTED #community/Community_88

@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/access.svg"
 type: "image"
-community: "Microsoft OneDrive Icon"
+community: "Community 28"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Microsoft_OneDrive_Icon
+  - community/Community_28
 ---
 
 # Access Icon
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Excel Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Microsoft_OneDrive_Icon
+#graphify/image #graphify/INFERRED #community/Community_28

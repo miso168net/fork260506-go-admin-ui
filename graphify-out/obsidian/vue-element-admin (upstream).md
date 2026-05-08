@@ -1,16 +1,17 @@
 ---
 source_file: "README.md"
-type: "document"
-community: "Admin Modules & Docs"
+type: "rationale"
+community: "Project Docs & Backend Concepts"
 tags:
-  - graphify/document
+  - graphify/rationale
   - graphify/EXTRACTED
-  - community/Admin_Modules_&_Docs
+  - community/Project_Docs__Backend_Concepts
 ---
 
 # vue-element-admin (upstream)
 
 ## Connections
 - [[README.md (English)]] - `cites` [EXTRACTED]
+- [[go-admin Project (English README)]] - `cites` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Admin_Modules_&_Docs
+#graphify/rationale #graphify/EXTRACTED #community/Project_Docs__Backend_Concepts

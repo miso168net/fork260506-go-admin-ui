@@ -1,11 +1,11 @@
 ---
 source_file: "src/assets/icons/adobe-01-01-01.png"
 type: "image"
-community: "Adobe Portfolio Icon"
+community: "Community 29"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Adobe_Portfolio_Icon
+  - community/Community_29
 ---
 
 # Adobe Icon
@@ -18,4 +18,4 @@ tags:
 - [[Adobe Premiere Icon]] - `conceptually_related_to` [INFERRED]
 - [[Picture Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Adobe_Portfolio_Icon
+#graphify/image #graphify/INFERRED #community/Community_29

@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/online.svg"
 type: "image"
-community: "Logininfor Icon"
+community: "Community 51"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Logininfor_Icon
+  - community/Community_51
 ---
 
 # Online Icon
@@ -14,4 +14,4 @@ tags:
 - [[Log Icon]] - `conceptually_related_to` [INFERRED]
 - [[Logininfor Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Logininfor_Icon
+#graphify/image #graphify/INFERRED #community/Community_51

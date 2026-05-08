@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/example.svg"
 type: "image"
-community: "Documentation Icon"
+community: "Community 33"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Documentation_Icon
+  - community/Community_33
 ---
 
 # Example Icon
@@ -14,4 +14,4 @@ tags:
 - [[Doc Icon]] - `conceptually_related_to` [INFERRED]
 - [[Icon Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Documentation_Icon
+#graphify/image #graphify/INFERRED #community/Community_33

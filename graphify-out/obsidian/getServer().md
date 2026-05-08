@@ -1,12 +1,12 @@
 ---
 source_file: "src/api/monitor/server.js"
 type: "code"
-community: "Server Info Component"
+community: "Community 27"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Server_Info_Component
+  - community/Community_27
 ---
 
 # getServer()
@@ -15,4 +15,4 @@ tags:
 - [[getServerInfo()]] - `calls` [INFERRED]
 - [[server.js]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Server_Info_Component
+#graphify/code #graphify/EXTRACTED #community/Community_27

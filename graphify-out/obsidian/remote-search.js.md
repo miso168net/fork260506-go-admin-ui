@@ -1,12 +1,12 @@
 ---
 source_file: "src/api/remote-search.js"
 type: "code"
-community: "transactionList()"
+community: "Community 61"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/transactionList()
+  - community/Community_61
 ---
 
 # remote-search.js
@@ -15,4 +15,4 @@ tags:
 - [[searchUser()]] - `contains` [EXTRACTED]
 - [[transactionList()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/transactionList()
+#graphify/code #graphify/EXTRACTED #community/Community_61

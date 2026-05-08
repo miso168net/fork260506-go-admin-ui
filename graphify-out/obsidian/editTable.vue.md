@@ -1,19 +1,19 @@
 ---
 source_file: "src/views/dev-tools/gen/editTable.vue"
 type: "code"
-community: "Form & Table Helpers"
+community: "CodeGen EditTable"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Form_&_Table_Helpers
+  - community/CodeGen_EditTable
 ---
 
 # editTable.vue
 
 ## Connections
-- [[h('span', column.label + ' ', { align 'center', marginTop '0px' }), h( 'e...]] - `contains` [EXTRACTED]
 - [[close()]] - `contains` [EXTRACTED]
+- [[editTable render() expr ...]] - `contains` [EXTRACTED]
 - [[getFormPromise()]] - `contains` [EXTRACTED]
 - [[getTables()]] - `contains` [EXTRACTED]
 - [[getTablesCol()]] - `contains` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[return()]] - `contains` [EXTRACTED]
 - [[submitForm()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Form_&_Table_Helpers
+#graphify/code #graphify/EXTRACTED #community/CodeGen_EditTable

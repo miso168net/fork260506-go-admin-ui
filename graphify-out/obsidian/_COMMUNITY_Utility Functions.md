@@ -89,13 +89,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_Form & Table Helpers]]
-- 7 edges to [[_COMMUNITY_CRUD Page Lifecycle]]
+- 8 edges to [[_COMMUNITY_CodeGen EditTable]]
+- 7 edges to [[_COMMUNITY_Dictionary Data Component]]
 - 1 edge to [[_COMMUNITY_User API]]
 - 1 edge to [[_COMMUNITY_Sidebar Menu Items]]
-- 1 edge to [[_COMMUNITY_App Bootstrap & DOM Utils]]
+- 1 edge to [[_COMMUNITY_Error Log & DOM Utils]]
 - 1 edge to [[_COMMUNITY_Theme Engine]]
-- 1 edge to [[_COMMUNITY_Sidebar Tags & Navbar]]
+- 1 edge to [[_COMMUNITY_TagsView  Sidebar Navigation]]
 - 1 edge to [[_COMMUNITY_Auth Token Helpers]]
 
 ## Top bridge nodes

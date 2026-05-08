@@ -1,11 +1,11 @@
 ---
 source_file: "src/assets/icons/Idea.png"
 type: "image"
-community: "Android Studio Icon"
+community: "Community 58"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Android_Studio_Icon
+  - community/Community_58
 ---
 
 # IntelliJ IDEA Icon
@@ -14,4 +14,4 @@ tags:
 - [[Android Studio Icon]] - `conceptually_related_to` [INFERRED]
 - [[PhpStorm Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Android_Studio_Icon
+#graphify/image #graphify/INFERRED #community/Community_58

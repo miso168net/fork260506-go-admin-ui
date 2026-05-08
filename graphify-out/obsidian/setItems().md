@@ -1,12 +1,12 @@
 ---
 source_file: "src/api/table.js"
 type: "code"
-community: "getItems()"
+community: "Community 62"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/getItems()
+  - community/Community_62
 ---
 
 # setItems()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[table.js]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/getItems()
+#graphify/code #graphify/EXTRACTED #community/Community_62

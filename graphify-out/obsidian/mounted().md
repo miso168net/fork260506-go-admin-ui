@@ -1,12 +1,12 @@
 ---
 source_file: "src/App.vue"
 type: "code"
-community: "mounted()"
+community: "Community 83"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mounted()
+  - community/Community_83
 ---
 
 # mounted()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[App.vue]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mounted()
+#graphify/code #graphify/EXTRACTED #community/Community_83

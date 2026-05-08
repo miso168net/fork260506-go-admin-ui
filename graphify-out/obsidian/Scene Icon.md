@@ -1,13 +1,13 @@
 ---
 source_file: "src/icons/svg/scene.svg"
 type: "image"
-community: "Scene Icon"
+community: "Community 213"
 tags:
   - graphify/image
   - graphify/EXTRACTED
-  - community/Scene_Icon
+  - community/Community_213
 ---
 
 # Scene Icon
 
-#graphify/image #graphify/EXTRACTED #community/Scene_Icon
+#graphify/image #graphify/EXTRACTED #community/Community_213

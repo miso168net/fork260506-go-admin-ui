@@ -1,12 +1,12 @@
 ---
 source_file: "src/utils/error-log.js"
 type: "code"
-community: "App Bootstrap & DOM Utils"
+community: "Error Log & DOM Utils"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/App_Bootstrap_&_DOM_Utils
+  - community/Error_Log__DOM_Utils
 ---
 
 # error-log.js
@@ -15,4 +15,4 @@ tags:
 - [[checkNeed()]] - `contains` [EXTRACTED]
 - [[setupErrorHandler()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/App_Bootstrap_&_DOM_Utils
+#graphify/code #graphify/EXTRACTED #community/Error_Log__DOM_Utils

@@ -1,11 +1,11 @@
 ---
 source_file: "src/assets/icons/Pycharm.png"
 type: "image"
-community: "WebStorm Icon"
+community: "Community 118"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/WebStorm_Icon
+  - community/Community_118
 ---
 
 # PyCharm Icon
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[WebStorm Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/WebStorm_Icon
+#graphify/image #graphify/INFERRED #community/Community_118

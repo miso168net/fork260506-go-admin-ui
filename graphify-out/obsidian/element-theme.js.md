@@ -1,14 +1,14 @@
 ---
 source_file: "src/styles/element-theme.js"
 type: "code"
-community: "element-theme.js"
+community: "Community 175"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/element-theme.js
+  - community/Community_175
 ---
 
 # element-theme.js
 
-#graphify/code #graphify/EXTRACTED #community/element-theme.js
+#graphify/code #graphify/EXTRACTED #community/Community_175

@@ -1,12 +1,12 @@
 ---
 source_file: "src/api/admin/sys-api.js"
 type: "code"
-community: "updateSysApi()"
+community: "Community 30"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/updateSysApi()
+  - community/Community_30
 ---
 
 # sys-api.js
@@ -18,4 +18,4 @@ tags:
 - [[listSysApi()]] - `contains` [EXTRACTED]
 - [[updateSysApi()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/updateSysApi()
+#graphify/code #graphify/EXTRACTED #community/Community_30

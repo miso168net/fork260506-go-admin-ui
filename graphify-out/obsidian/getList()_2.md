@@ -1,21 +1,21 @@
 ---
 source_file: "src/views/dev-tools/gen/importTable.vue"
 type: "code"
-community: "Form & Table Helpers"
+community: "CodeGen EditTable"
 location: "L89"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Form_&_Table_Helpers
+  - community/CodeGen_EditTable
 ---
 
 # getList()
 
 ## Connections
-- [[handleQuery()_2]] - `calls` [EXTRACTED]
 - [[handleQuery()_1]] - `calls` [INFERRED]
+- [[handleQuery()_2]] - `calls` [EXTRACTED]
 - [[importTable.vue]] - `contains` [EXTRACTED]
 - [[listDbTable()]] - `calls` [INFERRED]
 - [[show()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Form_&_Table_Helpers
+#graphify/code #graphify/EXTRACTED #community/CodeGen_EditTable

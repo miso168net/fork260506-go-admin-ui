@@ -1,12 +1,12 @@
 ---
 source_file: "src/views/dashboard/admin/components/PieChart.vue"
 type: "code"
-community: "beforeUnmount()"
+community: "Community 43"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/beforeUnmount()
+  - community/Community_43
 ---
 
 # PieChart.vue
@@ -17,4 +17,4 @@ tags:
 - [[initChart()_2]] - `contains` [EXTRACTED]
 - [[mounted()_9]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/beforeUnmount()
+#graphify/code #graphify/EXTRACTED #community/Community_43

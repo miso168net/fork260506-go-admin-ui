@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/project-manage.svg"
 type: "image"
-community: "Project Manage Icon"
+community: "Community 52"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Project_Manage_Icon
+  - community/Community_52
 ---
 
 # Project Manage Icon
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Project Group Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Project_Manage_Icon
+#graphify/image #graphify/INFERRED #community/Community_52

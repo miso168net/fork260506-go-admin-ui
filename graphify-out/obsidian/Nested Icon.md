@@ -1,13 +1,13 @@
 ---
 source_file: "src/icons/svg/nested.svg"
 type: "image"
-community: "Nested Icon"
+community: "Community 207"
 tags:
   - graphify/image
   - graphify/EXTRACTED
-  - community/Nested_Icon
+  - community/Community_207
 ---
 
 # Nested Icon
 
-#graphify/image #graphify/EXTRACTED #community/Nested_Icon
+#graphify/image #graphify/EXTRACTED #community/Community_207

@@ -1,12 +1,12 @@
 ---
 source_file: "src/views/admin/dict/data.vue"
 type: "code"
-community: "CRUD Page Lifecycle"
+community: "Dictionary Data Component"
 location: "L207"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CRUD_Page_Lifecycle
+  - community/Dictionary_Data_Component
 ---
 
 # created()
@@ -17,4 +17,4 @@ tags:
 - [[getType()_1]] - `calls` [EXTRACTED]
 - [[getTypeList()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CRUD_Page_Lifecycle
+#graphify/code #graphify/EXTRACTED #community/Dictionary_Data_Component

@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/drag copy.svg"
 type: "image"
-community: "Drag Copy Icon"
+community: "Community 32"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Drag_Copy_Icon
+  - community/Community_32
 ---
 
 # Drag Copy Icon
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Drag Icon]] - `semantically_similar_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Drag_Copy_Icon
+#graphify/image #graphify/INFERRED #community/Community_32

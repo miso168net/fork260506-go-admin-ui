@@ -1,12 +1,12 @@
 ---
 source_file: "src/components/RightPanel/index.vue"
 type: "code"
-community: "App Bootstrap & DOM Utils"
+community: "Error Log & DOM Utils"
 location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/App_Bootstrap_&_DOM_Utils
+  - community/Error_Log__DOM_Utils
 ---
 
 # addEventClick()
@@ -15,4 +15,4 @@ tags:
 - [[index.vue_19]] - `contains` [EXTRACTED]
 - [[show()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/App_Bootstrap_&_DOM_Utils
+#graphify/code #graphify/EXTRACTED #community/Error_Log__DOM_Utils

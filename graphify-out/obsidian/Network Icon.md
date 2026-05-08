@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/network.svg"
 type: "image"
-community: "Network Icon"
+community: "Community 110"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Network_Icon
+  - community/Community_110
 ---
 
 # Network Icon
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Map Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Network_Icon
+#graphify/image #graphify/INFERRED #community/Community_110

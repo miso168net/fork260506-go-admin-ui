@@ -1,11 +1,11 @@
 ---
 source_file: "src/assets/icons/txtbeifen.png"
 type: "image"
-community: "TXT Backup Icon"
+community: "Community 80"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/TXT_Backup_Icon
+  - community/Community_80
 ---
 
 # TXT Backup Icon
@@ -14,4 +14,4 @@ tags:
 - [[Document Icon]] - `conceptually_related_to` [INFERRED]
 - [[Folder Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/TXT_Backup_Icon
+#graphify/image #graphify/INFERRED #community/Community_80

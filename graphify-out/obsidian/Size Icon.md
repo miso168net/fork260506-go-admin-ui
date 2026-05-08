@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/size.svg"
 type: "image"
-community: "Theme Icon"
+community: "Community 75"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Theme_Icon
+  - community/Community_75
 ---
 
 # Size Icon
@@ -14,4 +14,4 @@ tags:
 - [[Tab Icon]] - `conceptually_related_to` [INFERRED]
 - [[Theme Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Theme_Icon
+#graphify/image #graphify/INFERRED #community/Community_75

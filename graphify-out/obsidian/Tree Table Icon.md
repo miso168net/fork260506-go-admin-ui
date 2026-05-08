@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/tree-table.svg"
 type: "image"
-community: "Statistics Icon"
+community: "Community 55"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Statistics_Icon
+  - community/Community_55
 ---
 
 # Tree Table Icon
@@ -14,4 +14,4 @@ tags:
 - [[Table Icon]] - `conceptually_related_to` [INFERRED]
 - [[Tree Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Statistics_Icon
+#graphify/image #graphify/INFERRED #community/Community_55

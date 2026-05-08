@@ -1,12 +1,12 @@
 ---
 source_file: "src/directive/el-drag-dialog/drag.js"
 type: "code"
-community: "drag.js"
+community: "Community 90"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/drag.js
+  - community/Community_90
 ---
 
 # drag.js
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[bind()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/drag.js
+#graphify/code #graphify/EXTRACTED #community/Community_90

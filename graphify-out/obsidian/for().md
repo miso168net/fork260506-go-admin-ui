@@ -1,12 +1,12 @@
 ---
 source_file: "src/views/admin/sys-menu/index.vue"
 type: "code"
-community: "index.vue"
+community: "Community 97"
 location: "L440"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/index.vue
+  - community/Community_97
 ---
 
 # for()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[index.vue_35]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/index.vue
+#graphify/code #graphify/EXTRACTED #community/Community_97

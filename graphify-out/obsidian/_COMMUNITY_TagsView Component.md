@@ -33,7 +33,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Sidebar Tags & Navbar]]
+- 1 edge to [[_COMMUNITY_TagsView  Sidebar Navigation]]
 
 ## Top bridge nodes
 - [[moveToCurrentTag()]] - degree 2, connects to 1 community

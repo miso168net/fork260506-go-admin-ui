@@ -5,7 +5,7 @@ community: "Schedule CRUD"
 location: "L11"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/Schedule_CRUD
 ---
 
@@ -15,4 +15,4 @@ tags:
 - [[chainWebpack()]] - `calls` [INFERRED]
 - [[schedule.js]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Schedule_CRUD
+#graphify/code #graphify/INFERRED #community/Schedule_CRUD

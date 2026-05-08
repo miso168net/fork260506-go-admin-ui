@@ -1,12 +1,12 @@
 ---
 source_file: "src/layout/components/Navbar.vue"
 type: "code"
-community: "toggleSideBar()"
+community: "Community 40"
 location: "L77"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toggleSideBar()
+  - community/Community_40
 ---
 
 # toggleSideBar()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Navbar.vue]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toggleSideBar()
+#graphify/code #graphify/EXTRACTED #community/Community_40

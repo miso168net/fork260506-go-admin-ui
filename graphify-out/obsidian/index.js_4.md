@@ -1,12 +1,12 @@
 ---
 source_file: "src/filters/index.js"
 type: "code"
-community: "toThousandFilter()"
+community: "Community 31"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toThousandFilter()
+  - community/Community_31
 ---
 
 # index.js
@@ -18,4 +18,4 @@ tags:
 - [[toThousandFilter()]] - `contains` [EXTRACTED]
 - [[uppercaseFirst()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toThousandFilter()
+#graphify/code #graphify/EXTRACTED #community/Community_31

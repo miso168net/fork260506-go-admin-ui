@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/textarea.svg"
 type: "image"
-community: "Textarea Icon"
+community: "Community 54"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Textarea_Icon
+  - community/Community_54
 ---
 
 # Textarea Icon
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Select Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Textarea_Icon
+#graphify/image #graphify/INFERRED #community/Community_54

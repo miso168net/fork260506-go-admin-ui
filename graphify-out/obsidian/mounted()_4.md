@@ -1,12 +1,12 @@
 ---
 source_file: "src/layout/components/Sidebar/FixiOSBug.js"
 type: "code"
-community: "fixBugIniOS()"
+community: "Community 47"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fixBugIniOS()
+  - community/Community_47
 ---
 
 # mounted()
@@ -15,4 +15,4 @@ tags:
 - [[FixiOSBug.js]] - `contains` [EXTRACTED]
 - [[fixBugIniOS()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fixBugIniOS()
+#graphify/code #graphify/EXTRACTED #community/Community_47

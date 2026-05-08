@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/app-group-fill.svg"
 type: "image"
-community: "App Group Fill Icon"
+community: "Community 102"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/App_Group_Fill_Icon
+  - community/Community_102
 ---
 
 # App Group Fill Icon
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Base Info Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/App_Group_Fill_Icon
+#graphify/image #graphify/INFERRED #community/Community_102

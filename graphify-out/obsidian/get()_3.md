@@ -1,12 +1,12 @@
 ---
 source_file: "src/views/excel/components/BookTypeOption.vue"
 type: "code"
-community: "BookTypeOption.vue"
+community: "Community 49"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BookTypeOption.vue
+  - community/Community_49
 ---
 
 # get()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[BookTypeOption.vue]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BookTypeOption.vue
+#graphify/code #graphify/EXTRACTED #community/Community_49

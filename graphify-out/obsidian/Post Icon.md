@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/post.svg"
 type: "image"
-community: "Message Icon"
+community: "Community 53"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Message_Icon
+  - community/Community_53
 ---
 
 # Post Icon
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Message Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Message_Icon
+#graphify/image #graphify/INFERRED #community/Community_53

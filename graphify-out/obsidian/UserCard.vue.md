@@ -1,14 +1,14 @@
 ---
 source_file: "src/views/profile/components/UserCard.vue"
 type: "code"
-community: "UserCard.vue"
+community: "Community 196"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UserCard.vue
+  - community/Community_196
 ---
 
 # UserCard.vue
 
-#graphify/code #graphify/EXTRACTED #community/UserCard.vue
+#graphify/code #graphify/EXTRACTED #community/Community_196

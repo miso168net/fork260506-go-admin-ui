@@ -1,12 +1,12 @@
 ---
 source_file: "src/layout/components/TagsView/index.vue"
 type: "code"
-community: "Sidebar Tags & Navbar"
+community: "TagsView / Sidebar Navigation"
 location: "L118"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Sidebar_Tags_&_Navbar
+  - community/TagsView_/_Sidebar_Navigation
 ---
 
 # handleTagsLeave()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[index.vue_29]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Sidebar_Tags_&_Navbar
+#graphify/code #graphify/EXTRACTED #community/TagsView_/_Sidebar_Navigation

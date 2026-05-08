@@ -1,12 +1,12 @@
 ---
 source_file: "src/store/modules/permission.js"
 type: "code"
-community: "Permission Routing"
+community: "Community 25"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Permission_Routing
+  - community/Community_25
 ---
 
 # hasPermission()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[permission.js_2]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Permission_Routing
+#graphify/code #graphify/EXTRACTED #community/Community_25

@@ -1,13 +1,13 @@
 ---
 source_file: "src/icons/svg/404.svg"
 type: "image"
-community: "404 Not Found Icon"
+community: "Community 204"
 tags:
   - graphify/image
   - graphify/EXTRACTED
-  - community/404_Not_Found_Icon
+  - community/Community_204
 ---
 
 # 404 Not Found Icon
 
-#graphify/image #graphify/EXTRACTED #community/404_Not_Found_Icon
+#graphify/image #graphify/EXTRACTED #community/Community_204

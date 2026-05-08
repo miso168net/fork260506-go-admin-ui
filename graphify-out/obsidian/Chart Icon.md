@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/chart.svg"
 type: "image"
-community: "Dashboard Icon"
+community: "Community 103"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Dashboard_Icon
+  - community/Community_103
 ---
 
 # Chart Icon
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Dashboard Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Dashboard_Icon
+#graphify/image #graphify/INFERRED #community/Community_103

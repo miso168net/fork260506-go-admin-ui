@@ -1,12 +1,12 @@
 ---
 source_file: "src/layout/components/TagsView/index.vue"
 type: "code"
-community: "Sidebar Tags & Navbar"
+community: "TagsView / Sidebar Navigation"
 location: "L161"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Sidebar_Tags_&_Navbar
+  - community/TagsView_/_Sidebar_Navigation
 ---
 
 # addTags()
@@ -17,4 +17,4 @@ tags:
 - [[isActive()]] - `calls` [EXTRACTED]
 - [[mounted()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Sidebar_Tags_&_Navbar
+#graphify/code #graphify/EXTRACTED #community/TagsView_/_Sidebar_Navigation

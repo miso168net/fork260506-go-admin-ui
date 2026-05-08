@@ -1,12 +1,12 @@
 ---
 source_file: "src/layout/mixin/ResizeHandler.js"
 type: "code"
-community: "Resize/Activate Mixins"
+community: "Resize / Activate Mixins"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Resize/Activate_Mixins
+  - community/Resize_/_Activate_Mixins
 ---
 
 # beforeUnmount()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ResizeHandler.js]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Resize/Activate_Mixins
+#graphify/code #graphify/EXTRACTED #community/Resize_/_Activate_Mixins

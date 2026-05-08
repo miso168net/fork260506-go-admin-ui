@@ -1,11 +1,11 @@
 ---
 source_file: "src/assets/icons/bianxingjingang1.png"
 type: "image"
-community: "Transformers Decepticon Icon"
+community: "Community 121"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Transformers_Decepticon_Icon
+  - community/Community_121
 ---
 
 # Transformers Decepticon Icon
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Transformers Autobot Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Transformers_Decepticon_Icon
+#graphify/image #graphify/INFERRED #community/Community_121

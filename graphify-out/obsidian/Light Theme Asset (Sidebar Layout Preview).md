@@ -1,11 +1,11 @@
 ---
 source_file: "src/assets/light.svg"
 type: "image"
-community: "Light Theme Asset (Sidebar Layout"
+community: "Community 123"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Light_Theme_Asset_(Sidebar_Layout
+  - community/Community_123
 ---
 
 # Light Theme Asset (Sidebar Layout Preview)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Dark Theme Asset (Sidebar Layout Preview)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Light_Theme_Asset_(Sidebar_Layout
+#graphify/image #graphify/INFERRED #community/Community_123

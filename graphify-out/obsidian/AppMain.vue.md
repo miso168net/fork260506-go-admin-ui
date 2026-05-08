@@ -1,12 +1,12 @@
 ---
 source_file: "src/layout/components/AppMain.vue"
 type: "code"
-community: "cachedViews()"
+community: "Community 65"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cachedViews()
+  - community/Community_65
 ---
 
 # AppMain.vue
@@ -15,4 +15,4 @@ tags:
 - [[cachedViews()]] - `contains` [EXTRACTED]
 - [[key()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cachedViews()
+#graphify/code #graphify/EXTRACTED #community/Community_65

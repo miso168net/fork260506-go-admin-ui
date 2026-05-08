@@ -1,16 +1,16 @@
 ---
 source_file: "README.md"
 type: "document"
-community: "Admin Modules & Docs"
+community: "Project Docs & Backend Concepts"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Admin_Modules_&_Docs
+  - community/Project_Docs__Backend_Concepts
 ---
 
 # GORM ORM
 
 ## Connections
-- [[go-admin Project]] - `implements` [EXTRACTED]
+- [[go-admin Project (English README)]] - `implements` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Admin_Modules_&_Docs
+#graphify/document #graphify/EXTRACTED #community/Project_Docs__Backend_Concepts

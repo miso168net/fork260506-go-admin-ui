@@ -1,11 +1,11 @@
 ---
 source_file: "src/assets/icons/WindowsTerminal_PRE-01.png"
 type: "image"
-community: "Windows Terminal (Preview) Icon"
+community: "Community 59"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Windows_Terminal_(Preview)_Icon
+  - community/Community_59
 ---
 
 # Windows Terminal (Preview) Icon
@@ -14,4 +14,4 @@ tags:
 - [[PowerShell Icon]] - `conceptually_related_to` [INFERRED]
 - [[Windows Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Windows_Terminal_(Preview)_Icon
+#graphify/image #graphify/INFERRED #community/Community_59

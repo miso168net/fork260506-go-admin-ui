@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/qq.svg"
 type: "image"
-community: "Message Icon"
+community: "Community 53"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Message_Icon
+  - community/Community_53
 ---
 
 # Qq Icon
@@ -14,4 +14,4 @@ tags:
 - [[Message Icon]] - `conceptually_related_to` [INFERRED]
 - [[Phone Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Message_Icon
+#graphify/image #graphify/INFERRED #community/Community_53

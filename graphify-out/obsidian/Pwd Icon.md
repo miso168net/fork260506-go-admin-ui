@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/pwd.svg"
 type: "image"
-community: "Safety Icon"
+community: "Community 73"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Safety_Icon
+  - community/Community_73
 ---
 
 # Pwd Icon
@@ -14,4 +14,4 @@ tags:
 - [[Pass Icon]] - `conceptually_related_to` [INFERRED]
 - [[Safety Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Safety_Icon
+#graphify/image #graphify/INFERRED #community/Community_73

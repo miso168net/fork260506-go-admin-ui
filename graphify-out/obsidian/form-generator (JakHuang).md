@@ -1,11 +1,11 @@
 ---
 source_file: "README.md"
 type: "document"
-community: "Admin Modules & Docs"
+community: "Project Docs & Backend Concepts"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Admin_Modules_&_Docs
+  - community/Project_Docs__Backend_Concepts
 ---
 
 # form-generator (JakHuang)
@@ -14,4 +14,4 @@ tags:
 - [[Form Builder]] - `conceptually_related_to` [INFERRED]
 - [[README.md (English)]] - `cites` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Admin_Modules_&_Docs
+#graphify/document #graphify/EXTRACTED #community/Project_Docs__Backend_Concepts

@@ -1,12 +1,12 @@
 ---
 source_file: "src/views/dashboard/admin/components/PanelGroup.vue"
 type: "code"
-community: "handleSetLineChartData()"
+community: "Community 98"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/handleSetLineChartData()
+  - community/Community_98
 ---
 
 # PanelGroup.vue
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[handleSetLineChartData()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/handleSetLineChartData()
+#graphify/code #graphify/EXTRACTED #community/Community_98

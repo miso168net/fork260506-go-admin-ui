@@ -1,12 +1,12 @@
 ---
 source_file: "src/directive/permission/permission.js"
 type: "code"
-community: "permission.js"
+community: "Community 92"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/permission.js
+  - community/Community_92
 ---
 
 # inserted()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[permission.js_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/permission.js
+#graphify/code #graphify/EXTRACTED #community/Community_92

@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/calendar.svg"
 type: "image"
-community: "Date Range Icon"
+community: "Community 70"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Date_Range_Icon
+  - community/Community_70
 ---
 
 # Calendar Icon
@@ -14,4 +14,4 @@ tags:
 - [[Date Icon]] - `semantically_similar_to` [INFERRED]
 - [[Date Range Icon]] - `semantically_similar_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Date_Range_Icon
+#graphify/image #graphify/INFERRED #community/Community_70

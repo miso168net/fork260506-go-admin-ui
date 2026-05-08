@@ -1,12 +1,12 @@
 ---
 source_file: "src/api/admin/dict/type.js"
 type: "code"
-community: "CRUD Page Lifecycle"
+community: "Dictionary Data Component"
 location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CRUD_Page_Lifecycle
+  - community/Dictionary_Data_Component
 ---
 
 # delType()
@@ -15,4 +15,4 @@ tags:
 - [[handleDelete()_1]] - `calls` [INFERRED]
 - [[type.js]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CRUD_Page_Lifecycle
+#graphify/code #graphify/EXTRACTED #community/Dictionary_Data_Component

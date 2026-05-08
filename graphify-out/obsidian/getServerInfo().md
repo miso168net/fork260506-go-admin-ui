@@ -1,12 +1,12 @@
 ---
 source_file: "src/views/sys-tools/monitor.vue"
 type: "code"
-community: "Server Info Component"
+community: "Community 27"
 location: "L162"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Server_Info_Component
+  - community/Community_27
 ---
 
 # getServerInfo()
@@ -16,4 +16,4 @@ tags:
 - [[getServer()]] - `calls` [INFERRED]
 - [[monitor.vue]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Server_Info_Component
+#graphify/code #graphify/EXTRACTED #community/Community_27

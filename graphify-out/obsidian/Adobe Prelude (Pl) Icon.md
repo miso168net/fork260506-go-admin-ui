@@ -1,11 +1,11 @@
 ---
 source_file: "src/assets/icons/Pl-01.png"
 type: "image"
-community: "Adobe Presenter (Pn) Icon"
+community: "Community 117"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Adobe_Presenter_(Pn)_Icon
+  - community/Community_117
 ---
 
 # Adobe Prelude (Pl) Icon
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Adobe Presenter (Pn) Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Adobe_Presenter_(Pn)_Icon
+#graphify/image #graphify/INFERRED #community/Community_117

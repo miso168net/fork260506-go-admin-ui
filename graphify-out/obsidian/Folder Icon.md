@@ -1,11 +1,11 @@
 ---
 source_file: "src/assets/icons/wenjianjia.png"
 type: "image"
-community: "TXT Backup Icon"
+community: "Community 80"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/TXT_Backup_Icon
+  - community/Community_80
 ---
 
 # Folder Icon
@@ -14,4 +14,4 @@ tags:
 - [[Document Icon]] - `conceptually_related_to` [INFERRED]
 - [[TXT Backup Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/TXT_Backup_Icon
+#graphify/image #graphify/INFERRED #community/Community_80

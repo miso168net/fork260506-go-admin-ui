@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/time-range.svg"
 type: "image"
-community: "Time Range Icon"
+community: "Community 76"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Time_Range_Icon
+  - community/Community_76
 ---
 
 # Time Range Icon
@@ -14,4 +14,4 @@ tags:
 - [[Time Avg Icon]] - `conceptually_related_to` [INFERRED]
 - [[Time Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Time_Range_Icon
+#graphify/image #graphify/INFERRED #community/Community_76

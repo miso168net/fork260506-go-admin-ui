@@ -1,12 +1,12 @@
 ---
 source_file: "src/utils/generator/css.js"
 type: "code"
-community: "makeUpCss()"
+community: "Community 66"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/makeUpCss()
+  - community/Community_66
 ---
 
 # css.js
@@ -15,4 +15,4 @@ tags:
 - [[addCss()]] - `contains` [EXTRACTED]
 - [[makeUpCss()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/makeUpCss()
+#graphify/code #graphify/EXTRACTED #community/Community_66

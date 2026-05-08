@@ -1,12 +1,12 @@
 ---
 source_file: "src/directive/waves/waves.js"
 type: "code"
-community: "handleClick()"
+community: "Community 39"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/handleClick()
+  - community/Community_39
 ---
 
 # handleClick()
@@ -16,4 +16,4 @@ tags:
 - [[update()]] - `calls` [EXTRACTED]
 - [[waves.js]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/handleClick()
+#graphify/code #graphify/EXTRACTED #community/Community_39

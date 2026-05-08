@@ -1,12 +1,12 @@
 ---
 source_file: "src/utils/permission.js"
 type: "code"
-community: "checkPermission()"
+community: "Community 95"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/checkPermission()
+  - community/Community_95
 ---
 
 # permission.js
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[checkPermission()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/checkPermission()
+#graphify/code #graphify/EXTRACTED #community/Community_95

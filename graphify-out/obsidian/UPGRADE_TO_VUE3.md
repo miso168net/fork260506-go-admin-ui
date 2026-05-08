@@ -1,11 +1,11 @@
 ---
 source_file: "UPGRADE_TO_VUE3.md"
 type: "document"
-community: "Admin Modules & Docs"
+community: "Vue 3 Migration Concepts"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Admin_Modules_&_Docs
+  - community/Vue_3_Migration_Concepts
 ---
 
 # UPGRADE_TO_VUE3.md
@@ -26,4 +26,4 @@ tags:
 - [[VUE3_UPGRADE_COMPLETE.md (empty placeholder)]] - `semantically_similar_to` [INFERRED]
 - [[Vue 2.x to Vue 3.x Migration]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Admin_Modules_&_Docs
+#graphify/document #graphify/EXTRACTED #community/Vue_3_Migration_Concepts

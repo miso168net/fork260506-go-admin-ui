@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/link.svg"
 type: "image"
-community: "GitHub Icon"
+community: "Community 71"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/GitHub_Icon
+  - community/Community_71
 ---
 
 # Link Icon
@@ -14,4 +14,4 @@ tags:
 - [[Email Icon]] - `conceptually_related_to` [INFERRED]
 - [[GitHub Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/GitHub_Icon
+#graphify/image #graphify/INFERRED #community/Community_71

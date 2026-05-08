@@ -1,12 +1,12 @@
 ---
 source_file: "src/views/admin/dict/data.vue"
 type: "code"
-community: "CRUD Page Lifecycle"
+community: "Dictionary Data Component"
 location: "L327"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/CRUD_Page_Lifecycle
+  - graphify/INFERRED
+  - community/Dictionary_Data_Component
 ---
 
 # handleDelete()
@@ -15,4 +15,4 @@ tags:
 - [[data.vue]] - `contains` [EXTRACTED]
 - [[delData()]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/CRUD_Page_Lifecycle
+#graphify/code #graphify/INFERRED #community/Dictionary_Data_Component

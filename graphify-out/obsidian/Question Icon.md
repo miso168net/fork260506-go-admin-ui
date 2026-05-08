@@ -1,13 +1,13 @@
 ---
 source_file: "src/icons/svg/question.svg"
 type: "image"
-community: "Question Icon"
+community: "Community 211"
 tags:
   - graphify/image
   - graphify/EXTRACTED
-  - community/Question_Icon
+  - community/Community_211
 ---
 
 # Question Icon
 
-#graphify/image #graphify/EXTRACTED #community/Question_Icon
+#graphify/image #graphify/EXTRACTED #community/Community_211

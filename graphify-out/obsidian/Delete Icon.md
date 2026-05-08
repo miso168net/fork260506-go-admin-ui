@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/del.svg"
 type: "image"
-community: "Batch Update Icon"
+community: "Community 104"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Batch_Update_Icon
+  - community/Community_104
 ---
 
 # Delete Icon
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Batch Update Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Batch_Update_Icon
+#graphify/image #graphify/INFERRED #community/Community_104

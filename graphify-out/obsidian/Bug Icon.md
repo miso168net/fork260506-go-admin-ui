@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/bug.svg"
 type: "image"
-community: "Alarm Settings Icon"
+community: "Community 45"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Alarm_Settings_Icon
+  - community/Community_45
 ---
 
 # Bug Icon
@@ -14,4 +14,4 @@ tags:
 - [[Alarm Settings Icon]] - `conceptually_related_to` [INFERRED]
 - [[Dev Tools Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Alarm_Settings_Icon
+#graphify/image #graphify/INFERRED #community/Community_45

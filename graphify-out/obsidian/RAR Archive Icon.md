@@ -1,11 +1,11 @@
 ---
 source_file: "src/assets/icons/rar.png"
 type: "image"
-community: "Zip Archive Icon"
+community: "Community 120"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Zip_Archive_Icon
+  - community/Community_120
 ---
 
 # RAR Archive Icon
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Zip Archive Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Zip_Archive_Icon
+#graphify/image #graphify/INFERRED #community/Community_120

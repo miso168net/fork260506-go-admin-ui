@@ -52,8 +52,8 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 1 edge to [[_COMMUNITY_Utility Functions]]
-- 1 edge to [[_COMMUNITY_App Bootstrap & DOM Utils]]
-- 1 edge to [[_COMMUNITY_Sidebar Tags & Navbar]]
+- 1 edge to [[_COMMUNITY_Error Log & DOM Utils]]
+- 1 edge to [[_COMMUNITY_TagsView  Sidebar Navigation]]
 
 ## Top bridge nodes
 - [[theme()]] - degree 6, connects to 2 communities

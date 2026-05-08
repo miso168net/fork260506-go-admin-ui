@@ -1,11 +1,11 @@
 ---
 source_file: "x_fork.branch-origin.md"
 type: "document"
-community: "Admin Modules & Docs"
+community: "Vue 3 Migration Concepts"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Admin_Modules_&_Docs
+  - community/Vue_3_Migration_Concepts
 ---
 
 # x_fork.branch-origin.md
@@ -18,4 +18,4 @@ tags:
 - [[main branch (created 2026-05-06)]] - `references` [EXTRACTED]
 - [[master branch (legacy default)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Admin_Modules_&_Docs
+#graphify/document #graphify/EXTRACTED #community/Vue_3_Migration_Concepts

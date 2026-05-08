@@ -1,12 +1,12 @@
 ---
 source_file: "src/directive/sticky.js"
 type: "code"
-community: "inserted()"
+community: "Community 64"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/inserted()
+  - community/Community_64
 ---
 
 # inserted()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sticky.js]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/inserted()
+#graphify/code #graphify/EXTRACTED #community/Community_64

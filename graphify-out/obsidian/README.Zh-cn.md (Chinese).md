@@ -1,11 +1,11 @@
 ---
 source_file: "README.Zh-cn.md"
 type: "document"
-community: "Admin Modules & Docs"
+community: "Project Docs & Backend Concepts"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Admin_Modules_&_Docs
+  - community/Project_Docs__Backend_Concepts
 ---
 
 # README.Zh-cn.md (Chinese)
@@ -14,4 +14,4 @@ tags:
 - [[Node.js v14.16.0 (legacy requirement)]] - `references` [EXTRACTED]
 - [[README.md (English)]] - `semantically_similar_to` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Admin_Modules_&_Docs
+#graphify/document #graphify/EXTRACTED #community/Project_Docs__Backend_Concepts

@@ -1,12 +1,12 @@
 ---
 source_file: "src/utils/validate.js"
 type: "code"
-community: "App Bootstrap & DOM Utils"
+community: "Error Log & DOM Utils"
 location: "L82"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/App_Bootstrap_&_DOM_Utils
+  - community/Error_Log__DOM_Utils
 ---
 
 # isArray()
@@ -18,4 +18,4 @@ tags:
 - [[objectMerge()]] - `calls` [INFERRED]
 - [[validate.js]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/App_Bootstrap_&_DOM_Utils
+#graphify/code #graphify/INFERRED #community/Error_Log__DOM_Utils

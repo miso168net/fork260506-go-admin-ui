@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/server.svg"
 type: "image"
-community: "System Tools Icon"
+community: "Community 34"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/System_Tools_Icon
+  - community/Community_34
 ---
 
 # Server Icon
@@ -15,4 +15,4 @@ tags:
 - [[System Icon]] - `conceptually_related_to` [INFERRED]
 - [[Webhock Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/System_Tools_Icon
+#graphify/image #graphify/INFERRED #community/Community_34

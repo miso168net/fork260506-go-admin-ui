@@ -5,7 +5,7 @@ community: "Auth Token Helpers"
 location: "L23"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/Auth_Token_Helpers
 ---
 
@@ -15,4 +15,4 @@ tags:
 - [[FilenameOption.vue]] - `contains` [EXTRACTED]
 - [[setToken()]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Token_Helpers
+#graphify/code #graphify/INFERRED #community/Auth_Token_Helpers

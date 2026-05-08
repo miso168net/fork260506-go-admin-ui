@@ -1,12 +1,12 @@
 ---
 source_file: "src/views/excel/components/AutoWidthOption.vue"
 type: "code"
-community: "AutoWidthOption.vue"
+community: "Community 67"
 location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AutoWidthOption.vue
+  - community/Community_67
 ---
 
 # get()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[AutoWidthOption.vue]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AutoWidthOption.vue
+#graphify/code #graphify/EXTRACTED #community/Community_67

@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/eye-open.svg"
 type: "image"
-community: "Eye Open Icon"
+community: "Community 72"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Eye_Open_Icon
+  - community/Community_72
 ---
 
 # Eye Open Icon
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Eye Icon]] - `semantically_similar_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Eye_Open_Icon
+#graphify/image #graphify/INFERRED #community/Community_72

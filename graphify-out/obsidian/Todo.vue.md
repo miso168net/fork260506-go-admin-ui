@@ -1,12 +1,12 @@
 ---
 source_file: "src/views/dashboard/admin/components/TodoList/Todo.vue"
 type: "code"
-community: "open-window.js"
+community: "Community 48"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/open-window.js
+  - community/Community_48
 ---
 
 # Todo.vue
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[focus()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/open-window.js
+#graphify/code #graphify/EXTRACTED #community/Community_48

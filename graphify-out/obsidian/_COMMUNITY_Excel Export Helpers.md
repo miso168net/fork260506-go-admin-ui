@@ -62,8 +62,8 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_App Bootstrap & DOM Utils]]
-- 2 edges to [[_COMMUNITY_Sidebar Tags & Navbar]]
+- 4 edges to [[_COMMUNITY_Error Log & DOM Utils]]
+- 2 edges to [[_COMMUNITY_TagsView  Sidebar Navigation]]
 
 ## Top bridge nodes
 - [[index.js_10]] - degree 12, connects to 1 community

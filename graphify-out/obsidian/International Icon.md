@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/international.svg"
 type: "image"
-community: "International Icon"
+community: "Community 109"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/International_Icon
+  - community/Community_109
 ---
 
 # International Icon
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Language Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/International_Icon
+#graphify/image #graphify/INFERRED #community/Community_109

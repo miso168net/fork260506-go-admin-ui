@@ -1,12 +1,12 @@
 ---
 source_file: "src/api/admin/dict/type.js"
 type: "code"
-community: "CRUD Page Lifecycle"
+community: "Dictionary Data Component"
 location: "L4"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/CRUD_Page_Lifecycle
+  - community/Dictionary_Data_Component
 ---
 
 # listType()
@@ -16,4 +16,4 @@ tags:
 - [[getTypeList()]] - `calls` [INFERRED]
 - [[type.js]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/CRUD_Page_Lifecycle
+#graphify/code #graphify/INFERRED #community/Dictionary_Data_Component

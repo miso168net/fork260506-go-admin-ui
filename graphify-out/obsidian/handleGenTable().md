@@ -5,7 +5,7 @@ community: "Auth Token Helpers"
 location: "L283"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/Auth_Token_Helpers
 ---
 
@@ -15,4 +15,4 @@ tags:
 - [[downLoadFile()]] - `calls` [INFERRED]
 - [[index.vue_44]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Token_Helpers
+#graphify/code #graphify/INFERRED #community/Auth_Token_Helpers

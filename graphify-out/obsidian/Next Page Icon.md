@@ -1,13 +1,13 @@
 ---
 source_file: "src/icons/svg/next-page.svg"
 type: "image"
-community: "Next Page Icon"
+community: "Community 208"
 tags:
   - graphify/image
   - graphify/EXTRACTED
-  - community/Next_Page_Icon
+  - community/Community_208
 ---
 
 # Next Page Icon
 
-#graphify/image #graphify/EXTRACTED #community/Next_Page_Icon
+#graphify/image #graphify/EXTRACTED #community/Community_208

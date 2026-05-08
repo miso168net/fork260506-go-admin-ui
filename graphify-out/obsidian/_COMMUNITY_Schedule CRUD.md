@@ -37,7 +37,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_App Bootstrap & DOM Utils]]
+- 1 edge to [[_COMMUNITY_Error Log & DOM Utils]]
 
 ## Top bridge nodes
 - [[isExternal()_1]] - degree 3, connects to 1 community

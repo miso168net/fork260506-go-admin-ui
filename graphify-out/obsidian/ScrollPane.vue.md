@@ -1,12 +1,12 @@
 ---
 source_file: "src/layout/components/TagsView/ScrollPane.vue"
 type: "code"
-community: "scrollWrapper()"
+community: "Community 41"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/scrollWrapper()
+  - community/Community_41
 ---
 
 # ScrollPane.vue
@@ -17,4 +17,4 @@ tags:
 - [[moveToTarget()]] - `contains` [EXTRACTED]
 - [[scrollWrapper()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/scrollWrapper()
+#graphify/code #graphify/EXTRACTED #community/Community_41

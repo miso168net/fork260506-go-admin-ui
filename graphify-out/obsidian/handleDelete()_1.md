@@ -5,7 +5,7 @@ community: "Utility Functions"
 location: "L337"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/Utility_Functions
 ---
 
@@ -25,4 +25,4 @@ tags:
 - [[index.vue_37]] - `contains` [EXTRACTED]
 - [[index.vue_44]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Utility_Functions
+#graphify/code #graphify/INFERRED #community/Utility_Functions

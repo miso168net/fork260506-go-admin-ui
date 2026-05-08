@@ -1,11 +1,11 @@
 ---
 source_file: "src/assets/icons/Web.png"
 type: "image"
-community: "Typora Icon"
+community: "Community 119"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Typora_Icon
+  - community/Community_119
 ---
 
 # Web Icon
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Typora Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Typora_Icon
+#graphify/image #graphify/INFERRED #community/Community_119

@@ -1,12 +1,12 @@
 ---
 source_file: "src/icons/index.js"
 type: "code"
-community: "requireAll()"
+community: "Community 93"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/requireAll()
+  - community/Community_93
 ---
 
 # index.js
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[requireAll()_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/requireAll()
+#graphify/code #graphify/EXTRACTED #community/Community_93

@@ -1,11 +1,11 @@
 ---
 source_file: "x_fork.branch-origin.md"
 type: "document"
-community: "Admin Modules & Docs"
+community: "Vue 3 Migration Concepts"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Admin_Modules_&_Docs
+  - community/Vue_3_Migration_Concepts
 ---
 
 # Upstream: go-admin-team/go-admin-ui
@@ -14,4 +14,4 @@ tags:
 - [[Fork repo miso168netfork260506-go-admin-ui]] - `references` [EXTRACTED]
 - [[x_fork.branch-origin]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Admin_Modules_&_Docs
+#graphify/document #graphify/EXTRACTED #community/Vue_3_Migration_Concepts

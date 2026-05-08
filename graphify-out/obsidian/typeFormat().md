@@ -5,7 +5,7 @@ community: "Utility Functions"
 location: "L284"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/Utility_Functions
 ---
 
@@ -15,4 +15,4 @@ tags:
 - [[index.vue_32]] - `contains` [EXTRACTED]
 - [[selectDictLabel()]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Utility_Functions
+#graphify/code #graphify/INFERRED #community/Utility_Functions

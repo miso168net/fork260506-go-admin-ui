@@ -1,12 +1,12 @@
 ---
 source_file: "src/utils/validate.js"
 type: "code"
-community: "App Bootstrap & DOM Utils"
+community: "Error Log & DOM Utils"
 location: "L71"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/App_Bootstrap_&_DOM_Utils
+  - graphify/INFERRED
+  - community/Error_Log__DOM_Utils
 ---
 
 # isString()
@@ -15,4 +15,4 @@ tags:
 - [[checkNeed()]] - `calls` [INFERRED]
 - [[validate.js]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/App_Bootstrap_&_DOM_Utils
+#graphify/code #graphify/INFERRED #community/Error_Log__DOM_Utils

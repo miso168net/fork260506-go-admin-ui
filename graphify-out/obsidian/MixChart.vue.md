@@ -1,12 +1,12 @@
 ---
 source_file: "src/components/Charts/MixChart.vue"
 type: "code"
-community: "MixChart.vue"
+community: "Community 84"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MixChart.vue
+  - community/Community_84
 ---
 
 # MixChart.vue
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[formatter()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MixChart.vue
+#graphify/code #graphify/EXTRACTED #community/Community_84

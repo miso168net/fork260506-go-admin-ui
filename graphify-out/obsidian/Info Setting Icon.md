@@ -1,11 +1,11 @@
 ---
 source_file: "src/icons/svg/info-setting.svg"
 type: "image"
-community: "Info Setting Icon"
+community: "Community 107"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Info_Setting_Icon
+  - community/Community_107
 ---
 
 # Info Setting Icon
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Job Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Info_Setting_Icon
+#graphify/image #graphify/INFERRED #community/Community_107

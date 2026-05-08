@@ -5,7 +5,7 @@ community: "Theme Engine"
 location: "L61"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/Theme_Engine
 ---
 
@@ -15,4 +15,4 @@ tags:
 - [[userInfo.vue]] - `contains` [EXTRACTED]
 - [[validate()]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Theme_Engine
+#graphify/code #graphify/INFERRED #community/Theme_Engine

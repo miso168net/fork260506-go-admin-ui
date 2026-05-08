@@ -1,12 +1,12 @@
 ---
 source_file: "src/views/dashboard/admin/components/mixins/resize.js"
 type: "code"
-community: "Resize/Activate Mixins"
+community: "Resize / Activate Mixins"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Resize/Activate_Mixins
+  - community/Resize_/_Activate_Mixins
 ---
 
 # mounted()
@@ -18,4 +18,4 @@ tags:
 - [[resize.js]] - `contains` [EXTRACTED]
 - [[resize.js_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Resize/Activate_Mixins
+#graphify/code #graphify/EXTRACTED #community/Resize_/_Activate_Mixins

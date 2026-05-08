@@ -1,11 +1,11 @@
 ---
 source_file: "src/assets/icons/Awesome.png"
 type: "image"
-community: "Awesome Vue Icon"
+community: "Community 116"
 tags:
   - graphify/image
   - graphify/INFERRED
-  - community/Awesome_Vue_Icon
+  - community/Community_116
 ---
 
 # Awesome Icon
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Awesome Vue Icon]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Awesome_Vue_Icon
+#graphify/image #graphify/INFERRED #community/Community_116
